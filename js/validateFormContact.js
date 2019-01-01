@@ -20,10 +20,8 @@ function validateFormContact(){
 		return true;
 	}else{
 		return false;
-	}
-		
+	}	
 }
-
 
 function getDataItems(item,value,key){
 	if(value.length <= 0 ){
