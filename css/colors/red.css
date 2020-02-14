@@ -1,0 +1,156 @@
+
+#preloader .circle-ef {
+    border-left-color: #EAF102;
+}
+#nav-left ul li:hover,
+#nav-left ul li.current-page-item,
+#owl-services .item a:hover,
+#team .item:hover,
+#work #filters ul li.select-filter,
+#work #filters ul li:hover {
+	border-color:#EAF102;
+}
+
+#nav-left ul li a:before {border-right-color:#EAF102;}
+#process .item:hover .hr:after {border-top-color:#EAF102;}
+
+#button-menu{
+    -webkit-text-shadow: 0 0 0 #000, 28px 0 0 #EAF102;
+    -moz-text-shadow: 0 0 0 #000, 28px 0 0 #EAF102;
+    text-shadow: 0 0 0 #000, 28px 0 0 #EAF102;
+}
+#button-menu:hover{
+    -webkit-text-shadow: -29px 0 0 #000, 0 0 0 #EAF102;
+    -moz-text-shadow: -29px 0 0 #000, 0 0 0 #EAF102;
+    text-shadow: -29px 0 0 #000, 0 0 0 #EAF102;
+}
+.header-sticky #button-menu{
+    -webkit-text-shadow: 0 0 0 #fff, 28px 0 0 #EAF102;
+    -moz-text-shadow: 0 0 0 #fff, 28px 0 0 #EAF102;
+    text-shadow: 0 0 0 #fff, 28px 0 0 #EAF102;
+}
+.header-sticky #button-menu:hover{
+    -webkit-text-shadow: -29px 0 0 #fff, 0 0 0 #EAF102;
+    -moz-text-shadow: -29px 0 0 #fff, 0 0 0 #EAF102;
+    text-shadow: -29px 0 0 #fff, 0 0 0 #EAF102;
+}
+#closeProject a:hover .icon {
+    color: #EAF102;
+}
+#ascrail2000 div {
+    background-color: #EAF102 !important;
+}
+
+.head-ct h3,
+#nav-left ul li a:after,
+#about a,
+#funfacts,
+#team .join-team,
+.do-you-love-us-yet a,
+#owl-services .item a:hover,
+#twitter .icon,
+#plans .item .price,
+#plans .item:hover .sign-up a,
+#owl-news .item .image .share,
+#contact .contact-form .item button,
+#footer #scroll-top,
+.blog-title .icofont {
+    background-color: #EAF102;
+}
+#testimonial .icon {
+	background-color:#FFF;
+	}
+#about a:hover {
+    background-color: #222;
+}
+
+#owl-services .owl-controls .owl-buttons div:hover,
+#twitter .owl-buttons div:hover,
+#owl-news .owl-buttons div:hover,
+#testimonial .owl-buttons div:hover {
+    color: #EAF102;
+    border-color: #EAF102;
+}
+
+
+#team .item .img .content {
+	background-color: rgba(225,43,66,0.85);
+}
+
+#team .join-team:hover{
+    background-color: #222;
+}
+
+#work #filters ul li.select-filter a,
+#work #filters ul li:hover a,
+#twitter .item p span,
+#twitter .item h2,
+#owl-news .item h2 a:hover,
+#owl-news .item ul li.wish .fa,
+#testimonial .item h2,
+#menu-top li a:hover,#menu-top li.current-page-item a,
+.menu-nav > li:hover > a,.menu-nav > li.current-page-item > a,
+.menu-nav .sub-menu .current-page-item a,
+.menu-nav .sub-menu li:hover a,
+#ajaxpage h4 {
+    color: #EAF102;
+}
+#work-wrap .work-item .caption {
+	background-color: rgba(241,219,2,0.9);
+}
+
+.do-you-love-us-yet a:hover {
+    background: #222;
+}
+
+
+
+
+#contact .contact-form .item button:hover{
+    background-color: #222;
+}
+#footer #scroll-top{
+	color: #fff;
+}
+
+#owl-blog-list .owl-buttons div:hover {
+	background-color: rgba(255,43,66,1);
+}
+.blog-title h2 a:hover,
+#nextProject .fa:hover,
+#prevProject .fa:hover,
+#process .item:hover .icon,
+#process .item:hover h2,
+#contact .contact-info div p b a:hover {
+    color: #EAF102;
+}
+.blog-item .blog-read-more:hover,
+#ajaxpage .detail-pj ul li .list-tt a.link:hover {
+	background-color: #EAF102;
+	color: #fff;
+	border-color: #EAF102;
+}
+.blog-item .blog-quote {
+	border-color:; #EAF102;
+}
+.blog-item .blog-quote span,
+	ul.ul-category li a:hover,
+.reply-comment {
+	color: #EAF102;
+	}
+	.blog-leave-reply button:hover {
+	border-color: #EAF102;
+    background: #EAF102;
+    color: #fff;
+}
+.blog-grid.blog-item .blog-link:hover,
+.blog-grid.blog-item .blog-link:hover .icofont {
+    border-color: #EAF102;
+}
+.blog-grid.blog-item .blog-link:hover p,
+.blog-grid.blog-item .blog-link:hover .icofont {
+    color: #EAF102;
+}
+#loadmore a {
+	background-color: #EAF102;
+}
