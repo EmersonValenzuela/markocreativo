@@ -1,14 +1,39 @@
 // Scheme of colors
 $colorscheme: (
-  gray: (
-    base: #ccc,
-    light: #f2f2f2,
-    dark: #666
+  	red: (
+	lighten-5:#ffebee,  
+	lighten-4:#ffcdd2,  
+	lighten-3:#ef9a9a,  
+	lighten-2:#e57373,  
+	lighten-1:#ef5350, 
+
+	base: #f44336, 
+
+	darken-1:#e53935,  
+	darken-2:#d32f2f,  
+	darken-3:#c62828,  
+	darken-4:#b71c1c,  
+	
+	accent-1:#ff8a80,  
+	accent-2:#ff5252,  
+	accent-3:#ff1744,  
+	accent-4:#d50000  
   ),
-  brown: (
-    base: #ab906b,
-    light: #ecdac3,
-    dark: #5e421c
+  yellow: (
+	lighten-5:#fffde7,  
+	lighten-4:#fff9c4,  
+	lighten-3:#fff59d,  
+	lighten-2:#fff176,  
+	lighten-1:#ffee58,  
+	base: #ffeb3b,
+	darken-1:#fdd835, 
+	darken-2:#fbc02d, 
+	darken-3:#f9a825, 
+	darken-4:#f57f17, 
+	accent-1:#ffff8d, 
+	accent-2:#ffff00, 
+	accent-3:#ffea00, 
+	accent-4:#ffd600
   )
 );
 

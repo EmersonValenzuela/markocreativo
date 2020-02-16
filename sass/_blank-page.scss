@@ -1,0 +1,16 @@
+body{
+	background: setcolor(red,darken-1);
+	@include respond-to(tablet){
+		background: setcolor(yellow, darken-1); 
+	}
+}
+.description-blank{
+	font-size: 1rem;
+	text-align: center;
+	color: setcolor(red,darken-1);
+	background: setcolor(yellow,lighten-1); 
+	@include respond-to(tablet) {
+        color: setcolor(yellow);
+		background: setcolor(red,lighten-1); 
+    }
+}

@@ -1,8 +1,8 @@
 // Map with much breakpoints
 $breakpoints: (
-    small: 320px,
-    medium: 600px,
-    large: 768px
+    mobile: 320px,
+    tablet: 600px,
+    desktop: 768px
 );
  
 // Respond-To Mixin
@@ -10,7 +10,7 @@ $breakpoints: (
     @if map-has-key($breakpoints, $breakpoint) {
         $value: map-get($breakpoints, $breakpoint);
          
-        @media screen and (min-width: $value) {
+        @media screen and (max-width: $value) {
             @content;
         }
     }

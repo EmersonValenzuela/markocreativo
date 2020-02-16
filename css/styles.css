@@ -1,5 +1,15 @@
 body {
-  background: #ab906b; }
+  background: #e53935; }
+  @media screen and (max-width: 600px) {
+    body {
+      background: #fdd835; } }
 
-h1, p {
-  color: #666; }
+.description-blank {
+  font-size: 1rem;
+  text-align: center;
+  color: #e53935;
+  background: #ffee58; }
+  @media screen and (max-width: 600px) {
+    .description-blank {
+      color: #ffeb3b;
+      background: #ef5350; } }
