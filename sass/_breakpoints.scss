@@ -6,7 +6,7 @@ $breakpoints: (
 );
  
 // Respond-To Mixin
-@mixin respond-to($breakpoint) {
+@mixin mediaQuery($breakpoint) {
     @if map-has-key($breakpoints, $breakpoint) {
         $value: map-get($breakpoints, $breakpoint);
          

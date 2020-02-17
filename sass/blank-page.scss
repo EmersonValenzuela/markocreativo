@@ -1,0 +1,35 @@
+@import "./colors";
+@import "./mixins";
+@import "./utils";
+@import "./breakpoints";
+
+body{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	background: setColor(yellow);
+
+	@include mediaQuery(tablet){
+		background: setColor(black, lighten-2); 
+	}
+
+}
+
+.description-blank{
+	padding: 1rem;
+	font-size: 2rem;
+	text-align: center;
+
+	color: setColor(yellow);
+	background: setColor(black,lighten-5); 
+
+	@include mediaQuery(tablet) {
+		font-size: 1.5rem;
+        color: setColor(black, lighten-1);
+		background: setColor(yellow,lighten-5); 
+    }
+
+}

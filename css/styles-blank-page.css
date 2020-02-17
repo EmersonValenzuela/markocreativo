@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  background: #F9FF00; }
+  @media screen and (max-width: 600px) {
+    body {
+      background: #141414; } }
+
+.description-blank {
+  padding: 1rem;
+  font-size: 2rem;
+  text-align: center;
+  color: #F9FF00;
+  background: #333333; }
+  @media screen and (max-width: 600px) {
+    .description-blank {
+      font-size: 1.5rem;
+      color: #0a0a0a;
+      background: #fbff62; } }
