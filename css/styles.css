@@ -3,3 +3,220 @@ body {
   padding: 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
+
+.container-initial {
+  width: 100vw;
+  height: 100vh;
+  background: red; }
+  .container-initial .container-logo {
+    width: 100%;
+    height: 13vh;
+    background: #000000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .container-initial .container-logo h1 {
+      color: #ffffff;
+      font-size: 2rem; }
+  .container-initial .container-nabvar {
+    width: 100%;
+    height: 6vh;
+    background: #F9FF00; }
+    .container-initial .container-nabvar .menu {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .container-initial .container-nabvar .menu .list {
+        background: green;
+        list-style: none;
+        width: 50%;
+        display: -ms-grid;
+        display: grid;
+        font-weight: 700;
+        -ms-grid-columns: (calc(100% / 5))[5];
+        grid-template-columns: repeat(5, calc(100% / 5));
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center; }
+        .container-initial .container-nabvar .menu .list li {
+          padding: 5px; }
+  .container-initial .container-slider {
+    background: orange;
+    width: 100%;
+    height: 81vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .container-initial .container-slider h1 {
+      color: #000000;
+      font-size: 4rem; }
+
+.container-about-us {
+  width: 100vw;
+  height: 90vh;
+  background: green;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 4rem;
+  font-weight: 700;
+  color: #ffffff; }
+  .container-about-us h1 {
+    border: 2px solid #000; }
+
+.container-services {
+  width: 100vw;
+  height: 90vh;
+  background: purple;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 4rem;
+  font-weight: 700;
+  color: #ffffff; }
+  .container-services h1 {
+    border: 2px solid #000; }
+
+.container-banner-title-jobs {
+  width: 100vw;
+  height: 90vh;
+  background: blue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 4rem;
+  font-weight: 700;
+  color: #ffffff; }
+  .container-banner-title-jobs h1 {
+    border: 2px solid #000; }
+
+.container-briefcase {
+  width: 100vw;
+  height: auto;
+  background: red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 4rem;
+  font-weight: 700;
+  color: #ffffff;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+  .container-briefcase h1 {
+    border: 2px solid #000; }
+  .container-briefcase .container-grid {
+    width: 100vw;
+    height: 1600px; }
+    .container-briefcase .container-grid .grid {
+      display: -ms-grid;
+      display: grid;
+      -ms-grid-columns: (calc(90% / 5))[5];
+      grid-template-columns: repeat(5, calc(90% / 5));
+      -ms-grid-rows: (calc(100% / 2))[2];
+      grid-template-rows: repeat(2, calc(100% / 2));
+      grid-gap: 1%;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      width: 100%;
+      height: 30%; }
+      .container-briefcase .container-grid .grid .item {
+        color: #000;
+        padding: 10px;
+        background: #000000;
+        color: #ffffff;
+        font-size: 2rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center; }
+        .container-briefcase .container-grid .grid .item:nth-child(2n + 1) {
+          background: #F9FF00;
+          color: #000000; }
+
+.container-customers {
+  width: 100vw;
+  height: 90vh;
+  background: gray;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 4rem;
+  font-weight: 700;
+  color: #ffffff; }
+  .container-customers h1 {
+    border: 2px solid #000; }
+
+.container-contact-us {
+  width: 100vw;
+  height: 90vh;
+  background: brown;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 4rem;
+  font-weight: 700;
+  color: #ffffff; }
+  .container-contact-us h1 {
+    border: 2px solid #000; }
