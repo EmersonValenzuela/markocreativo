@@ -22,8 +22,59 @@
 					</ul>
 				</nav>
 			</header>
+
 			<div class="container-slider">
-				<h1>Slider</h1>
+				
+				<div id="slideshow">
+				    <div class="control">
+				        <button id="previous">&lt;</button>
+				        <button id="next">&gt;</button>
+				    </div>
+				    <!-- IMAGES SLIDERS -->
+				    <ul id="slides">
+
+				        <li class="slideActive item-img-slider img-slider-1">
+				        	<div>
+				    			<h1 class="text-slider">
+				    				ONE SLIDER
+				    				HELLO WORD!
+				    			</h1>
+				    		</div>
+				    	</li>
+				        <li class="item-img-slider img-slider-2">
+				        	<div>
+				    			<h1 class="text-slider">
+				    				TWO SLIDER
+				    				HELLO WORD!
+				    			</h1>
+				    		</div>
+				        </li>
+				        <li class="item-img-slider img-slider-3">
+				        	<div>
+				    			<h1 class="text-slider">
+				    				TRHEE SLIDER
+				    				HELLO WORD!
+				    			</h1>
+				    		</div>
+				        </li>
+
+				    </ul>
+				    <!-- PAGINATION -->
+				    <div class="pager">
+				        <ul>
+				            <li id="first">1</li>
+				            <li id="second">2</li>
+				            <li id="third">3</li>
+				        </ul>
+				    </div>
+				    <!-- PROGRESS -->
+				    <div class="progressbar">
+				        <div class="full">
+				            <div class="progress"></div>
+				        </div>
+				    </div>
+				</div>
+
 			</div>
 	</section>
 
@@ -65,5 +116,7 @@
 		<h1>contact-us</h1>
 	</section>
 
+
+<script src="js/carousel-landing.js"></script>
 </body>
 </html>
