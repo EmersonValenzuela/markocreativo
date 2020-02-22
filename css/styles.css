@@ -241,7 +241,7 @@ body {
 
 .container-about-us {
   width: 100vw;
-  height: 70vh; }
+  height: 35rem; }
   .container-about-us .content-about {
     display: -ms-grid;
     display: grid;
@@ -317,41 +317,156 @@ body {
 
 .container-services {
   width: 100vw;
-  height: 90vh;
-  background: purple;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 4rem;
-  font-weight: 700;
-  color: #ffffff; }
-  .container-services h1 {
-    border: 2px solid #000; }
+  height: 38rem; }
+  .container-services .content-services {
+    width: 100%;
+    height: 100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 25% 50% 25%;
+    grid-template-columns: 25% 50% 25%;
+    position: relative; }
+    .container-services .content-services .content-img {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
+      .container-services .content-services .content-img img {
+        width: auto;
+        height: 500px; }
+    .container-services .content-services .content-items-services {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .container-services .content-services .content-items-services .content-card-items {
+        width: 90%;
+        height: 80%;
+        max-width: 600px;
+        background: orange;
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: (50%)[2];
+        grid-template-columns: repeat(2, 50%);
+        -ms-grid-rows: (50%)[2];
+        grid-template-rows: repeat(2, 50%);
+        background: #ffffff; }
+        @media screen and (max-width: 768px) {
+          .container-services .content-services .content-items-services .content-card-items {
+            width: 90%;
+            height: 80%; } }
+        .container-services .content-services .content-items-services .content-card-items .item-service {
+          display: -ms-grid;
+          display: grid;
+          -ms-grid-rows: 20% 10% 70%;
+          grid-template-rows: 20% 10% 70%;
+          padding: 1rem 1rem 1rem 2rem; }
+          .container-services .content-services .content-items-services .content-card-items .item-service .icon-service {
+            font-size: 1.5rem;
+            text-align: left; }
+          .container-services .content-services .content-items-services .content-card-items .item-service .title-service {
+            font-size: .8rem;
+            text-align: left; }
+          .container-services .content-services .content-items-services .content-card-items .item-service .description-service {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center; }
+            .container-services .content-services .content-items-services .content-card-items .item-service .description-service .list-service {
+              list-style: none;
+              margin: 0;
+              padding: 0;
+              font-size: .8rem; }
+    .container-services .content-services .content-title-service {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
+      .container-services .content-services .content-title-service .item-title {
+        width: auto;
+        height: auto;
+        font-size: 5rem;
+        line-height: 70px; }
+    .container-services .content-services .background-absolute {
+      position: absolute;
+      background: #F9FF00;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -10;
+      -webkit-clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 4% 100%);
+      clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 4% 100%); }
 
 .container-banner-title-jobs {
   width: 100vw;
-  height: 90vh;
-  background: blue;
+  height: 35rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  font-size: 4rem;
-  font-weight: 700;
-  color: #ffffff; }
-  .container-banner-title-jobs h1 {
-    border: 2px solid #000; }
+  position: relative; }
+  .container-banner-title-jobs .container-text-title {
+    width: 100%;
+    height: auto;
+    padding: 2rem 0;
+    background: #000000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .container-banner-title-jobs .container-text-title .content-titles {
+      width: 70%;
+      height: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
+      .container-banner-title-jobs .container-text-title .content-titles .item-about-us {
+        color: #F9FF00;
+        font-size: 3rem;
+        font-weight: 900; }
+      .container-banner-title-jobs .container-text-title .content-titles .item-text-jobs {
+        color: #ffffff;
+        font-size: 11rem;
+        font-weight: 900; }
+  .container-banner-title-jobs .img-girl {
+    width: auto;
+    height: 590px;
+    position: absolute;
+    bottom: 0;
+    right: 20%;
+    z-index: 500; }
 
 .container-briefcase {
   width: 100vw;
