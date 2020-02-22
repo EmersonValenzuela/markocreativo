@@ -472,58 +472,215 @@ body {
   width: 100vw;
   height: auto;
   background: brown;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 4rem;
-  font-weight: 700;
-  color: #ffffff;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column; }
-  .container-briefcase h1 {
-    border: 2px solid #000; }
-  .container-briefcase .container-grid {
-    width: 100vw;
-    height: 1600px; }
-    .container-briefcase .container-grid .grid {
+  /* Media queries for other screen widths */
+  /************ Hover effect styles *************/
+  /* Anchor will cover the whole item by default */
+  /* For some effects it will show as a button */ }
+  .container-briefcase .grid-container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto; }
+  .container-briefcase .cols {
+    margin: 0 auto;
+    max-width: 1000px; }
+  .container-briefcase .col {
+    width: 25%;
+    height: 250px;
+    float: left;
+    margin: 0; }
+  .container-briefcase .col img {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+    opacity: 0.8; }
+  .container-briefcase .col h2 {
+    font-weight: 900;
+    color: #fff;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.8); }
+  .container-briefcase .grid-1 {
+    width: 50%; }
+  .container-briefcase .grid-3 {
+    float: right;
+    height: 500px; }
+  .container-briefcase .grid-5 {
+    display: table; }
+  .container-briefcase .grid-5 > * {
+    display: table-cell; }
+  .container-briefcase .grid-5 > .text-container {
+    text-align: center;
+    vertical-align: middle;
+    width: 50%; }
+  .container-briefcase .grid-5 img {
+    -o-object-position: right;
+    object-position: right; }
+  .container-briefcase .grid-7 {
+    width: 50%; }
+  @supports ((display: -ms-grid) or (display: grid)) or (display: -ms-grid) {
+    .container-briefcase .grid-area {
       display: -ms-grid;
       display: grid;
-      -ms-grid-columns: (calc(90% / 5))[5];
-      grid-template-columns: repeat(5, calc(90% / 5));
-      -ms-grid-rows: (calc(100% / 2))[2];
-      grid-template-rows: repeat(2, calc(100% / 2));
-      grid-gap: 1%;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      grid-auto-rows: 250px;
       -webkit-box-pack: center;
       -ms-flex-pack: center;
-      justify-content: center;
+      justify-content: center; }
+    .container-briefcase .col {
       width: 100%;
-      height: 30%; }
-      .container-briefcase .container-grid .grid .item {
-        color: #000;
-        padding: 10px;
-        background: #000000;
-        color: #ffffff;
-        font-size: 2rem;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center; }
-        .container-briefcase .container-grid .grid .item:nth-child(2n + 1) {
-          background: #F9FF00;
-          color: #000000; }
+      height: 100%;
+      float: none; }
+    .container-briefcase .grid-1 {
+      -ms-grid-column-span: 2;
+      grid-column-end: span 2; }
+    .container-briefcase .grid-3 {
+      -ms-grid-row-span: 2;
+      grid-row-end: span 2; }
+    .container-briefcase .grid-5 {
+      -ms-grid-column-span: 2;
+      grid-column-end: span 2; }
+    .container-briefcase .grid-6 {
+      -ms-grid-row-span: 2;
+      grid-row-end: span 2; }
+    .container-briefcase .grid-7 {
+      -ms-grid-column-span: 3;
+      grid-column-end: span 3; } }
+  @media screen and (max-width: 450px) {
+    .container-briefcase .col {
+      -ms-grid-row-span: unset;
+      grid-row-end: unset;
+      -ms-grid-column-span: unset;
+      grid-column-end: unset;
+      height: 250px; }
+    .container-briefcase .grid-area {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+    .container-briefcase .grid-3 {
+      -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+      order: -1;
+      height: 500px; } }
+  @media screen and (max-width: 768px) {
+    .container-briefcase .grid-2 {
+      display: none; } }
+  .container-briefcase figure {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer; }
+  .container-briefcase figure figcaption {
+    color: #fff;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; }
+  .container-briefcase figure figcaption::before,
+  .container-briefcase figure figcaption::after {
+    pointer-events: none; }
+  .container-briefcase figure figcaption,
+  .container-briefcase figure figcaption > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+  .container-briefcase figure figcaption > a {
+    z-index: 1000;
+    text-indent: 200%;
+    white-space: nowrap;
+    font-size: 0;
+    opacity: 0; }
+  .container-briefcase figure h2 {
+    word-spacing: -0.15em;
+    font-weight: 300; }
+  .container-briefcase figure h2 span {
+    font-weight: 800; }
+  .container-briefcase figure h2,
+  .container-briefcase figure p {
+    margin: 0; }
+  .container-briefcase figure button.rww_grid_button {
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    margin: 0 auto;
+    padding: 0.5rem;
+    font-weight: bold;
+    font-size: smaller;
+    color: #fff;
+    text-transform: uppercase;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s; }
+  .container-briefcase figure p {
+    letter-spacing: 1px;
+    font-size: smaller; }
+  .container-briefcase figure figcaption::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(72, 76, 97, 0)), color-stop(75%, rgba(72, 76, 97, 0.8)));
+    background: -webkit-linear-gradient(top, rgba(72, 76, 97, 0) 0%, rgba(72, 76, 97, 0.8) 75%);
+    background: -o-linear-gradient(top, rgba(72, 76, 97, 0) 0%, rgba(72, 76, 97, 0.8) 75%);
+    background: linear-gradient(to bottom, rgba(72, 76, 97, 0) 0%, rgba(72, 76, 97, 0.8) 75%);
+    content: "";
+    opacity: 0;
+    -webkit-transform: translate3d(0, 50%, 0);
+    transform: translate3d(0, 50%, 0); }
+  .container-briefcase figure h2 {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    color: #484c61;
+    -webkit-transition: all 0.35s;
+    -o-transition: all 0.35s;
+    transition: all 0.35s;
+    -webkit-transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -50%, 0); }
+  .container-briefcase figure figcaption::before,
+  .container-briefcase figure p,
+  .container-briefcase figure .grid-button-wrapper {
+    -webkit-transition: all 0.35s;
+    -o-transition: all 0.35s;
+    transition: all 0.35s; }
+  .container-briefcase figure .grid-button-wrapper {
+    position: absolute;
+    bottom: 35%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    opacity: 0;
+    -webkit-transform: translate3d(0, 20px, 0);
+    transform: translate3d(0, 20px, 0); }
+  .container-briefcase figure p {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    padding-bottom: 3rem;
+    width: 100%;
+    opacity: 0;
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0); }
+  .container-briefcase figure:hover h2 {
+    background: none;
+    color: #fff;
+    -webkit-transform: translate3d(0, -50%, 0) translate3d(0, -40px, 0);
+    transform: translate3d(0, -50%, 0) translate3d(0, -40px, 0); }
+  .container-briefcase figure:hover figcaption::before,
+  .container-briefcase figure:hover p,
+  .container-briefcase figure:hover .grid-button-wrapper {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
 
 .container-customers {
   width: 100vw;
