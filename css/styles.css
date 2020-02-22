@@ -178,7 +178,6 @@ body {
             color: white;
             font-weight: 900;
             background: rgba(0, 0, 0, 0.5);
-            text-align: left;
             margin: 0; }
             @media screen and (max-width: 600px) {
               .container-initial .container-slider #slides .img-slider-3 div .text-slider {
@@ -242,22 +241,79 @@ body {
 
 .container-about-us {
   width: 100vw;
-  height: 90vh;
-  background: green;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 4rem;
-  font-weight: 700;
-  color: #ffffff; }
-  .container-about-us h1 {
-    border: 2px solid #000; }
+  height: 70vh; }
+  .container-about-us .content-about {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 20% 45% 35%;
+    grid-template-columns: 20% 45% 35%;
+    width: 100%;
+    height: 100%; }
+    .container-about-us .content-about .content-title {
+      position: relative;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      background: -webkit-gradient(linear, left top, right top, color-stop(20%, #F9FF00), color-stop(20%, transparent));
+      background: -webkit-linear-gradient(left, #F9FF00 20%, transparent 20%);
+      background: -o-linear-gradient(left, #F9FF00 20%, transparent 20%);
+      background: linear-gradient(90deg, #F9FF00 20%, transparent 20%); }
+      .container-about-us .content-about .content-title .title-reverse {
+        position: absolute;
+        -webkit-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+        font-size: 6rem; }
+    .container-about-us .content-about .content-description {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .container-about-us .content-about .content-description .description {
+        width: 100%;
+        height: 70%;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        padding: 0 5rem 0 0; }
+        .container-about-us .content-about .content-description .description p {
+          font-size: 1.2rem;
+          text-align: justify; }
+    .container-about-us .content-about .content-image {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: end;
+      -ms-flex-align: end;
+      align-items: flex-end;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      background: -webkit-gradient(linear, left top, right top, color-stop(70%, #F9FF00), color-stop(70%, transparent));
+      background: -webkit-linear-gradient(left, #F9FF00 70%, transparent 70%);
+      background: -o-linear-gradient(left, #F9FF00 70%, transparent 70%);
+      background: linear-gradient(90deg, #F9FF00 70%, transparent 70%); }
+      .container-about-us .content-about .content-image img {
+        width: auto;
+        height: 520px; }
 
 .container-services {
   width: 100vw;
