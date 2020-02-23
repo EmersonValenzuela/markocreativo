@@ -727,14 +727,141 @@ body{
 
 .container-customers{
 	width: 100vw;
-	height: 90vh;
-	background: gray;
-	@include tempStyleContainer;
+	height: 35rem;
+	background: black;
+	
+	.content-customers{
+		width: 100%;
+		height: 100%;
+		display: grid;
+		grid-template-columns: 70% 30%;
+		overflow: hidden;
+
+		.content-items-customers{
+		display: grid;
+		grid-template-rows: 25% 75%;
+			.item-title-customers{
+				color:setColor(yellow);
+				display: flex;
+			    flex-direction: column;
+			    justify-content: flex-end;
+			    padding-left: 4rem;
+				div:first-child{
+					font-size: 2rem;
+					font-weight: 200;
+				}
+				div:last-child{
+					font-size: 4rem;
+				}
+			}
+
+			.content-logos-customers{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				.items-logos{
+					width: 90%;
+					height: 90%;
+					display: grid;
+					grid-template-columns: repeat(5,20%);
+		    		grid-auto-rows: auto;
+
+					.item-logo{
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						img{
+							width: auto;
+							height: 40px;
+						}
+					}
+				}
+
+			}
+		}
+
+		.content-img-customer{
+			display: flex;
+			align-items: flex-end;
+			img{
+				width: auto;
+				height: 530px;
+			}
+		}
+
+	}
+
 }
 
 .container-contact-us{
 	width: 100vw;
-	height: 90vh;
-	background: brown;
-	@include tempStyleContainer;
+	height: 38rem;
+	
+	.content-items-contact{
+		width: 100%;
+		height: 100%;
+		display: grid;
+		grid-template-columns: 38% 62%;
+		position: relative;
+		.background-black{
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 200;
+			background: setColor(black);
+			clip-path: polygon(37% 0%, 100% 0%, 100% 100%, 21% 100%);
+		}
+		.content-img{
+			display: flex;
+			align-items: flex-end;
+			justify-content: flex-end;
+			z-index: 400;
+			img{
+				width: auto;
+				height: 580px;
+			}
+		}
+		.content-form{
+			display: grid;
+			grid-template-rows: 85% 15%;
+			z-index: 400;
+			width: 100%;
+			height: 100%;
+			.item-form{
+
+			}
+			.item-footer-redes{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				.item-contact{
+					display: flex;
+					align-items: center;
+					.icon{
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						width: 30px;
+						height: 30px;
+						border-radius:50%;
+						background: setColor(yellow);
+						color: setColor(black);
+						padding: 5px;
+						margin:0 1.2rem;
+					}
+					span{
+						font-weight: 500;
+						font-size: 1.2rem;
+						color:setColor(yellow);
+					}
+				}
+			}
+		}
+	}
 }
+
+
+
+
