@@ -1,21 +1,7 @@
-@import "./breakpoints";
-
 body{
 	margin:0;
 	padding: 0;
 	box-sizing: border-box;
-}
-
-@mixin tempStyleContainer{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 4rem;
-	font-weight: 700;
-	color: setColor(white);
-	h1{
-		border: 2px solid #000;
-	}
 }
 
 .container-initial{
@@ -27,12 +13,29 @@ body{
 		width: 100%;
 		height: 13vh;
 		background: setColor(black);
-		display: flex;
-		justify-content: center;
+		display: grid;
+		grid-template-columns: none;
 		align-items: center;
-		h1{
-			color:setColor(white);	
-			font-size:2rem;
+		@include mediaQuery(tablet){
+			grid-template-columns: 20% 60% 20%;
+		}
+		.icon-menu-mb{
+			@include flexCenter();
+			font-size: 1.5rem;
+			i{
+				color: setColor(white);
+			}
+			display: none;
+			@include mediaQuery(tablet){
+				display: inherit;
+			}
+		}
+		.item-logo{
+			@include flexCenter();
+			h1{
+				color:setColor(white);	
+				font-size:2rem;
+			}
 		}
 	}
 
@@ -40,6 +43,9 @@ body{
 		width: 100%;
 		height: 6vh;
 		background: setColor(yellow);
+		@include mediaQuery(tablet){
+			display: none;
+		}
 		.menu{
 			display: flex;
 			justify-content: center;
@@ -130,7 +136,7 @@ body{
 								margin: 0;
 								@include mediaQuery(tablet){
 									width: 85%;
-									font-size: 11vh;
+									font-size: 7vh;
 								}
 							}
 						}
@@ -159,7 +165,7 @@ body{
 								margin: 0;
 								@include mediaQuery(tablet){
 									width: 85%;
-									font-size: 11vh;
+									font-size: 7vh;
 								}
 							}
 						}
@@ -187,7 +193,7 @@ body{
 								margin: 0;
 								@include mediaQuery(tablet){
 									width: 85%;
-									font-size: 11vh;
+									font-size: 7vh;
 								}
 							}
 						}
@@ -267,21 +273,38 @@ body{
 .container-about-us{
 	width: 100vw;
 	height: 35rem;
+	@include mediaQuery(tablet){
+		height: auto;
+	}
 	.content-about{
 		display: grid;
 		grid-template-columns: 20% 45% 35%;
 		width: 100%;
     	height: 100%;
+    	@include mediaQuery(tablet){
+			grid-template-columns: none;
+			grid-template-rows: repeat(3, auto);
+    	}
 		.content-title{
 			position: relative;
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			background: linear-gradient(90deg, setColor(yellow) 20%, transparent 20%);
+			@include mediaQuery(tablet){
+				background: none;
+			}
 			.title-reverse{
 				position: absolute;
 				transform: rotate(-90deg);
 				font-size:6rem;
+				@include mediaQuery(tablet){
+					transform: none;
+					font-size: 3rem;
+					position: relative;
+					text-align: center;
+					padding: 1.5rem 0;
+				}
 			}
 		}
 		.content-description{
@@ -298,6 +321,9 @@ body{
 				p{
 				font-size:1.2rem;
 				text-align: justify;
+				}
+				@include mediaQuery(tablet){
+					padding: .5rem 1rem;
 				}
 			}
 		}
@@ -324,15 +350,35 @@ body{
 		display: grid;
 		grid-template-columns: 25% 50% 25%;
 		position: relative;
-
+		@include mediaQuery(tablet){
+			grid-template-columns: none;
+			grid-template-rows: repeat(3, auto);
+		}
 		.content-img{
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			@include mediaQuery(tablet){
+				justify-content: flex-start;
+			}
 			img{
 				width: auto;
 				height: 500px;
 			}
+				.item-title{
+					display: inherit;
+					width: auto;
+					height: auto;
+					font-size:4rem;
+					line-height: 70px;
+					display: none;
+					@include mediaQuery(tablet){
+					display: inherit;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					}
+				}
 		}
 		.content-items-services{
 			display: flex;
@@ -355,6 +401,9 @@ body{
 					display: grid;
 					grid-template-rows: 20% 10% 70%;
 					padding: 1rem 1rem 1rem 2rem;
+					@include mediaQuery(tablet){
+						    grid-template-rows: repeat(3,auto);
+					}
 					.icon-service{
 						font-size: 1.5rem;
 						text-align: left;
@@ -362,6 +411,9 @@ body{
 					.title-service{
 						font-size: .8rem;
 						text-align: left;
+						@include mediaQuery(tablet){
+						 	padding: .5rem 0;
+						}
 					}
 					.description-service{
 						display: flex;
@@ -385,6 +437,9 @@ body{
 				height: auto;
 				font-size:5rem;
 				line-height: 70px;
+			}
+			@include mediaQuery(tablet){
+				display: none;
 			}
 		}
 	
