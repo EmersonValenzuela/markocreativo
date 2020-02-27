@@ -2,14 +2,21 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>MarkoCreativo</title>
 	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
 	<section class="container-initial">
 			<div class="container-logo">
-				<h1>LOGO</h1>
+				<div class="icon-menu-mb">
+					<i class="fa fa-bars"></i>
+				</div>
+				<div class="item-logo">
+					<h1>LOGO</h1>
+				</div>
 			</div>
 			<header class="container-nabvar">
 				<nav class="menu">
@@ -22,48 +29,416 @@
 					</ul>
 				</nav>
 			</header>
+
 			<div class="container-slider">
-				<h1>Slider</h1>
+				
+				<div id="slideshow">
+				    <div class="control">
+				        <button id="previous">&lt;</button>
+				        <button id="next">&gt;</button>
+				    </div>
+				    <!-- IMAGES SLIDERS -->
+				    <ul id="slides">
+
+				        <li class="slideActive item-img-slider img-slider-1">
+				        	<div>
+				    			<h1 class="text-slider">
+				    				ONE SLIDER
+				    				HELLO WORD!
+				    			</h1>
+				    		</div>
+				    	</li>
+				        <li class="item-img-slider img-slider-2">
+				        	<div>
+				    			<h1 class="text-slider">
+				    				TWO SLIDER
+				    				HELLO WORD!
+				    			</h1>
+				    		</div>
+				        </li>
+				        <li class="item-img-slider img-slider-3">
+				        	<div>
+				    			<h1 class="text-slider">
+				    				TRHEE SLIDER
+				    				HELLO WORD!
+				    			</h1>
+				    		</div>
+				        </li>
+
+				    </ul>
+				    <!-- PAGINATION -->
+				    <div class="pager">
+				        <ul>
+				            <li id="first">1</li>
+				            <li id="second">2</li>
+				            <li id="third">3</li>
+				        </ul>
+				    </div>
+				    <!-- PROGRESS -->
+				    <div class="progressbar">
+				        <div class="full">
+				            <div class="progress"></div>
+				        </div>
+				    </div>
+				</div>
+
 			</div>
 	</section>
 
+
 	<section class="container-about-us">
-		<h1>About-us</h1>
-	</section>
+		<div class="content-about">
+			<div class="content-title">
+				<div class="title-reverse">Nosotros</div>
+			</div>
+			<div class="content-description">
+				<div class="description">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing 
+					elit. Nisi veritatis corporis hic placeat commodi exercitationem temporibus earum blanditiis voluptate necessitatibus adipisci, illum sit iste quo, magnam, amet non dolores animi. </p>
+					
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. sit iste quo, magnam, amet non dolores animi. </p>
 
-	<section class="container-services">
-		<h1>Services</h1>
-	</section>
+					<p>Lationem temporibus earum blanditiis voluptate necessitatibus adipisci, illum sit iste quo, magnam, amet non dolores animi. </p>
 
-	<section class="container-banner-title-jobs">
-		<h1>Banner title jobs</h1>
-	</section>
-
-	<section class="container-briefcase">
-		<h1>Briefcase</h1>
-		<div class="container-grid">
-			<div class="grid">
-				<div class="item">1</div>
-				<div class="item">2</div>
-				<div class="item">3</div>
-				<div class="item">4</div>
-				<div class="item">5</div>
-				<div class="item">6</div>
-				<div class="item">7</div>
-				<div class="item">8</div>
-				<div class="item">9</div>
-				<div class="item">10</div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing 
+					elit. Nisi veritatis corporis hic placeat commodi exercitationem temporibus earum blanditiis voluptate necessitatibus adipisci, illum sit iste quo, magnam, amet non dolores animi. </p>
+				</div>
+			</div>
+			<div class="content-image">
+				<img src="./images/sections/about-us/img-man-gray.png" alt="About Us">
 			</div>
 		</div>
 	</section>
 
+
+	<section class="container-services">
+		<div class="content-services">
+			<div class="background-absolute"></div>
+			<div class="content-img">
+					<img src="./images/sections/services/toy-black.png" alt="Servicios Us">
+					<div class="item-title">
+						<div>SER</div>
+						<div>VICI</div>
+						<div>OS</div>
+					</div>
+			</div>
+			<div class="content-items-services">
+				<div class="content-card-items">
+					<div class="item-service">
+						<div class="icon-service">
+							<i class="fa fa-pencil"></i>	
+						</div>
+						<div class="title-service">
+							<span>IDENTIDAD Y BRANDING</span>
+						</div>
+						<div class="description-service">
+							<ul class="list-service">
+								<li>- Identidad corporativa.</li>
+								<li>- Creación de marca.</li>
+								<li>- Publicidad interna, externa.</li>
+								<li>- Diseño de empaques.</li>
+								<li>- Brochure.</li>
+								<li>- Manualidades.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="item-service">
+						<div class="icon-service">
+							<i class="fa fa-pencil"></i>	
+						</div>
+						<div class="title-service">
+							<span>IDENTIDAD Y BRANDING</span>
+						</div>
+						<div class="description-service">
+							<ul class="list-service">
+								<li>- Identidad corporativa.</li>
+								<li>- Creación de marca.</li>
+								<li>- Publicidad interna, externa.</li>
+								<li>- Diseño de empaques.</li>
+								<li>- Brochure.</li>
+								<li>- Manualidades.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="item-service">
+						<div class="icon-service">
+							<i class="fa fa-pencil"></i>	
+						</div>
+						<div class="title-service">
+							<span>IDENTIDAD Y BRANDING</span>
+						</div>
+						<div class="description-service">
+							<ul class="list-service">
+								<li>- Identidad corporativa.</li>
+								<li>- Creación de marca.</li>
+								<li>- Publicidad interna, externa.</li>
+								<li>- Diseño de empaques.</li>
+								<li>- Brochure.</li>
+								<li>- Manualidades.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="item-service">
+						<div class="icon-service">
+							<i class="fa fa-pencil"></i>	
+						</div>
+						<div class="title-service">
+							<span>IDENTIDAD Y BRANDING</span>
+						</div>
+						<div class="description-service">
+							<ul class="list-service">
+								<li>- Identidad corporativa.</li>
+								<li>- Creación de marca.</li>
+								<li>- Publicidad interna, externa.</li>
+								<li>- Diseño de empaques.</li>
+								<li>- Brochure.</li>
+								<li>- Manualidades.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content-title-service">
+				<div class="item-title">
+					<div>SER</div>
+					<div>VICI</div>
+					<div>OS</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="container-banner-title-jobs">
+			<div class="container-text-title">
+				<div class="content-titles">
+					<div class="item-about-us">
+						NUESTROS
+					</div>
+					<div class="item-text-jobs">
+						TRABAJOS
+					</div>
+				</div>
+			</div>
+			<img class="img-girl" src="./images/sections/title-jobs/img-girl-for-title-job.png" alt="Nuestro Trabajos">
+	</section>
+
+	<section class="container-briefcase">
+		
+		<section class="grid-container">
+		  <div class="cols grid-area">
+
+		    <figure class="col grid-1">
+		      <img src="https://placeimg.com/640/640/animals" alt="">
+		      <figcaption>
+		        
+		        <div class="grid-button-wrapper">
+		          <button class="rww_grid_button">More Info</button>
+		        </div>
+		        <p>Filler sentance goes here.</p>
+		        <a href="#">View More</a>
+		      </figcaption>
+		    </figure>
+
+
+			<figure class="col grid-2">
+		      <img src="https://placeimg.com/640/640/arch" alt="">
+		      <figcaption>
+		        
+		        <div class="grid-button-wrapper">
+		          <button class="rww_grid_button">More Info</button>
+		        </div>
+		        <p>Filler sentance lorem</p>
+		        <a href="#">View More</a>
+		      </figcaption>
+		    </figure>
+
+		    <figure class="col grid-3">
+		      <img src="https://placeimg.com/640/640/arch" alt="">
+		      <figcaption>
+		        
+		        <div class="grid-button-wrapper">
+		          <button class="rww_grid_button">More Info</button>
+		        </div>
+		        <p>Filler sentance goes here. It's longer to demonstrate how the text wrapping works.</p>
+		        <a href="#">View More</a>
+		      </figcaption>
+		    </figure>
+
+		    <figure class="col grid-4">
+		      <img src="https://placeimg.com/640/640/nature" alt="">
+		      <figcaption>
+		        
+		        <div class="grid-button-wrapper">
+		          <button class="rww_grid_button">More Info</button>
+		        </div>
+		        <p>Filler sentance goes here works.</p>
+		        <a href="#">View More</a>
+		      </figcaption>
+		    </figure>
+
+		     <figure class="col grid-5">
+		      <img src="https://placeimg.com/640/640/arch" alt="">
+		      <figcaption>
+		        
+		        <div class="grid-button-wrapper">
+		          <button class="rww_grid_button">More Info</button>
+		        </div>
+		        <p>Filler sentance goes here works.</p>
+		        <a href="#">View More</a>
+		      </figcaption>
+		    </figure>
+
+		     <figure class="col grid-6">
+		      <img src="https://placeimg.com/640/640/grayscale" alt="">
+		      <figcaption>
+		        
+		        <div class="grid-button-wrapper">
+		          <button class="rww_grid_button">More Info</button>
+		        </div>
+		        <p>Filler sentance goes here works.</p>
+		        <a href="#">View More</a>
+		      </figcaption>
+		    </figure>
+
+
+			<figure class="col grid-7">
+		      <img src="https://placeimg.com/640/640/sepia" alt="">
+		      <figcaption>
+		        
+		        <div class="grid-button-wrapper">
+		          <button class="rww_grid_button">More Info</button>
+		        </div>
+		        <p>Filler sentance goes here works.</p>
+		        <a href="#">View More</a>
+		      </figcaption>
+		    </figure>
+
+		    <figure class="col grid-8">
+		      <img src="https://placeimg.com/640/640/any" alt="">
+		      <figcaption>
+		        
+		        <div class="grid-button-wrapper">
+		          <button class="rww_grid_button">More Info</button>
+		        </div>
+		        <p>Filler sentance goes here works.</p>
+		        <a href="#">View More</a>
+		      </figcaption>
+		    </figure>
+
+		    <figure class="col grid-9">
+		      <img src="https://placeimg.com/640/640/grayscale" alt="">
+		      <figcaption>
+		        
+		        <div class="grid-button-wrapper">
+		          <button class="rww_grid_button">More Info</button>
+		        </div>
+		        <p>Filler sentance goes here works.</p>
+		        <a href="#">View More</a>
+		      </figcaption>
+		    </figure>
+
+		    <figure class="col grid-10">
+		      <img src="https://placeimg.com/640/640/any" alt="">
+		      <figcaption>
+		        
+		        <div class="grid-button-wrapper">
+		          <button class="rww_grid_button">More Info</button>
+		        </div>
+		        <p>Filler sentance goes here works.</p>
+		        <a href="#">View More</a>
+		      </figcaption>
+		    </figure>
+
+		  </div>
+		</section>
+
+	</section>
+
 	<section class="container-customers">
-		<h1>customers</h1>
+			<div class="content-customers">
+				<div class="content-items-customers">
+					<div class="item-title-customers">
+						<div>ELLOS CONFÍAN EN</div>
+						<div>NOSOTROS</div>
+					</div>
+					<div class="content-logos-customers">
+						<div class="items-logos">
+							
+							<div class="item-logo">
+								<img src="https://www.servitecperu.com/logotipo-soft.png" alt="">
+							</div>
+
+							<div class="item-logo">
+								<img src="https://www.servitecperu.com/logotipo-soft.png" alt="">
+							</div>
+
+							<div class="item-logo">
+								<img src="https://www.servitecperu.com/logotipo-soft.png" alt="">
+							</div>
+
+							<div class="item-logo">
+								<img src="https://www.servitecperu.com/logotipo-soft.png" alt="">
+							</div>
+
+
+							<div class="item-logo">
+								<img src="https://www.servitecperu.com/logotipo-soft.png" alt="">
+							</div>
+
+							<div class="item-logo">
+								<img src="https://www.servitecperu.com/logotipo-soft.png" alt="">
+							</div>
+
+							<div class="item-logo">
+								<img src="https://www.servitecperu.com/logotipo-soft.png" alt="">
+							</div>
+
+							<div class="item-logo">
+								<img src="https://www.servitecperu.com/logotipo-soft.png" alt="">
+							</div>
+
+							<div class="item-logo">
+								<img src="https://www.servitecperu.com/logotipo-soft.png" alt="">
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<div class="content-img-customer">
+						<img src="./images/sections/customers/img-customer.png" alt="Nuestro clientes">
+				</div>
+			</div>
 	</section>
 
 	<section class="container-contact-us">
-		<h1>contact-us</h1>
+		<div class="content-items-contact">
+			<div class="background-black"></div>
+			<div class="content-img">
+				<img src="./images/sections/contact/img-monkey-in-contact.png" alt="Contactanos">
+			</div>
+			<div class="content-form">
+				<div class="item-form">
+					
+				</div>
+				<div class="item-footer-redes">
+					<div class="item-contact">
+						<div class="icon">
+							T
+						</div>
+						<span>987 523 496</span>
+					</div>
+					<div class="item-contact">
+						<div class="icon">
+							E
+						</div>
+						<span>markocreativo@gmail.com</span>
+					</div>
+				</div>
+			</div>	
+		</div>
 	</section>
 
+
+<script src="js/carousel-landing.js"></script>
 </body>
 </html>
