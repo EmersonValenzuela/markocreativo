@@ -390,9 +390,12 @@ body{
 				max-width: 600px;
 				background: orange;
 				display: grid;
-			    grid-template-columns: repeat(2,50%);
 			    grid-template-rows: repeat(2,50%);
 			    background: setColor(white);
+			    grid-template-columns: repeat(2,50%);
+			    @include mediaQuery(tablet){
+					display: block;
+			    }
 			    @include mediaQuery(desktop){
 					width: 90%;
 					height: 80%;
