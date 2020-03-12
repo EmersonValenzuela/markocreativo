@@ -480,6 +480,7 @@ body{
 	display: flex;
 	align-items: center;
 	position: relative;
+	overflow: hidden;
 	@include mediaQuery(tablet){
 		height: auto;
 		margin-top: 8rem;
@@ -524,7 +525,7 @@ body{
 		width: auto;
 		height: 590px;
 		position: absolute;
-		bottom: 0;
+		bottom: -80px;
 		right: 20%;
 		z-index: 500;
 		@include mediaQuery(tablet){
