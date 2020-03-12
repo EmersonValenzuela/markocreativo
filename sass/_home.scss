@@ -8,6 +8,9 @@ body{
 	width: 100vw;
 	height: auto;
 	background: black;
+	@include mediaQuery(tablet){
+		height: 100vh;
+	}
 
 	.container-logo{
 		width: 100%;
@@ -17,6 +20,7 @@ body{
 		grid-template-columns: none;
 		align-items: center;
 		@include mediaQuery(tablet){
+			height: 15vh;
 			grid-template-columns: 20% 60% 20%;
 		}
 		.icon-menu-mb{
@@ -53,7 +57,6 @@ body{
 			width: 100%;
     		height: 100%;
 			.list{
-				background: green;		
 				list-style: none;
 				width: 50%;
 				display: grid;
@@ -72,10 +75,13 @@ body{
 		min-height: 73vh;
 		height: 75vh;
 		position: relative;
+		@include mediaQuery(tablet){
+			height: 85vh;
+		}
 		
 			#slideshow{
-				line-height: 1;
-				font-family:Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+			 line-height: 1;
+			 font-family:Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
 			  position: relative;
 			  height: 100%;
 			  width: 100%;
@@ -335,6 +341,9 @@ body{
 			img{
 				width: auto;
 				height: 520px;
+				@include mediaQuery(tablet){
+					height: 500px;
+				}
 			}
 		}
 
@@ -344,6 +353,9 @@ body{
 .container-services{
 	width: 100vw;
 	height: 38rem;
+	@include mediaQuery(tablet){
+		height: auto;
+	}
 	.content-services{
 		width: 100%;
 		height: 100%;
@@ -364,6 +376,9 @@ body{
 			img{
 				width: auto;
 				height: 500px;
+				@include mediaQuery(tablet){
+					height: 400px;
+				}
 			}
 				.item-title{
 					display: inherit;
@@ -390,9 +405,12 @@ body{
 				max-width: 600px;
 				background: orange;
 				display: grid;
-			    grid-template-columns: repeat(2,50%);
 			    grid-template-rows: repeat(2,50%);
 			    background: setColor(white);
+			    grid-template-columns: repeat(2,50%);
+			    @include mediaQuery(tablet){
+					display: block;
+			    }
 			    @include mediaQuery(desktop){
 					width: 90%;
 					height: 80%;
@@ -462,13 +480,18 @@ body{
 	display: flex;
 	align-items: center;
 	position: relative;
+	overflow: hidden;
+	@include mediaQuery(tablet){
+		height: auto;
+		margin-top: 8rem;
+	}
 	.container-text-title{
 		width: 100%;
 		height: auto;
 		padding: 2rem 0;
 		background: setColor(black);
 		display: flex;
-		justify-content: center;
+		justify-content: center;		
 		.content-titles{
 			width: 70%;
 			height: 100%;
@@ -476,16 +499,25 @@ body{
 			flex-direction: column;
 			align-items: flex-start;
 			justify-content: center;
+			@include mediaQuery(tablet){
+					width: 90%;
+			}
 		.item-about-us{
 			color: setColor(yellow);
 			font-size: 3rem;
 			font-weight: 900;
+			@include mediaQuery(tablet){
+				font-size: 2rem;
+			}
 		}
 		.item-text-jobs{
 			color: setColor(white);
 			font-size: 11rem;
 			font-weight: 900;
-		}
+				@include mediaQuery(tablet){
+					font-size: 3.5rem;
+				}
+			}
 		}
 	}
 
@@ -493,9 +525,13 @@ body{
 		width: auto;
 		height: 590px;
 		position: absolute;
-		bottom: 0;
+		bottom: -80px;
 		right: 20%;
 		z-index: 500;
+		@include mediaQuery(tablet){
+			height: 320px;
+			right: 3%;
+		}
 	}
 }
 
@@ -784,6 +820,9 @@ body{
 	width: 100vw;
 	height: 35rem;
 	background: black;
+	@include mediaQuery(tablet){
+		height: auto;
+	}
 	
 	.content-customers{
 		width: 100%;
@@ -791,10 +830,16 @@ body{
 		display: grid;
 		grid-template-columns: 70% 30%;
 		overflow: hidden;
-
+		@include mediaQuery(tablet){
+			grid-template-columns: auto;
+			grid-template-rows: auto;
+		}	
 		.content-items-customers{
 		display: grid;
 		grid-template-rows: 25% 75%;
+		@include mediaQuery(tablet){
+			grid-template-rows: auto;
+		}
 			.item-title-customers{
 				color:setColor(yellow);
 				display: flex;
@@ -804,9 +849,18 @@ body{
 				div:first-child{
 					font-size: 2rem;
 					font-weight: 200;
+					@include mediaQuery(tablet){
+						font-size:1rem;
+					}
 				}
 				div:last-child{
 					font-size: 4rem;
+					@include mediaQuery(tablet){
+						font-size: 3rem;
+					}
+				}
+				@include mediaQuery(tablet){
+					padding: 2rem 1rem;
 				}
 			}
 
@@ -814,20 +868,34 @@ body{
 				display: flex;
 				justify-content: center;
 				align-items: center;
+				@include mediaQuery(tablet){
+					padding: 2rem 1rem;
+					overflow-x: scroll;
+						overflow:hidden;
+				}
 				.items-logos{
 					width: 90%;
 					height: 90%;
 					display: grid;
 					grid-template-columns: repeat(5,20%);
 		    		grid-auto-rows: auto;
+		    		@include mediaQuery(tablet){
+						display: flex;
+						width: 300px;
+						overflow-x: scroll; 
+						padding: 1rem 0;
+					}	
 
 					.item-logo{
 						display: flex;
 						justify-content: center;
 						align-items: center;
+						@include mediaQuery(tablet){
+							margin: 5px .7rem;
+						}
 						img{
 							width: auto;
-							height: 40px;
+							height: 30px;
 						}
 					}
 				}
@@ -838,9 +906,15 @@ body{
 		.content-img-customer{
 			display: flex;
 			align-items: flex-end;
+			@include mediaQuery(tablet){
+					justify-content: flex-end;
+			}
 			img{
 				width: auto;
 				height: 530px;
+				@include mediaQuery(tablet){
+					height: 300px;
+				}
 			}
 		}
 
@@ -850,14 +924,20 @@ body{
 
 .container-contact-us{
 	width: 100vw;
-	height: 38rem;
-	
+	height: 40rem;
+	@include mediaQuery(tablet){
+		height: auto;
+	}
 	.content-items-contact{
 		width: 100%;
 		height: 100%;
 		display: grid;
 		grid-template-columns: 38% 62%;
 		position: relative;
+		@include mediaQuery(tablet){
+			grid-template-columns: auto;
+			grid-template-rows:auto;
+		}
 		.background-black{
 			position: absolute;
 			top: 0;
@@ -867,6 +947,9 @@ body{
 			z-index: 200;
 			background: setColor(black);
 			clip-path: polygon(37% 0%, 100% 0%, 100% 100%, 21% 100%);
+			@include mediaQuery(tablet){
+				clip-path: polygon(37% 0%, 100% 0%, 100% 100%, -61% 100%);	
+			}
 		}
 		.content-img{
 			display: flex;
@@ -876,6 +959,9 @@ body{
 			img{
 				width: auto;
 				height: 580px;
+				@include mediaQuery(tablet){
+					height: 360px;
+				}
 			}
 		}
 		.content-form{
@@ -884,13 +970,87 @@ body{
 			z-index: 400;
 			width: 100%;
 			height: 100%;
-			.item-form{
-
+			@include mediaQuery(tablet){
+					grid-template-rows: auto;
 			}
+			.item-form{
+				.title-form{
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					padding: .5rem 0;
+					img{
+						width: auto;
+						height: 120px;
+						@include mediaQuery(tablet){
+							height: 86px;
+						}
+					}
+				}
+				.content-form-contact{
+					.form-contact{
+						width: 70%;
+						margin: auto;
+						@include mediaQuery(tablet){
+							width: 90%;
+						}
+						.item-group-form{
+							width: 100%;
+							padding: 1rem 0;
+							label{
+								color: setColor(white);
+								font-weight: 500;
+								text-align: left;
+							}
+							input, textarea{
+								margin-top: 5px;
+								width: 100%;
+								padding: 7px;
+								@include mediaQuery(tablet){
+									width: 95%;
+								}
+							}
+						}
+						.group-by-flex{
+							display: flex;
+							justify-content: space-between;
+							@include mediaQuery(tablet){
+								flex-direction:column;
+							}
+							.item-group-form{
+								width: 47%;
+								@include mediaQuery(tablet){
+									width: 100%;
+								}
+							}
+						}
+						.item-button-send{
+							width: 100%;
+							display: flex;
+							justify-content: center;
+							.btn-send-message{
+								font-size: .8rem;
+								padding: 10px 3rem;
+								background: setColor(yellow);
+								color: setColor(black);
+								text-transform: uppercase;
+								font-weight: 500;
+								border: none;
+							}
+						}
+					}
+				}
+			}
+
 			.item-footer-redes{
 				display: flex;
 				align-items: center;
 				justify-content: center;
+				@include mediaQuery(tablet){
+					align-items: flex-start;
+					flex-direction:column;
+					padding: 2rem 0;
+				}
 				.item-contact{
 					display: flex;
 					align-items: center;
@@ -904,12 +1064,13 @@ body{
 						background: setColor(yellow);
 						color: setColor(black);
 						padding: 5px;
-						margin:0 1.2rem;
+						margin:.3rem 1.2rem;
 					}
 					span{
 						font-weight: 500;
 						font-size: 1.2rem;
 						color:setColor(yellow);
+
 					}
 				}
 			}
