@@ -137,6 +137,10 @@ body{
 							height: 100%;
 						    justify-content: flex-end;
 						    align-items: center;
+						    @include mediaQuery(tablet){
+						    	align-items: flex-start;
+						    	padding-top: 1rem;
+						    }
 						    .img-slider1{
 						    	position: absolute;
 						    	width: auto;
@@ -183,6 +187,10 @@ body{
 							height: 100%;
 						    justify-content: flex-end;
 						    align-items: center;
+						    @include mediaQuery(tablet){
+						    	align-items: flex-start;
+						    	padding-top: 1rem;
+						    }
 						    .img-slider2{
 						    	position: absolute;
 						    	width: auto;
@@ -230,6 +238,10 @@ body{
 							height: 100%;
 						    justify-content: flex-start;
 						    align-items: center;
+						    @include mediaQuery(tablet){
+						    	align-items: flex-start;
+						    	padding-top: 1rem;
+						    }
 						    .img-slider3{
 						    	position: absolute;
 						    	width: auto;
@@ -958,6 +970,9 @@ body{
 						img{
 							width: auto;
 							height: 30px;
+							@include mediaQuery(tablet){
+								height: 70px;
+							}
 						}
 					}
 				}

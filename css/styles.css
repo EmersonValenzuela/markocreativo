@@ -153,6 +153,12 @@ body {
           -webkit-box-align: center;
           -ms-flex-align: center;
           align-items: center; }
+          @media screen and (max-width: 768px) {
+            .container-initial .container-slider #slides .img-slider-1 div {
+              -webkit-box-align: start;
+              -ms-flex-align: start;
+              align-items: flex-start;
+              padding-top: 1rem; } }
           .container-initial .container-slider #slides .img-slider-1 div .img-slider1 {
             position: absolute;
             width: auto;
@@ -201,6 +207,12 @@ body {
           -webkit-box-align: center;
           -ms-flex-align: center;
           align-items: center; }
+          @media screen and (max-width: 768px) {
+            .container-initial .container-slider #slides .img-slider-2 div {
+              -webkit-box-align: start;
+              -ms-flex-align: start;
+              align-items: flex-start;
+              padding-top: 1rem; } }
           .container-initial .container-slider #slides .img-slider-2 div .img-slider2 {
             position: absolute;
             width: auto;
@@ -250,6 +262,12 @@ body {
           -webkit-box-align: center;
           -ms-flex-align: center;
           align-items: center; }
+          @media screen and (max-width: 768px) {
+            .container-initial .container-slider #slides .img-slider-3 div {
+              -webkit-box-align: start;
+              -ms-flex-align: start;
+              align-items: flex-start;
+              padding-top: 1rem; } }
           .container-initial .container-slider #slides .img-slider-3 div .img-slider3 {
             position: absolute;
             width: auto;
@@ -987,6 +1005,9 @@ body {
             .container-customers .content-customers .content-items-customers .content-logos-customers .items-logos .item-logo img {
               width: auto;
               height: 30px; }
+              @media screen and (max-width: 768px) {
+                .container-customers .content-customers .content-items-customers .content-logos-customers .items-logos .item-logo img {
+                  height: 70px; } }
     .container-customers .content-customers .content-img-customer {
       display: -webkit-box;
       display: -ms-flexbox;
