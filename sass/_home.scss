@@ -120,10 +120,16 @@ body{
 				
 
 				.img-slider-1{
-						background: url("../images/sliders/slider1.jpg");
+						background: url("../images/sliders/bg-slider1-desktop.jpg");
 						background-size: cover;
 						background-position: center center;
 						background-repeat: no-repeat;
+						@include mediaQuery(tablet){
+							background: url("../images/sliders/bg-slider1-mobile.jpg");
+							background-size: cover;
+							background-position: center center;
+							background-repeat: no-repeat;
+						}
 						div {
 							position: relative;
 							display: flex;
@@ -131,6 +137,22 @@ body{
 							height: 100%;
 						    justify-content: flex-end;
 						    align-items: center;
+						    @include mediaQuery(tablet){
+						    	align-items: flex-start;
+						    	padding-top: 1rem;
+						    }
+						    .img-slider1{
+						    	position: absolute;
+						    	width: auto;
+						    	height: 530px;
+						    	bottom: 0;
+						    	left: 5%;
+						    	@include mediaQuery(tablet){
+						    		height: 420px;
+							    	bottom: 3%;
+							    	left: 13%;
+						    	}
+						    }
 							.text-slider{
 								width: 70%;
     							height: auto;								
@@ -141,18 +163,23 @@ body{
 								text-align: left;
 								margin: 0;
 								@include mediaQuery(tablet){
-									width: 85%;
-									font-size: 7vh;
+									width: 100%;
+									padding: 0 1rem;
 								}
 							}
 						}
 					}
 					.img-slider-2{
-						background: url("../images/sliders/slider2.jpg");
+						background: url("../images/sliders/bg-slider2-desktop.jpg");
 						background-size: cover;
 						background-position: center center;
 						background-repeat: no-repeat;
-
+						@include mediaQuery(tablet){
+							background: url("../images/sliders/bg-slider2-mobile.jpg");
+							background-size: cover;
+							background-position: center center;
+							background-repeat: no-repeat;
+						}
 						div {
 							position: relative;
 							display: flex;
@@ -160,6 +187,22 @@ body{
 							height: 100%;
 						    justify-content: flex-end;
 						    align-items: center;
+						    @include mediaQuery(tablet){
+						    	align-items: flex-start;
+						    	padding-top: 1rem;
+						    }
+						    .img-slider2{
+						    	position: absolute;
+						    	width: auto;
+						    	height: 550px;
+						    	bottom: 0;
+						    	left: 5%;
+						    	@include mediaQuery(tablet){
+						    		height: 420px;
+							    	bottom: 3%;
+							    	left: 20%;
+						    	}
+						    }
 							.text-slider{
 								width: 70%;
     							height: auto;								
@@ -170,17 +213,24 @@ body{
 								text-align: left;
 								margin: 0;
 								@include mediaQuery(tablet){
-									width: 85%;
+									width: 100%;
+									padding: 0 1rem;
 									font-size: 7vh;
 								}
 							}
 						}
 					}
 					.img-slider-3{
-						background: url("../images/sliders/slider3.jpg");
+						background: url("../images/sliders/bg-slider3-desktop.jpg");
 						background-size: cover;
-						background-position: center center;
+						background-position: center center; 
 						background-repeat: no-repeat;
+						@include mediaQuery(tablet){
+							background: url("../images/sliders/bg-slider3-mobile.jpg");
+							background-size: cover;
+							background-position: center center;
+							background-repeat: no-repeat;
+						}
 						div {
 							position: relative;
 							display: flex;
@@ -188,6 +238,22 @@ body{
 							height: 100%;
 						    justify-content: flex-start;
 						    align-items: center;
+						    @include mediaQuery(tablet){
+						    	align-items: flex-start;
+						    	padding-top: 1rem;
+						    }
+						    .img-slider3{
+						    	position: absolute;
+						    	width: auto;
+						    	height: 550px;
+						    	bottom: 0;
+						    	right: 5%;
+						    	@include mediaQuery(tablet){
+						    		height: 380px;
+							    	bottom: 0;
+							    	right: 30%;
+						    	}
+						    }
 							.text-slider{
 								width: 70%;
     							height: auto;								
@@ -195,10 +261,10 @@ body{
 								color:white;
 								font-weight: 900;
 								background: rgba(0,0,0,.5);
-
 								margin: 0;
 								@include mediaQuery(tablet){
-									width: 85%;
+									width: 100%;
+									padding: 0 1rem;
 									font-size: 7vh;
 								}
 							}
@@ -279,6 +345,7 @@ body{
 .container-about-us{
 	width: 100vw;
 	height: 35rem;
+	overflow-x: hidden;
 	@include mediaQuery(tablet){
 		height: auto;
 	}
@@ -353,6 +420,7 @@ body{
 .container-services{
 	width: 100vw;
 	height: 38rem;
+	overflow-x: hidden;
 	@include mediaQuery(tablet){
 		height: auto;
 	}
@@ -480,7 +548,6 @@ body{
 	display: flex;
 	align-items: center;
 	position: relative;
-	overflow: hidden;
 	@include mediaQuery(tablet){
 		height: auto;
 		margin-top: 8rem;
@@ -525,12 +592,13 @@ body{
 		width: auto;
 		height: 590px;
 		position: absolute;
-		bottom: -80px;
+		bottom: -70px;
 		right: 20%;
 		z-index: 500;
 		@include mediaQuery(tablet){
 			height: 320px;
 			right: 3%;
+			bottom: -40px;
 		}
 	}
 }
@@ -538,8 +606,9 @@ body{
 .container-briefcase{
 	width: 100vw;
 	height: auto;
-	background: brown;
-	
+	z-index: 500;
+    position: relative;
+	background: setColor(black);
 	.grid-container {
 			width: 100%;
 		    max-width: 1650px;
@@ -617,6 +686,10 @@ body{
 		    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
 		    grid-auto-rows: 350px;
 		    justify-content: center;
+		    @include mediaQuery(tablet){
+		    	grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+				grid-auto-rows: auto;
+		    };
 		    
 		  }
 		  .col {
@@ -820,6 +893,7 @@ body{
 	width: 100vw;
 	height: 35rem;
 	background: black;
+	overflow-x: hidden;
 	@include mediaQuery(tablet){
 		height: auto;
 	}
@@ -896,6 +970,9 @@ body{
 						img{
 							width: auto;
 							height: 30px;
+							@include mediaQuery(tablet){
+								height: 70px;
+							}
 						}
 					}
 				}
@@ -925,6 +1002,7 @@ body{
 .container-contact-us{
 	width: 100vw;
 	height: 40rem;
+	overflow-x: hidden;
 	@include mediaQuery(tablet){
 		height: auto;
 	}
