@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'UnitedSansReg-Medium';
+  /* Antes de descargar el archivo, le decimos al buscador
+  que intente buscar en local la fuente con nombre
+  Cabin, Cabin Regular o Cabin-Regular */
+  src: local("UnitedSansReg-Medium"), local("font/UnitedSansReg-Medium"), local("UnitedSansReg-Medium"), url(UnitedSansReg-Medium.otf) format("otf"); }
+
 body {
   margin: 0;
   padding: 0;
@@ -86,7 +93,8 @@ body {
         grid-template-columns: repeat(5, calc(100% / 5));
         -webkit-box-pack: center;
         -ms-flex-pack: center;
-        justify-content: center; }
+        justify-content: center;
+        font-family: UnitedSansReg-Medium; }
         .container-initial .container-nabvar .menu .list li {
           padding: 5px; }
   .container-initial .container-slider {
@@ -625,42 +633,20 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center; }
-    .container-banner-title-jobs .container-text-title .content-titles {
-      width: 70%;
-      height: 100%;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      -webkit-box-align: start;
-      -ms-flex-align: start;
-      align-items: flex-start;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center; }
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start; }
+    .container-banner-title-jobs .container-text-title img {
+      padding-left: 6rem;
+      width: auto;
+      height: 200px; }
       @media screen and (max-width: 768px) {
-        .container-banner-title-jobs .container-text-title .content-titles {
-          width: 90%; } }
-      .container-banner-title-jobs .container-text-title .content-titles .item-about-us {
-        color: #F9FF00;
-        font-size: 3rem;
-        font-weight: 900; }
-        @media screen and (max-width: 768px) {
-          .container-banner-title-jobs .container-text-title .content-titles .item-about-us {
-            font-size: 2rem; } }
-      .container-banner-title-jobs .container-text-title .content-titles .item-text-jobs {
-        color: #ffffff;
-        font-size: 11rem;
-        font-weight: 900; }
-        @media screen and (max-width: 768px) {
-          .container-banner-title-jobs .container-text-title .content-titles .item-text-jobs {
-            font-size: 3.5rem; } }
+        .container-banner-title-jobs .container-text-title img {
+          height: 130px;
+          padding-left: 3rem; } }
+  @media screen and (max-width: 768px) and (max-width: 320px) {
+    .container-banner-title-jobs .container-text-title img {
+      height: 80px; } }
   .container-banner-title-jobs .img-girl {
     width: auto;
     height: 590px;

@@ -63,6 +63,7 @@ body{
 				font-weight: 700;
 				grid-template-columns: repeat(5,calc(100% / 5));
 				justify-content: center;
+				font-family: UnitedSansReg-Medium;
 				li{
 					padding: 5px;
 				}
@@ -558,31 +559,16 @@ body{
 		padding: 2rem 0;
 		background: setColor(black);
 		display: flex;
-		justify-content: center;		
-		.content-titles{
-			width: 70%;
-			height: 100%;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			justify-content: center;
+		justify-content: flex-start;		
+		img{
+			padding-left: 6rem;
+			width: auto;
+			height: 200px;
 			@include mediaQuery(tablet){
-					width: 90%;
-			}
-		.item-about-us{
-			color: setColor(yellow);
-			font-size: 3rem;
-			font-weight: 900;
-			@include mediaQuery(tablet){
-				font-size: 2rem;
-			}
-		}
-		.item-text-jobs{
-			color: setColor(white);
-			font-size: 11rem;
-			font-weight: 900;
-				@include mediaQuery(tablet){
-					font-size: 3.5rem;
+				height: 130px;
+				padding-left: 3rem;
+				@include mediaQuery(mobile){
+					height: 80px;
 				}
 			}
 		}
