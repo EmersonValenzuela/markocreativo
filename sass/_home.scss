@@ -60,10 +60,9 @@ body{
 				list-style: none;
 				width: 50%;
 				display: grid;
-				font-weight: 700;
 				grid-template-columns: repeat(5,calc(100% / 5));
 				justify-content: center;
-				font-family: UnitedSansReg-Medium;
+				font-family: $terciary-extra-bold;
 				li{
 					padding: 5px;
 				}
@@ -163,6 +162,7 @@ body{
 								background: rgba(0,0,0,.5);
 								text-align: left;
 								margin: 0;
+								font-family: $font-slider-1-bold;
 								@include mediaQuery(tablet){
 									width: 100%;
 									padding: 0 1rem;
@@ -260,9 +260,9 @@ body{
     							height: auto;								
 								font-size:13vh;
 								color:white;
-								font-weight: 900;
 								background: rgba(0,0,0,.5);
 								margin: 0;
+								font-family:$font-slider-3-bold;
 								@include mediaQuery(tablet){
 									width: 100%;
 									padding: 0 1rem;
