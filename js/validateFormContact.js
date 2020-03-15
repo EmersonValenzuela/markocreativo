@@ -1,4 +1,5 @@
 let btnSendMessage = document.querySelector("#btn-send-message");
+let warningMessage = document.querySelector("#warning-message");
 
 let inputNameAndLastname = document.querySelector("#input-name-and-lastname");
 let inputPhone = document.querySelector("#input-phone");
@@ -10,30 +11,17 @@ inputPhone.addEventListener("input", function(){getDataItems(inputPhone,inputPho
 inputEmail.addEventListener("input", function(){getDataItems(inputEmail,inputEmail.value,"email")});
 textAreaDescription.addEventListener("input", function(){getDataItems(textAreaDescription,textAreaDescription.value,"message")});
 
-btnSendMessage.addEventListener("click",validateFormContact);
 
-function validateFormContact(){
-	
-	if(inputNameAndLastname.value.length <= 1){
-		addClassNew(inputNameAndLastname,"warning-border");
+function validateFormContact(){		
+
+	if (inputNameAndLastname.value == "" || inputPhone.value == "" || inputEmail.value == "" || textAreaDescription.value == "") return false;
+
+	if(validateEmailFormat("email",inputEmail.value)){
+		return true;
 	}else{
-		setLocalStorage("nameAndLastname","");
+		return false;
 	}
-	if(inputPhone.value.length <= 1){
-		addClassNew(inputPhone,"warning-border");
-	}else{
-		setLocalStorage("phone","");
-	}
-	if(inputEmail.value.length <= 1){
-		addClassNew(inputEmail,"warning-border");
-	}else{
-		setLocalStorage("email","");
-	}
-	if(textAreaDescription.value.length <= 1){
-		addClassNew(textAreaDescription,"warning-border");
-	}else{
-		setLocalStorage("message","");
-	}
+		
 }
 
 
@@ -42,13 +30,14 @@ function getDataItems(item,value,key){
 		return addClassNew(item,"warning-border")
 	}else{
 		addClassNew(item,"-");
-		setLocalStorage(key,value);
+		setSessionStorage(key,value);
+		validateEmailFormat(key,value);
 	};
 }
 
 
-function setLocalStorage(key,value){
-	localStorage.setItem(key,value);
+function setSessionStorage(key,value){
+	sessionStorage.setItem(key,value);
 }
 
 function addClassNew(item,value){
@@ -63,28 +52,39 @@ function setClassNameAll(value){
 }
 
 function defaultValueItems(){
-	const nameAndLastname_ = localStorage.getItem("nameAndLastname");
-	const phone_ = localStorage.getItem("phone");
-	const email_ = localStorage.getItem("email");
-	const message_ = localStorage.getItem("message");
+	const nameAndLastname_ = sessionStorage.getItem("nameAndLastname");
+	const phone_ = sessionStorage.getItem("phone");
+	const email_ = sessionStorage.getItem("email");
+	const message_ = sessionStorage.getItem("message");
 	
 	if(nameAndLastname_.length >= 1){
 		inputNameAndLastname.value = nameAndLastname_;
 	}
-	if(phone_.length >= 1){
+	if(phone_.length >= 1 && phone_.length !== null){
 		inputPhone.value = phone_;
 	}
-	if(email_.length >= 1){
+	if(email_.length >= 1 && email_.length !== null){
 		inputEmail.value = email_;
 	}
-	if(message_.length >= 1){
+	if(message_.length >= 1 && message_.length !== null){
 		textAreaDescription.value = message_;
 	}
 };
 
-function validateEmailFormat(valueEmail){
-	var regexEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return regexEmail.test(String(valueEmail).toLowerCase());
+function validateEmailFormat(key,valueEmail){
+	let regexEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    if (key === "email") {
+    	let result = regexEmail.test(String(valueEmail).toLowerCase());
+	    if(result){
+	    	warningMessage.style.display = "none";
+	    	return result;
+	    }else{
+	    	warningMessage.style.display = "inherit";
+	    	return result;
+	    }
+    }
 } 
 
 defaultValueItems();
+
