@@ -35,11 +35,11 @@ var slide = 0,
       autonext = setInterval(function() {
         slide++;
         currentSlide();
-      }, 2000);
+      }, 100000000);
     },
     autonext = setInterval(function() {
       next();
-    }, 2000);
+    }, 10000000);
 
 
 //Buttons

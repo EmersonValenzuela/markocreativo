@@ -1,7 +1,12 @@
+html{
+	scroll-behavior: smooth;
+}
+
 body{
 	margin:0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: $font-primary;
 }
 
 .container-initial{
@@ -62,9 +67,14 @@ body{
 				display: grid;
 				grid-template-columns: repeat(5,calc(100% / 5));
 				justify-content: center;
-				font-family: $terciary-extra-bold;
+				font-family: $font-terciary-extra-bold;
 				li{
 					padding: 5px;
+					cursor: pointer;
+					a{
+						text-decoration: none;
+						color: setColor(black);
+					}
 				}
 			}
 		}
@@ -93,7 +103,7 @@ body{
 				top:36px;
 				margin: 0;
 				z-index: 99;
-			  display: block;
+			  	display: block;
 			}
 			.control > button {
 				width: 16.7%;
@@ -103,7 +113,8 @@ body{
 			  	background-color: transparent;
 				border: 0;
 			  	cursor: pointer;
-			  	font-size: 10vh
+			  	font-size: 10vh;
+			  	outline: none;
 			}
 			#previous{
 			  float: left;
@@ -148,9 +159,16 @@ body{
 						    	bottom: 0;
 						    	left: 5%;
 						    	@include mediaQuery(tablet){
-						    		height: 420px;
+						    		height: 500px;
 							    	bottom: 3%;
-							    	left: 13%;
+							    	left: 23%;
+							    	@include mediaQuery(mobile){
+							    		height: 320px;
+							    		left: 12%;
+							    		@include mediaQuery(mobilexs){
+											height: 270px;
+										}
+							    	}
 						    	}
 						    }
 							.text-slider{
@@ -159,13 +177,44 @@ body{
 								font-size:13vh;
 								color:white;
 								font-weight: 900;
-								background: rgba(0,0,0,.5);
+								/*background: rgba(0,0,0,.5);*/
 								text-align: left;
 								margin: 0;
 								font-family: $font-slider-1-bold;
+								display: flex;
+								flex-direction: column;
+								align-items: center;
+								color: setColor(black);
+								span:nth-child(1){
+									font-size: 4.7rem;
+									font-family: $font-slider-1-bold;
+									@include mediaQuery(mobile){
+										font-size: 2rem;
+									}
+								}
+								span:nth-child(2){
+									font-size: 9rem;
+									font-family: $font-slider-1-stencil;
+									@include mediaQuery(mobile){
+										font-size: 4rem;
+									}
+								}
+								span:nth-child(3){
+									font-size: 7rem;
+									font-family: $font-slider-1-bold;
+									@include mediaQuery(mobile){
+										font-size: 3.2rem;
+									}
+								}
 								@include mediaQuery(tablet){
 									width: 100%;
-									padding: 0 1rem;
+									padding: 4rem 1rem 0 1rem;
+									@include mediaQuery(mobile){
+										padding: 2rem 1rem 0 1rem;
+										@include mediaQuery(mobilexs){
+										padding:1rem;
+									}
+									}
 								}
 							}
 						}
@@ -199,9 +248,13 @@ body{
 						    	bottom: 0;
 						    	left: 5%;
 						    	@include mediaQuery(tablet){
-						    		height: 420px;
+						    		height: 500px;
 							    	bottom: 3%;
-							    	left: 20%;
+							    	left: 30%;
+							    	@include mediaQuery(mobile){
+										height: 320px;
+										left: 20%;
+									}
 						    	}
 						    }
 							.text-slider{
@@ -210,13 +263,43 @@ body{
 								font-size:13vh;
 								color:white;
 								font-weight: 900;
-								background: rgba(0,0,0,.5);
+								/*background: rgba(0,0,0,.5);*/
 								text-align: left;
 								margin: 0;
+								display: flex;
+								flex-direction: column;
+								align-items: center;	
+								color: setColor(black);		
+								font-family: $font-primary-light;					
+								span:first-child{
+									font-size: 3.1rem;
+									@include mediaQuery(mobile){
+										font-size: 1.5rem;
+										@include mediaQuery(mobilexs){
+											font-size: 1.3rem;
+										}
+									}
+									span{
+										font-family: $font-secundary-light;
+									}
+								}
+								span:last-child{
+									font-family: $font-secundary-bold;
+									font-size: 10rem;
+									letter-spacing: 10px;
+									@include mediaQuery(mobile){
+										font-size: 4rem;
+										@include mediaQuery(mobilexs){
+											font-size: 3.3rem;
+										}
+									}
+								}
 								@include mediaQuery(tablet){
 									width: 100%;
-									padding: 0 1rem;
-									font-size: 7vh;
+									padding: 4rem 1rem 0 1rem;
+									@include mediaQuery(mobilexs){
+										padding:1rem;
+									}
 								}
 							}
 						}
@@ -250,9 +333,13 @@ body{
 						    	bottom: 0;
 						    	right: 5%;
 						    	@include mediaQuery(tablet){
-						    		height: 380px;
+						    		height: 500px;
 							    	bottom: 0;
 							    	right: 30%;
+							    	@include mediaQuery(mobile){
+										height: 340px;
+									    right: 17%;
+									}
 						    	}
 						    }
 							.text-slider{
@@ -260,13 +347,37 @@ body{
     							height: auto;								
 								font-size:13vh;
 								color:white;
-								background: rgba(0,0,0,.5);
+								/*background: rgba(0,0,0,.5);*/
 								margin: 0;
-								font-family:$font-slider-3-bold;
+								display: flex;
+						    	flex-direction: column;
+						    	align-items: center;
+						    	font-family: $font-slider-3-bold;
+						    	span:nth-child(1){
+									font-size: 5.3rem;
+									@include mediaQuery(mobile){
+										font-size: 2.5rem;
+									}
+								}
+								span:nth-child(2){
+									font-size: 9.2rem;
+									color: setColor(yellow);
+									@include mediaQuery(mobile){
+										font-size: 4.4rem;
+									}
+								}
+								span:nth-child(3){
+									font-size: 5.3rem;
+									@include mediaQuery(mobile){
+										font-size: 2.5rem;
+									}
+								}
 								@include mediaQuery(tablet){
 									width: 100%;
-									padding: 0 1rem;
-									font-size: 7vh;
+									padding: 4rem 1rem 0 1rem;
+									@include mediaQuery(mobilexs){
+										padding:1rem;
+									}
 								}
 							}
 						}
@@ -524,6 +635,7 @@ body{
 				height: auto;
 				font-size:5rem;
 				line-height: 70px;
+				font-family: $font-terciary-bold;
 			}
 			@include mediaQuery(tablet){
 				display: none;
@@ -568,7 +680,8 @@ body{
 				height: 130px;
 				padding-left: 3rem;
 				@include mediaQuery(mobile){
-					height: 80px;
+					height: 70px;
+					padding-left: 7px;
 				}
 			}
 		}
@@ -585,6 +698,10 @@ body{
 			height: 320px;
 			right: 3%;
 			bottom: -40px;
+			@include mediaQuery(mobile){
+				height: 280px;
+				bottom: -45px;
+			}
 		}
 	}
 }
@@ -795,6 +912,7 @@ body{
 		  border-radius: 5px;
 		  margin: 0 auto;
 		  padding: 0.5rem;
+		  font-family: $font-primary;
 		  font-weight: bold;
 		  font-size: smaller;
 		  color: #fff;
@@ -805,6 +923,7 @@ body{
 		figure p {
 		  letter-spacing: 1px;
 		  font-size: smaller;
+		  font-family: $font-primary;
 		}
 
 		figure figcaption::before {
@@ -816,7 +935,7 @@ body{
 		  background: linear-gradient(
 		    to bottom,
 		    rgba(72, 76, 97, 0) 0%,
-		    rgba(72, 76, 97, 0.8) 75%
+		    rgba(249, 255, 0, 0.34) 85%
 		  );
 		  content: "";
 		  opacity: 0;
@@ -877,7 +996,7 @@ body{
 
 .container-customers{
 	width: 100vw;
-	height: 35rem;
+	height: 38rem;
 	background: black;
 	overflow-x: hidden;
 	@include mediaQuery(tablet){
@@ -908,13 +1027,15 @@ body{
 			    padding-left: 4rem;
 				div:first-child{
 					font-size: 2rem;
-					font-weight: 200;
+					font-weight: 100;
+					font-family: $font-secundary-light;
 					@include mediaQuery(tablet){
 						font-size:1rem;
 					}
 				}
 				div:last-child{
 					font-size: 4rem;
+					font-family: $font-secundary-bold;
 					@include mediaQuery(tablet){
 						font-size: 3rem;
 					}
