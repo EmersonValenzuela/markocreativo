@@ -17,6 +17,7 @@ function validateFormContact(){
 	if (inputNameAndLastname.value == "" || inputPhone.value == "" || inputEmail.value == "" || textAreaDescription.value == "") return false;
 
 	if(validateEmailFormat("email",inputEmail.value)){
+		sessionStorage.clear();
 		return true;
 	}else{
 		return false;
