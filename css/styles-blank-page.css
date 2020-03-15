@@ -77,6 +77,9 @@
 
 /*fonts principales*/
 /*fonts sliders y otros*/
+.warning-border {
+  border: 3px solid #ff1212; }
+
 body {
   margin: 0;
   padding: 0;
