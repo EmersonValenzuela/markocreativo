@@ -7,11 +7,30 @@
 	<link rel="stylesheet" href="css/styles.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
+<body style="position: relative;">
+
+	<section class="container-menu-mobile">
+		<div class="item-close-menu-mobile">
+			<div class="icon-menu-close-mb">
+					<i class="fa fa-close"></i>
+			</div>
+		</div>
+		<div class="content-list-menu-mobile">
+			<nav class="menu">
+					<ul class="list">
+						<li><a class="active-item-mobile" href="#container-about-us">NOSOTROS</a></li>
+						<li><a class="active-item-mobile" href="#container-services">SERVICIOS</a></li>
+						<li><a class="active-item-mobile" href="#container-banner-title-jobs">PORTAFOLIO</a></li>
+						<li><a class="active-item-mobile" href="#container-customers">CLIENTES</a></li>
+						<li><a class="active-item-mobile" href="#container-contact-us">CONTACTO</a></li>
+					</ul>
+				</nav>
+		</div>
+	</section>
 
 	<section class="container-initial">
 			<div class="container-logo">
-				<div class="icon-menu-mb">
+				<div class="icon-menu-open-mb">
 					<i class="fa fa-bars"></i>
 				</div>
 				<div class="item-logo">
@@ -21,11 +40,11 @@
 			<header class="container-nabvar">
 				<nav class="menu">
 					<ul class="list">
-						<li>NOSOTROS</li>
-						<li>SERVICIOS</li>
-						<li>PORTAFOLIO</li>
-						<li>CLIENTES</li>
-						<li>CONTACTO</li>
+						<li><a href="#container-about-us">NOSOTROS</a></li>
+						<li><a href="#container-services">SERVICIOS</a></li>
+						<li><a href="#container-banner-title-jobs">PORTAFOLIO</a></li>
+						<li><a href="#container-customers">CLIENTES</a></li>
+						<li><a href="#container-contact-us">CONTACTO</a></li>
 					</ul>
 				</nav>
 			</header>
@@ -34,8 +53,8 @@
 				
 				<div id="slideshow">
 				    <div class="control">
-				        <button id="previous">&lt;</button>
-				        <button id="next">&gt;</button>
+				        <button id="previous"></button>
+				        <button id="next"></button>
 				    </div>
 				    <!-- IMAGES SLIDERS -->
 				    <ul id="slides">
@@ -44,8 +63,9 @@
 				        	<div>
 				        		<img src="./images/sliders/img-slider1.png" alt="img-slider-1" class="img-slider1">
 				    			<h1 class="text-slider">
-				    				ONE SLIDER
-				    				HELLO WORD!
+				    				<span>TRANSFORMAMOS</span>
+				    				<span>IDEAS EN</span>
+				    				<span>EMOCIONES</span>
 				    			</h1>
 				    		</div>
 				    	</li>
@@ -53,8 +73,8 @@
 				        	<div>
 				        		<img src="./images/sliders/img-slider2.png" alt="img-slider-2" class="img-slider2">
 				    			<h1 class="text-slider">
-				    				TWO SLIDER
-				    				HELLO WORD!
+				    				<span>LA <b>MEJOR PUBLICIDAD</b> A TU</span>
+				    				<span>ALCANCE</span>
 				    			</h1>
 				    		</div>
 				        </li>
@@ -62,8 +82,9 @@
 				        	<div>
 				        		<img src="./images/sliders/img-slider3.png" alt="img-slider-3" class="img-slider3">
 				    			<h1 class="text-slider">
-				    				TRHEE SLIDER
-				    				HELLO WORD!
+				    				<span>HAZ CRECER TU</span>
+				    				<span>NEGOCIO</span>
+				    				<span>CON NOSOTROS</span>
 				    			</h1>
 				    		</div>
 				        </li>
@@ -88,7 +109,7 @@
 			</div>
 	</section>
 
-	<section class="container-about-us">
+	<section class="container-about-us" id="container-about-us">
 		<div class="content-about">
 			<div class="content-title">
 				<div class="title-reverse">Nosotros</div>
@@ -103,7 +124,7 @@
 					<p>Lationem temporibus earum blanditiis voluptate necessitatibus adipisci, illum sit iste quo, magnam, amet non dolores animi. </p>
 
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing 
-					elit. Nisi veritatis corporis hic placeat commodi exercitationem temporibus earum blanditiis voluptate necessitatibus adipisci, illum sit iste quo, magnam, amet non dolores animi. </p>
+					elit. Nisi veritatis corporis hic placeat commodi exercitationem met non dolores animi. </p>
 				</div>
 			</div>
 			<div class="content-image">
@@ -113,7 +134,7 @@
 	</section>
 
 
-	<section class="container-services">
+	<section class="container-services" id="container-services">
 		<div class="content-services">
 			<div class="background-absolute"></div>
 			<div class="content-img">
@@ -211,21 +232,14 @@
 	</section>
 
 
-	<section class="container-banner-title-jobs">
+	<section class="container-banner-title-jobs" id="container-banner-title-jobs">
 			<div class="container-text-title">
-				<div class="content-titles">
-					<div class="item-about-us">
-						NUESTROS
-					</div>
-					<div class="item-text-jobs">
-						TRABAJOS
-					</div>
-				</div>
+				<img class="img-text-title-job-us-ittju1" src="./images/sections/title-jobs/title-img-jobs-us.png" alt="title jobs">
 			</div>
 			<img class="img-girl img-girl-title-jobs-us-an003" src="./images/sections/title-jobs/img-girl-for-title-job.png" alt="Nuestro Trabajos">
 	</section>
 
-	<section class="container-briefcase">
+	<section class="container-briefcase" id="container-briefcase">
 		
 		<section class="grid-container">
 		  <div class="cols grid-area">
@@ -238,7 +252,7 @@
 		          <button class="rww_grid_button">More Info</button>
 		        </div>
 		        <p>Filler sentance goes here.</p>
-		        <a href="#">View More</a>
+		        <a href="#content-form-contact-us">View More</a>
 		      </figcaption>
 		    </figure>
 
@@ -251,7 +265,7 @@
 		          <button class="rww_grid_button">More Info</button>
 		        </div>
 		        <p>Filler sentance lorem</p>
-		        <a href="#">View More</a>
+		        <a href="#content-form-contact-us">View More</a>
 		      </figcaption>
 		    </figure>
 
@@ -263,7 +277,7 @@
 		          <button class="rww_grid_button">More Info</button>
 		        </div>
 		        <p>Filler sentance goes here. It's longer to demonstrate how the text wrapping works.</p>
-		        <a href="#">View More</a>
+		        <a href="#content-form-contact-us">View More</a>
 		      </figcaption>
 		    </figure>
 
@@ -275,7 +289,7 @@
 		          <button class="rww_grid_button">More Info</button>
 		        </div>
 		        <p>Filler sentance goes here works.</p>
-		        <a href="#">View More</a>
+		        <a href="#content-form-contact-us">View More</a>
 		      </figcaption>
 		    </figure>
 
@@ -287,7 +301,7 @@
 		          <button class="rww_grid_button">More Info</button>
 		        </div>
 		        <p>Filler sentance goes here works.</p>
-		        <a href="#">View More</a>
+		        <a href="#content-form-contact-us">View More</a>
 		      </figcaption>
 		    </figure>
 
@@ -299,7 +313,7 @@
 		          <button class="rww_grid_button">More Info</button>
 		        </div>
 		        <p>Filler sentance goes here works.</p>
-		        <a href="#">View More</a>
+		        <a href="#content-form-contact-us">View More</a>
 		      </figcaption>
 		    </figure>
 
@@ -312,7 +326,7 @@
 		          <button class="rww_grid_button">More Info</button>
 		        </div>
 		        <p>Filler sentance goes here works.</p>
-		        <a href="#">View More</a>
+		        <a href="#content-form-contact-us">View More</a>
 		      </figcaption>
 		    </figure>
 
@@ -324,7 +338,7 @@
 		          <button class="rww_grid_button">More Info</button>
 		        </div>
 		        <p>Filler sentance goes here works.</p>
-		        <a href="#">View More</a>
+		        <a href="#content-form-contact-us">View More</a>
 		      </figcaption>
 		    </figure>
 
@@ -336,7 +350,7 @@
 		          <button class="rww_grid_button">More Info</button>
 		        </div>
 		        <p>Filler sentance goes here works.</p>
-		        <a href="#">View More</a>
+		        <a href="#content-form-contact-us">View More</a>
 		      </figcaption>
 		    </figure>
 
@@ -348,7 +362,7 @@
 		          <button class="rww_grid_button">More Info</button>
 		        </div>
 		        <p>Filler sentance goes here works.</p>
-		        <a href="#">View More</a>
+		        <a href="#content-form-contact-us">View More</a>
 		      </figcaption>
 		    </figure>
 
@@ -358,7 +372,7 @@
 	</section>
 
 
-	<section class="container-customers">
+	<section class="container-customers" id="container-customers">
 			<div class="content-customers">
 				<div class="content-items-customers">
 					<div class="item-title-customers">
@@ -447,40 +461,41 @@
 			</div>
 	</section>
 
-	<section class="container-contact-us">
+	<section class="container-contact-us" id="container-contact-us">
 		<div class="content-items-contact">
 			<div class="background-black"></div>
 			<div class="content-img">
 				<img  class="img-contact-an005" src="./images/sections/contact/img-monkey-in-contact.png" alt="Contactanos">
 			</div>
-			<div class="content-form">
+			<div class="content-form" id="content-form-contact-us">
 				<div class="item-form">
 						<div class="title-form">
 							<img  class="img-contact-an004" src="./images/sections/contact/title-form.png" alt="contact">
 						</div>
 						<div class="content-form-contact">
-							<form action="" class="form-contact">
+							<form action="" class="form-contact" onsubmit="return validateFormContact()">
 								<div class="item-group-form">
-									<label for="">Nombres y Apellidos</label>
-									<input type="text">
+									<label for="">Nombres y Apellidos:</label>
+									<input type="text" id="input-name-and-lastname">
 								</div>
 
 								<div class="group-by-flex">
 									<div class="item-group-form">
-										<label for="">Telefono ó celular</label>
-										<input type="text">
+										<label for="">Telefono ó celular:</label>
+										<input type="number" id="input-phone">
 									</div>
 									<div class="item-group-form">
-										<label for="">Telefono ó celular</label>
-										<input type="text">
+										<label for="">E-mail:</label>
+										<input type="text" id="input-email">
+										<label for="warning" id="warning-message" style="display: none;">Email Invalido</label>
 									</div>
 								</div>
 								<div class="item-group-form">
-									<label for="">Nombres y Apellidos</label>
-									<textarea name="description" id="description" cols="30" rows="10"></textarea>
+									<label for="">Mensaje:</label>
+									<textarea id="text-area-description" cols="30" rows="10"></textarea>
 								</div>
 								<div class="item-button-send">
-									<button class="btn-send-message">Enviar Mensaje</button>
+									<button class="btn-send-message" id="btn-send-message" type="submit">Enviar Mensaje</button>
 								</div>
 							</form>
 						</div>
@@ -506,5 +521,7 @@
 <script src="js/carousel-landing.js"></script>
 <script src="./js/simpleParallax.min.js"></script>
 <script src="./js/animationHomePage.js"></script>
+<script src="./js/activeMenuMobile.js"></script>
+<script src="./js/validateFormContact.js"></script>
 </body>
 </html>

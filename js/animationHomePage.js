@@ -19,9 +19,19 @@ const imgGirlTitleJobsUsAn003 = document.getElementsByClassName("img-girl-title-
 		new simpleParallax(imgGirlTitleJobsUsAn003,{
 			  overflow: true,
 			  orientation: "up",
-			  delay: 1.5,
+			  delay: 1.9,
+			  scale: 1.7,
 			  transition: "cubic-bezier(0,0,0,1)"
 	});
+
+const imgTextTitleJobUs = document.getElementsByClassName("img-text-title-job-us-ittju1");
+		new simpleParallax(imgTextTitleJobUs,{
+			  overflow: true,
+			  orientation: "right",
+			  delay: 2.5,
+			  scale: 2.0,
+			  transition: "cubic-bezier(0,0,0,1)"
+	});	
 
 const imgCustomersAn004 = document.getElementsByClassName("img-customers-an004");
 		new simpleParallax(imgCustomersAn004,{
@@ -38,3 +48,4 @@ const imgContactAn005 = document.getElementsByClassName("img-contact-an005");
 			  delay: 1.5,
 			  transition: "cubic-bezier(0,0,0,1)"
 	});
+	
