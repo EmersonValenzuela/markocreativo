@@ -14,7 +14,9 @@ textAreaDescription.addEventListener("input", function(){getDataItems(textAreaDe
 
 function validateFormContact(){		
 
-	if (inputNameAndLastname.value == "" || inputPhone.value == "" || inputEmail.value == "" || textAreaDescription.value == "") return false;
+	if (inputNameAndLastname.value == "" || inputPhone.value == "" || inputEmail.value == "" || textAreaDescription.value == ""){
+	 	return false;
+	 };
 
 	if(validateEmailFormat("email",inputEmail.value)){
 		sessionStorage.clear();
