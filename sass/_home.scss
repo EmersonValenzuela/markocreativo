@@ -751,13 +751,14 @@ body{
 		padding: 2rem 0;
 		background: setColor(black);
 		display: flex;
-		justify-content: flex-start;		
+		justify-content: flex-start;
+		overflow-x: hidden;		
 		img{
 			padding-left: 6rem;
 			width: auto;
 			height: 200px;
 			@include mediaQuery(tablet){
-				height: 130px;
+				height: 80px;
 				padding-left: 3rem;
 				@include mediaQuery(mobile){
 					height: 70px;
