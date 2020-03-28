@@ -919,14 +919,15 @@ body {
     display: flex;
     -webkit-box-pack: start;
     -ms-flex-pack: start;
-    justify-content: flex-start; }
+    justify-content: flex-start;
+    overflow-x: hidden; }
     .container-banner-title-jobs .container-text-title img {
       padding-left: 6rem;
       width: auto;
       height: 200px; }
       @media screen and (max-width: 768px) {
         .container-banner-title-jobs .container-text-title img {
-          height: 130px;
+          height: 80px;
           padding-left: 3rem; } }
   @media screen and (max-width: 768px) and (max-width: 365px) {
     .container-banner-title-jobs .container-text-title img {
