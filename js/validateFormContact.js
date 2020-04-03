@@ -12,11 +12,12 @@ inputEmail.addEventListener("input", function(){getDataItems(inputEmail,inputEma
 textAreaDescription.addEventListener("input", function(){getDataItems(textAreaDescription,textAreaDescription.value,"message")});
 
 
+let valueData = [];
+let dataInputs = [inputNameAndLastname.value,inputPhone.value,inputEmail.value,textAreaDescription.value];
+
 function validateFormContact(){		
 
-	if (inputNameAndLastname.value == "" || inputPhone.value == "" || inputEmail.value == "" || textAreaDescription.value == ""){
-	 	return false;
-	 };
+	console.log("dataInputs->",dataInputs);
 
 	if(validateEmailFormat("email",inputEmail.value)){
 		sessionStorage.clear();
@@ -27,6 +28,7 @@ function validateFormContact(){
 }
 
 function getDataItems(item,value,key){
+
 	if(value.length <= 0 ){
 		return addClassNew(item,"warning-border")
 	}else{
@@ -58,7 +60,7 @@ function defaultValueItems(){
 	const email_ = sessionStorage.getItem("email");
 	const message_ = sessionStorage.getItem("message");
 	
-	if(nameAndLastname_.length >= 1){
+	if(nameAndLastname_.length >= 1 && nameAndLastname_.length !== null){
 		inputNameAndLastname.value = nameAndLastname_;
 	}
 	if(phone_.length >= 1 && phone_.length !== null){
@@ -73,7 +75,7 @@ function defaultValueItems(){
 };
 
 function validateEmailFormat(key,valueEmail){
-	let regexEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	const regexEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
     if (key === "email") {
     	let result = regexEmail.test(String(valueEmail).toLowerCase());

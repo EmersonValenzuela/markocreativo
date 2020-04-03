@@ -8,11 +8,9 @@ let itemsDisableMenuMobile = document.querySelectorAll(".active-item-mobile");
 visibleMenuMobile.addEventListener("click", activeMenuMobile)
 notVisibleMenuMobile.addEventListener("click", desactiveMenuMobile)
 
-
 function activeMenuMobile(){
 	MenuMobile.style.display = "inherit";
 }
-
 
 function addedEventItems () {
 	for (let i = 0; i <= itemsDisableMenuMobile.length; i++) {
@@ -20,10 +18,8 @@ function addedEventItems () {
 	}
 }
 
-
 function desactiveMenuMobile(){
 	MenuMobile.style.display = "none";
 }
-
 
 addedEventItems ()

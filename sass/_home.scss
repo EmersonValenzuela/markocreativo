@@ -105,9 +105,12 @@ body{
 		}
 		.item-logo{
 			@include flexCenter();
-			h1{
-				color:setColor(white);	
-				font-size:2rem;
+			img{
+				width: auto;
+				height: 70px;
+				@include mediaQuery(mobile){
+					height: 55px;	
+				}
 			}
 		}
 	}
@@ -523,7 +526,7 @@ body{
 
 .container-about-us{
 	width: 100vw;
-	height: 35rem;
+	height: 38rem;
 	overflow-x: hidden;
 	@include mediaQuery(tablet){
 		height: auto;
@@ -681,7 +684,7 @@ body{
 						 	}
 					}
 					.title-service{
-						font-size: .8rem;
+						font-size: 1rem;
 						text-align: left;
 						@include mediaQuery(tablet){
 						 	padding: .5rem 0;
@@ -1157,7 +1160,7 @@ body{
 						}
 						img{
 							width: auto;
-							height: 30px;
+							height: 60px;
 							@include mediaQuery(tablet){
 								height: 70px;
 							}
@@ -1182,15 +1185,14 @@ body{
 				}
 			}
 		}
-
 	}
-
 }
 
 .container-contact-us{
 	width: 100vw;
 	height: 45rem;
 	overflow-x: hidden;
+	background: setColor(yellow);
 	@include mediaQuery(tablet){
 		height: auto;
 	}
