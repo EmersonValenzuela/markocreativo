@@ -1233,7 +1233,7 @@ body {
           font-family: "Code-Light"; }
           @media screen and (max-width: 1025px) {
             .container-customers .content-customers .content-items-customers .item-title-customers div:first-child {
-              font-size: 1rem; } }
+              font-size: 1.5rem; } }
         .container-customers .content-customers .content-items-customers .item-title-customers div:last-child {
           font-size: 4rem;
           font-family: "Code-Bold"; }
@@ -1460,6 +1460,13 @@ body {
             font-weight: 500;
             border: none;
             cursor: pointer; }
+            .container-contact-us .content-items-contact .content-form .item-form .content-form-contact .form-contact .item-button-send .btn-send-message:hover {
+              -webkit-transition: all ease-in-out .5s;
+              -o-transition: all ease-in-out .5s;
+              transition: all ease-in-out .5s;
+              border: 2px solid #F9FF00;
+              background-color: #000000;
+              color: #F9FF00; }
       .container-contact-us .content-items-contact .content-form .item-footer-redes {
         display: -webkit-box;
         display: -ms-flexbox;

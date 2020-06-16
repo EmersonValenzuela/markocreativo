@@ -1117,7 +1117,7 @@ body{
 					font-weight: 100;
 					font-family: $font-secundary-light;
 					@include mediaQuery(tablet){
-						font-size:1rem;
+						font-size:1.5rem;
 					}
 				}
 				div:last-child{
@@ -1309,6 +1309,12 @@ body{
 								font-weight: 500;
 								border: none;
 								cursor: pointer;
+								&:hover{
+									transition: all ease-in-out .5s;
+									border: 2px solid setColor(yellow);
+									background-color: setColor(black);	
+									color: setColor(yellow);
+								}
 							}
 							/*.btn-send-message-disabled{
 								font-size: .8rem;
