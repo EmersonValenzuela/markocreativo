@@ -67,3 +67,4 @@ yarn-error.log*
 .idea/*
 .idea/workspace.xml
 prepos.config
+/materiales
