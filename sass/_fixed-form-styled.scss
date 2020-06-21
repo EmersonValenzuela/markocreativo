@@ -76,9 +76,11 @@ flex-wrap: wrap;
     height: 100vh; 
     overflow-y: scroll;
     top: 0;
-    z-index: 99999;
+    z-index: 16999999;
     display: inherit;
 @media(min-width: $tablet){
+    width: auto;
+    height: auto;
     position: fixed;
     width: 100%;
     height: auto;

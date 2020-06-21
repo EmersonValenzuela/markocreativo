@@ -17,6 +17,7 @@
             activeFormOpen = false;
             setLocalStorage("activeFormContent",{"isVisibleFormContact": false});
             generalContainer.style.position = "inherit";
+            isVisibleItem(generalContainer,"none");
             isVisibleItem(formContainerContact,"none");
             isVisibleItem(openFormMobile,"inherit");
         });
@@ -25,6 +26,7 @@
             activeFormOpen = true;
             setLocalStorage("activeFormContent",{"isVisibleFormContact": true});
             generalContainer.style.position = "fixed";
+            isVisibleItem(generalContainer,"inherit");
             isVisibleItem(formContainerContact,"flex");
             isVisibleItem(openFormMobile,"none");
         });
@@ -52,13 +54,17 @@
             if(!getLocalStorage("activeFormContent").isVisibleFormContact){
                 activeFormOpen = false;
                 if(!activeFormOpen){
+                    
                     isVisibleItem(formContainerContact,"none");
                     /* isVisibleItem(itemVisibleForm,"inherit"); */
                 }
             }else{
                 activeFormOpen = true;
                 if(activeFormOpen){
+                    
+                    generalContainer.style.position = "fixed";
                     isVisibleItem(formContainerContact,"flex");
+                    isVisibleItem(openFormMobile,"none");
                     /* isVisibleItem(itemVisibleForm,"none"); */
                 }
             }

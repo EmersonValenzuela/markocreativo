@@ -1593,11 +1593,13 @@ body {
   height: 100vh;
   overflow-y: scroll;
   top: 0;
-  z-index: 99999;
+  z-index: 16999999;
   display: inherit;
   /*style open form*/ }
   @media (min-width: 780px) {
     .general-container-form-contact {
+      width: auto;
+      height: auto;
       position: fixed;
       width: 100%;
       height: auto;
