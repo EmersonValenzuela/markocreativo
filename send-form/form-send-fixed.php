@@ -17,9 +17,9 @@
             $emailValue = $_POST['userEmail'];
             $phoneValue = $_POST['userPhone'];
             $servicesValue = $_POST['select-service'];
-            $contactType =  $_POST['contact-type'];
+            $contactType =  $_POST['contact-type-fixed'];
             
-            if(empty($nameValue) || empty($lastNameValue) || empty($emailValue) || empty($phoneValue) || empty($servicesValue) || empty($$contactType)){
+            if(empty($nameValue) || empty($lastNameValue) || empty($emailValue) || empty($phoneValue) || empty($servicesValue) || empty($contactType)){
                 echo "<script>alert('Ingrese todos sus datos');</script>";
             }else{
                 
