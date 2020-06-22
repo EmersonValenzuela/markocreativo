@@ -1451,7 +1451,7 @@ body {
 								border: none;
 								cursor: not-allowed;
 							}*/ }
-          .container-contact-us .content-items-contact .content-form .item-form .content-form-contact .form-contact .item-button-send .btn-send-message {
+          .container-contact-us .content-items-contact .content-form .item-form .content-form-contact .form-contact .item-button-send .btn-send-message-fo {
             font-size: .8rem;
             padding: 10px 3rem;
             background: #F9FF00;
@@ -1460,7 +1460,7 @@ body {
             font-weight: 500;
             border: none;
             cursor: pointer; }
-            .container-contact-us .content-items-contact .content-form .item-form .content-form-contact .form-contact .item-button-send .btn-send-message:hover {
+            .container-contact-us .content-items-contact .content-form .item-form .content-form-contact .form-contact .item-button-send .btn-send-message-fo:hover {
               -webkit-transition: all ease-in-out .5s;
               -o-transition: all ease-in-out .5s;
               transition: all ease-in-out .5s;
