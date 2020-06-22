@@ -80,7 +80,7 @@
             $servicesValue = "";
             $contactType =  "";
             
-            header("location:../../../index.html");
+            header("location:http://markocreativo.com/");
 
                 echo "<script>
                             if ( window.history.replaceState ) {
