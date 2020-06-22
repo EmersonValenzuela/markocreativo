@@ -80,7 +80,7 @@
             $servicesValue = "";
             $contactType =  "";
             
-            header("Location:../");
+            header("location:../../../index.html");
 
                 echo "<script>
                             if ( window.history.replaceState ) {
