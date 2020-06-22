@@ -59,14 +59,14 @@ if(isset($_POST['btn-send-message-fo'])){
     $phoneValue = "";
     $emailValue = "";
     $messageValue =  "";
-    
-    header("location:http://markocreativo.com/");
 
         echo "<script>
                     if ( window.history.replaceState ) {
                       window.history.replaceState( null, null, window.location.href );
                     }
               </script>";
+        
+        header("location:../index.html");
     }
 }
 ?>
