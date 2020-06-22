@@ -6,7 +6,7 @@ $phoneValue = "";
 $emailValue = "";
 $messageValue =  "";
     
-if(isset($_POST['btn-send-message'])){
+if(isset($_POST['btn-send-message-fo'])){
     
     $nameAndLasNameValue = $_POST['input-name-and-lastname-fo'];
     $phoneValue = $_POST['input-phone-fo'];

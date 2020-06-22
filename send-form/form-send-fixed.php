@@ -9,7 +9,7 @@
         $servicesValue = "";
         $contactType =  "";
             
-        if(isset($_POST['btn-send-message'])){
+        if(isset($_POST['btn-send-message-fixed'])){
             
             $nameValue = $_POST['userName'];
             $lastNameValue = $_POST['userLastName'];
