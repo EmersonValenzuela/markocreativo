@@ -32,7 +32,7 @@
                 <title>Email-MarkoCreativo</title>
             </head>
             <body>
-            <p>Esta mensaje fue enviado desde su pagina web https://www.markocreativo.com/</p>
+            <p>Este <br>mensaje cotización</br> fue enviado desde su pagina web https://www.markocreativo.com/</p>
             <table style='margin:0!important'>
                 <tr>
                 <td style='margin:0!important;border:1px solid #444;background:#F9FF00;color:#fff;padding:8px;'><b>Nombres:</b></td>

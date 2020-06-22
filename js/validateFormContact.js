@@ -12,24 +12,27 @@ inputEmail.addEventListener("input", function(){getDataItems(inputEmail,inputEma
 textAreaDescription.addEventListener("input", function(){getDataItems(textAreaDescription,textAreaDescription.value,"message")});
 
 
-let valueData = [];
-let dataInputs = [inputNameAndLastname.value,inputPhone.value,inputEmail.value,textAreaDescription.value];
-
 function validateFormContact(){		
 
-	console.log("dataInputs->",dataInputs);
+	if(!validateEmailFormat("email",inputEmail.value) || !sessionStorage.getItem("nameAndLastname") || !sessionStorage.getItem("phone") || !sessionStorage.getItem("email")){
+		return false;
+	}else{
+		const nameAndLastname_ = sessionStorage.getItem("nameAndLastname");
+		const phone_ = sessionStorage.getItem("phone");
+		const email_ = sessionStorage.getItem("email");
+		const message_ = sessionStorage.getItem("message");
 
-	if(validateEmailFormat("email",inputEmail.value)){
+		const refMessage = `https://api.whatsapp.com/send?phone=+51931296582&text=*_MENSAJE DE CONSULTA DESDE WEB MARKOCREATIVO_*%0A%0A*Nombres:*%0A${nameAndLastname_}%0A%0A*Cell:*%0A${phone_}%0A%0A*Email:*%0A${email_}%0A%0A*Mensaje:*%0A${message_}`;
+    	window.open(refMessage);
 		sessionStorage.clear();
 		return true;
-	}else{
-		return false;
 	}	
 }
 
 function getDataItems(item,value,key){
 
-	if(value.length <= 0 ){
+	if(value.length <= 1 ){
+		sessionStorage.setItem(key,value)
 		return addClassNew(item,"warning-border")
 	}else{
 		addClassNew(item,"-");

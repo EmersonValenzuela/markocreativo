@@ -75,13 +75,13 @@
         //VALIDATE CONTENT FORM
         function validateForm(){
 
-            let nameValue = document.querySelector("#input-name").value;
-            let lastNameValue = document.querySelector("#input-lastName").value;
-            let companyValue = document.querySelector("#input-company").value;
-            let emailValue = document.querySelector("#input-email").value;
-            let phoneValue = document.querySelector("#input-phone").value;
-            let servicesValue = document.querySelector("#select-services").value;
-            let contactType =  document.getElementsByName("contact-type");
+            let nameValue = document.querySelector("#input-name-fixed").value;
+            let lastNameValue = document.querySelector("#input-lastName-fixed").value;
+            let companyValue = document.querySelector("#input-company-fixed").value;
+            let emailValue = document.querySelector("#input-email-fixed").value;
+            let phoneValue = document.querySelector("#input-phone-fixed").value;
+            let servicesValue = document.querySelector("#select-services-fixed").value;
+            let contactType =  document.getElementsByName("contact-type-fixed");
 
             let stateMessage = document.querySelector("#state-message");
             
