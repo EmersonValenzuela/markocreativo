@@ -60,13 +60,12 @@ if(isset($_POST['btn-send-message-fo'])){
     $emailValue = "";
     $messageValue =  "";
 
-        echo "<script>
+        echo `<script>
                     if ( window.history.replaceState ) {
                       window.history.replaceState( null, null, window.location.href );
                     }
-              </script>";
-        
-        header("location:../index.html");
+                    window.location.assign('http://markocreativo.com/');
+              </script>`; 
     }
 }
 ?>
