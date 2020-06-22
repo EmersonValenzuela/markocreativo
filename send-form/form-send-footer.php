@@ -60,7 +60,7 @@ if(isset($_POST['btn-send-message'])){
     $emailValue = "";
     $messageValue =  "";
     
-    header("location:http://markocreativo.com/");
+    header("location:../index.html");
 
         echo "<script>
                     if ( window.history.replaceState ) {
