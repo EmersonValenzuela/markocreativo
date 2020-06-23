@@ -66,7 +66,7 @@ if(isset($_POST['btn-send-message-fo'])){
                     }
               </script>`;
         
-        header("location:../index.html");
+        header("location:../../../index.html");
     }
 }
 ?>
