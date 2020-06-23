@@ -13,23 +13,14 @@
 
         let resultContactType_ = "";
 
+        //ADD EVENTS ITEMS
         itemIconCloseForm.addEventListener("click", function(){
             activeFormOpen = false;
             setLocalStorage("activeFormContent",{"isVisibleFormContact": false});
-            generalContainer.style.position = "inherit";
-            isVisibleItem(generalContainer,"none");
             isVisibleItem(formContainerContact,"none");
-            isVisibleItem(openFormMobile,"inherit");
-        });
-
-        openFormMobile.addEventListener("click",function(){
-            activeFormOpen = true;
-            setLocalStorage("activeFormContent",{"isVisibleFormContact": true});
-            generalContainer.style.position = "fixed";
-            isVisibleItem(generalContainer,"inherit");
-            isVisibleItem(formContainerContact,"flex");
-            isVisibleItem(openFormMobile,"none");
-        });
+            isVisibleItem(itemVisibleForm,"flex");
+            iconFormContact.className = "fa fa-sort-up";
+    });
 
         //BTN CONTACT OPEN AND CLOSE
         itemVisibleForm.addEventListener("click", function(){
@@ -37,11 +28,13 @@
                 activeFormOpen = true;
                 setLocalStorage("activeFormContent",{"isVisibleFormContact": true});
                 isVisibleItem(formContainerContact,"flex");
-        
+                isVisibleItem(itemVisibleForm,"none");
             }else{
                 activeFormOpen = false;
                 setLocalStorage("activeFormContent",{"isVisibleFormContact": false});
                 isVisibleItem(formContainerContact,"none");
+                isVisibleItem(itemVisibleForm,"flex");
+                iconFormContact.className = "fa fa-sort-up";
             }
         });
         
@@ -54,18 +47,14 @@
             if(!getLocalStorage("activeFormContent").isVisibleFormContact){
                 activeFormOpen = false;
                 if(!activeFormOpen){
-                    
                     isVisibleItem(formContainerContact,"none");
-                    /* isVisibleItem(itemVisibleForm,"inherit"); */
+                    isVisibleItem(itemVisibleForm,"flex");
                 }
             }else{
                 activeFormOpen = true;
                 if(activeFormOpen){
-                    
-                    generalContainer.style.position = "fixed";
                     isVisibleItem(formContainerContact,"flex");
-                    isVisibleItem(openFormMobile,"none");
-                    /* isVisibleItem(itemVisibleForm,"none"); */
+                    isVisibleItem(itemVisibleForm,"none");
                 }
             }
         };
@@ -114,7 +103,7 @@
                     setLocalStorage("activeAlert",{"isVisibleAlert":true});
                     isVisibleItem(stateMessage,"none");
                     
-                    const refMessage = `https://api.whatsapp.com/send?phone=+51931296582&text=*_MENSAJE DESDE WEB MARKOCREATIVO_*%0A%0A*Nombres:*%0A${nameValue}%0A%0A*Apellidos:*%0A${lastNameValue}%0A%0A*Empresa:*%0A${companyValue}%0A%0A*Email:*%0A${emailValue}%0A%0A*Cell:*%0A${phoneValue}%0A%0A*Servicio:*%0A${servicesValue}%0A%0A*Tipo de contácto:*%0A${resultContactType_ ? resultContactType_ : "undefined"}`;
+                    const refMessage = `https://api.whatsapp.com/send?phone=+51931296582&text=*_MENSAJE DE COTIZACIÓN DESDE WEB MARKOCREATIVO_*%0A%0A*Nombres:*%0A${nameValue}%0A%0A*Apellidos:*%0A${lastNameValue}%0A%0A*Empresa:*%0A${companyValue}%0A%0A*Email:*%0A${emailValue}%0A%0A*Cell:*%0A${phoneValue}%0A%0A*Servicio:*%0A${servicesValue}%0A%0A*Tipo de contácto:*%0A${resultContactType_ ? resultContactType_ : "undefined"}`;
 
                     window.open(refMessage);
 

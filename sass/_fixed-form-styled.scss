@@ -53,123 +53,129 @@ flex-wrap: wrap;
   }
 }
 
-.item-open-form-mobile{
-    padding: 5px 10px;
-    position: fixed;
-    z-index: 9999;
-    bottom: 0;
-    right: 5%;
-    background-color: setColor(yellow);
-    box-shadow: rgba(167, 156, 2, 0.3);
-    animation: pulseBtnOpenForm 1s infinite;
-    transition: all .2 ease-in-out;
-    &:hover{
-        animation: none !important;
-    }
-    @media(min-width: $tablet) {
-        display: none;
-    }
-}
-
-.general-container-form-contact{
-    width: 100vw;
-    height: 100vh; 
-    overflow-y: scroll;
-    top: 0;
-    z-index: 16999999;
-    display: inherit;
-@media(min-width: $tablet){
-    width: auto;
-    height: auto;
-    position: fixed;
-    width: 100%;
-    height: auto;
-    justify-content: center;
-    width: auto;
-    top: 5%;
-    right: 0;
-    background: none;
-    display: flex;
-}
-
 /*style open form*/
 .item-open-form{
-    display: none;
-    width: 20px;
-    height: 150px;      
-    /* bottom: 0;
-    right: 2%; */
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    right: 2%;
+    display: flex;
     justify-content: center;
     align-items: center;
     background: setColor(yellow);
     padding: 8px .7rem;
-    margin-top: 15rem;
     color: setColor(black);
     cursor: pointer;
-    z-index:999;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 0 92%);
-
-    span{
-        transform: rotate(-90deg);
-        font-weight: 800;
-        font-size: 1.3rem;
+    box-shadow: rgba(191, 46, 42, 0.3);
+    animation: pulseBtnOpenForm 1s infinite;
+    transition: all .2 ease-in-out;
+    z-index:99999;
+    
+    &:hover{
+        animation: none !important;
     }
-    @media(min-width: $tablet) {
-        display: flex;
-        box-shadow: inset 0px 0px 18px -10px rgba(0,0,0,1);
+
+    i{
+        font-size: 1.5rem;
+        margin-right: 5px;
+    }
+    @media(min-width: $tablet){
+        width: 20px;
+        height: 170px;
+        background: #F9FF00;
+        padding: 8px .7rem;
+        color: #000000;
+        cursor: pointer;
+        top: 25%;
+        right: 0;
+        flex-direction: column;
+        justify-content: flex-start;
+        z-index: 999999;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 0 92%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 0 92%);
+        div{
+            transform: rotate(-90deg);
+            font-weight: 800;
+            font-size: 1.3rem;
+        }
+    }
+    div:first-child{
+        margin-bottom: 0;
+        @media(min-width: $tablet){
+            margin-bottom: 3.2rem;
+        }
     }
 }
 
+//STYLES FATHER CONTAINER
 .form-contact-container{
-    width: auto;
     display: flex;
-    flex-direction: column;
+    position: fixed;
     z-index:16999999;
-    /* background: linear-gradient(0deg, #ffffff, transparent); */
     @media(min-width: $tablet) {
+        width: auto;
+        right: 0;
+        top: 7%;
         clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%, 0 95%);
     }
 
-    .content-item-image{
-        position: relative;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-        background: linear-gradient(0deg, #ffffff 20%, rgba(0,0,0,0.9) 20%);
-        @media(min-width: $tablet) {
-            background: linear-gradient(0deg, #ffffff 20%, transparent 20%);
-        }
-        .image-form-contact{
-            width: auto;
-            height: 250px;            
-        }
-        .item-icon-close-form{
-            font-size: 2rem;
-            font-weight: 600;
-            color: setColor(white);
-            position: absolute;
-            top: 12px;
-            left: 13px;
-            width: 100px;
-            @media(min-width: $tablet) {
-                display: none;
+    form{
+        padding: 0;
+        @media(min-width: $tablet){
+            width: 420px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: setColor(black);
+
+            .element-bg-color{
+                background-color: #ffffff;
             }
         }
-    }
 
-    form{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        color: setColor(black);
-        background: setColor(white);
-        z-index:900;
-        @media(min-width: $tablet){
-            width: 350px;
-            padding: .7rem .8rem;
+        .content-item-image{
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            background: linear-gradient(0deg, #ffffff 20%, rgba(0,0,0,0.9) 20%);
+            @media(min-width: $tablet) {
+                color: setColor(black);
+                background: linear-gradient(0deg, #ffffff 20%, transparent 20%);
+            }
+            .image-form-contact{
+                width: auto;
+                height: 250px;            
+            }
+            .item-icon-close-form{
+                font-size: 2rem;
+                font-weight: 600;
+                color: setColor(white);
+                position: absolute;
+                top: 12px;
+                left: 13px;
+                width: 100px;
+                cursor: pointer;
+                @media(min-width: $tablet) {
+                    font-size: 1.5rem;
+                    top: 4px;
+                    left: 0;
+                    i{
+                        color: setColor(black);
+                        background: red;
+                        color: setColor(white);
+                        border-radius: 50%;
+                        padding: 10px;
+                        width: 15px;
+                        height: 15px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
         }
 
         .radio-group-container{
@@ -235,10 +241,10 @@ flex-wrap: wrap;
             }
             #state-message{
                 font-size: map-get($fontSize, "medium");
-            }
         }
     }
 }
+
 
 .needs-validation-form{
  display: flex;
@@ -254,7 +260,7 @@ flex-wrap: wrap;
 
     input, select{
         /* padding: 5px 6px; */
-        margin: 2px 5px;
+        margin: 2px 10px;
         border-top: none;
         border-left: none;
         border-right: none;
@@ -319,16 +325,23 @@ flex-wrap: wrap;
 }
 
 .form-contact-container{
-    /* width: 100vw;
-    height: 100vh; */
+    width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     clip-path: none;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 
     form{
+        width: 100%;
+        height: 100%;
         background: setColor(white);
         border-left: none;
+        overflow-y: scroll;
     }
 }
 

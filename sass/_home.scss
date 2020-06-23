@@ -9,6 +9,25 @@ body{
 	font-family: $font-primary;
 }
 
+//SCROLL STYLES
+::-webkit-scrollbar {
+	width: 3px;
+	height: 3px;
+}
+
+::-webkit-scrollbar-track {
+	background: #2b2b2b;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #030303;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #2b2b2b;
+}
+//--/>//
+
 .container-menu-mobile{
 	display: none;
 	position: fixed;

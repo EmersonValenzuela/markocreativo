@@ -520,26 +520,17 @@
 		  "Otros",
 		];
 	</script>
-  
-	<div class="item-open-form-mobile">
-	  <i class="fa fa-arrow-up"></i>
-	  <span>Contáctanos</span>
-	</div>
-
-	<section class="general-container-form-contact">
-		<!---BTN OPEN FORM--->
-		<div class="item-open-form">
-			<span>Contáctanos</span>
-		</div>
+		
 		  <!--START ADD CODE External-->
 		  <div class="form-contact-container">
-			<div class="content-item-image">
-			  <div class="item-icon-close-form">
-				<i class="fa fa-times"></i>
-			  </div>
-			  <img src="images/otros/form-girl.png" alt="image form" class="image-form-contact">
-			</div>
 			<form class="needs-validation-form form-contact" novalidate  method="post" action="./send-form/form-send-fixed.php" onsubmit="return validateForm()">
+				 <div class="content-item-image">
+					<div class="item-icon-close-form">
+						<div class="item-icon-close-form"><i class="fa fa-close"></i></div>
+					</div>
+					<img src="images/otros/form-girl.png" alt="image form" class="image-form-contact">
+				  </div>
+				  <span class="element-bg-color">
 				  <div class="form-item-row" style="width:100%">
 					<div class="item-form-input column-secondary">
 					  <!-- <label for="validationCustom01">Nombres:</label> -->
@@ -608,13 +599,21 @@
 						<button class="btn-customer-form-contact" name="btn-send-message-fixed" type="submit">Enviar</button>
 					  </div>
 				  </div>
+				</span>
 			</form>
-		  </div>  
-	</section>
+		</div>  
 
-	  <div class="alert alert-success" id="alert-success-status-form-contact" role="alert" style="display: none;">
-		  <!--Message status-->
+    <!---BTN OPEN FORM--->
+	<div class="item-open-form">
+		<div>
+			<i id="icon-form-contact" class="fa fa-sort-up"></i> 
 		</div>
+		<div>Contáctanos</div>
+	</div>
+
+	<div class="alert alert-success" id="alert-success-status-form-contact" role="alert" style="display: none;">
+		  <!--Message status-->
+	</div>
 	  <!--END ADD CODE External-->
 	<!--**************** end FIXED FORM CONTACT *********************-->
 
