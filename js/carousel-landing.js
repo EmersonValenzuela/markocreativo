@@ -9,7 +9,6 @@ var slide = 0,
         el.classList.remove('slideActive')
       });
       slides[itemToShow].classList.add('slideActive');
-      resetProgress();
       resetInterval();
     },
 
@@ -23,11 +22,11 @@ var slide = 0,
       currentSlide();
     },
 
-    resetProgress = function() {
+    /*resetProgress = function() {
       var elm = document.querySelector('.progressbar'),
           newone = elm.cloneNode(true),
           x = elm.parentNode.replaceChild(newone, elm);
-    },
+    },*/
 
     resetslide = function() {
       var elm = document.querySelector('#slides > li'),
@@ -40,12 +39,12 @@ var slide = 0,
       autonext = setInterval(function() {
         slide++;
         currentSlide();
-      }, 99999999);
+      }, 7000);
     },
     
     autonext = setInterval(function() {
       next();
-    }, 99999999999999);
+    }, 7000);
 
 
 //Buttons
