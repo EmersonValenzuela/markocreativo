@@ -93,7 +93,7 @@ body {
 
 body {
   background: #F9FF00; }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1125px) {
     body {
       background: #141414; } }
 
@@ -103,7 +103,7 @@ body {
   text-align: center;
   color: #F9FF00;
   background: #333333; }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1125px) {
     .description-blank {
       font-size: 1.5rem;
       color: #0a0a0a;
