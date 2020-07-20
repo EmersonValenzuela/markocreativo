@@ -1700,10 +1700,10 @@ body {
             height: 11vw; }
             @media screen and (max-width: 1805px) {
               .container-contact-us .content-items-contact .content-form .item-form .title-form img {
-                height: 10vw; } }
+                height: 9vw; } }
   @media screen and (max-width: 1805px) and (max-width: 1125px) {
     .container-contact-us .content-items-contact .content-form .item-form .title-form img {
-      height: 86px; } }
+      height: 10vw; } }
         .container-contact-us .content-items-contact .content-form .item-form .content-form-contact {
           width: 100%;
           display: -webkit-box;
@@ -1730,12 +1730,10 @@ body {
                 width: 100%;
                 padding: 7px;
                 outline: none; }
-                @media screen and (max-width: 1805px) {
-                  .container-contact-us .content-items-contact .content-form .item-form .content-form-contact .form-contact .item-group-form input, .container-contact-us .content-items-contact .content-form .item-form .content-form-contact .form-contact .item-group-form textarea {
-                    height: 20px; } }
-  @media screen and (max-width: 1805px) and (max-width: 1125px) {
-    .container-contact-us .content-items-contact .content-form .item-form .content-form-contact .form-contact .item-group-form input, .container-contact-us .content-items-contact .content-form .item-form .content-form-contact .form-contact .item-group-form textarea {
-      width: 95%; } }
+
+@media screen and (max-width: 1805px) and (max-width: 1125px) {
+  .container-contact-us .content-items-contact .content-form .item-form .content-form-contact .form-contact .item-group-form input, .container-contact-us .content-items-contact .content-form .item-form .content-form-contact .form-contact .item-group-form textarea {
+    width: 95%; } }
             .container-contact-us .content-items-contact .content-form .item-form .content-form-contact .form-contact .group-by-flex {
               display: -webkit-box;
               display: -ms-flexbox;
@@ -1783,7 +1781,7 @@ body {
                 cursor: pointer; }
                 @media screen and (max-width: 1805px) {
                   .container-contact-us .content-items-contact .content-form .item-form .content-form-contact .form-contact .item-button-send .btn-send-message-fo {
-                    padding: .8em 3rem; } }
+                    padding: .7em 3rem; } }
                 .container-contact-us .content-items-contact .content-form .item-form .content-form-contact .form-contact .item-button-send .btn-send-message-fo:hover {
                   -webkit-transition: all ease-in-out .5s;
                   -o-transition: all ease-in-out .5s;
