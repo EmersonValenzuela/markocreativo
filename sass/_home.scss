@@ -673,14 +673,16 @@ body{
 
 .container-about-us{
 	width: 100vw;
-	height: 38rem;
+	height: $height-primary;
 	overflow-x: hidden;
+	padding-top: 4rem;
 	@include mediaQuery(tablet){
 		height: auto;
+		padding-top: 0;
 	}
 	.content-about{
 		display: grid;
-		grid-template-columns: 20% 45% 35%;
+		grid-template-columns: 15% 45% 40%;
 		width: 100%;
     	height: 100%;
     	@include mediaQuery(tablet){
@@ -695,17 +697,22 @@ body{
 			background: linear-gradient(90deg, setColor(yellow) 20%, transparent 20%);
 			@include mediaQuery(tablet){
 				background: none;
+				padding-top: 3rem;
 			}
 			.title-reverse{
 				position: absolute;
 				transform: rotate(-90deg);
-				font-size:6rem;
-				@include mediaQuery(tablet){
-					transform: none;
-					font-size: 3rem;
-					position: relative;
-					text-align: center;
-					padding: 1.5rem 0;
+				font-size:7.3vw;
+				text-transform: uppercase;
+				@include mediaQuery(desktopHR){
+					
+					@include mediaQuery(tablet){
+						transform: none;
+						font-size: 7vw;
+						position: relative;
+						text-align: center;
+						padding: 1.5rem 0;
+					}
 				}
 			}
 		}
@@ -719,13 +726,22 @@ body{
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
-				padding: 0 5rem 0 0;
-				p{
-				font-size:1.2rem;
-				text-align: justify;
+				font-size: 1.7rem;
+				font-family: $font-primary-light;
+				padding: 0 7rem 0 1rem;
+				@include mediaQuery(desktopHR){
+					font-size:1.3rem;
+					font-weight: 200;
+					@include mediaQuery(tablet){
+						font-size:4vw;
+						padding: 0 3rem 2rem 3rem;
+						@include mediaQuery(mobile){
+							padding: 0 2rem 2rem 2rem;
+						}
+					}
 				}
-				@include mediaQuery(tablet){
-					padding: .5rem 1rem;
+				p{
+				text-align: justify;
 				}
 			}
 		}
@@ -734,10 +750,13 @@ body{
 			align-items: flex-end;
 			justify-content: center;
 			background: linear-gradient(90deg, setColor(yellow) 70%, transparent 70%);
+			position: relative;
 			img{
+				position: absolute;
 				width: auto;
-				height: 520px;
+				height: 97%;
 				@include mediaQuery(tablet){
+					position: relative;
 					height: 500px;
 				}
 			}
@@ -748,7 +767,7 @@ body{
 
 .container-services{
 	width: 100vw;
-	height: 38rem;
+	height: $height-primary;
 	overflow-x: hidden;
 	@include mediaQuery(tablet){
 		height: auto;
@@ -765,30 +784,63 @@ body{
 		}
 		.content-img{
 			display: flex;
-			align-items: center;
+			align-items: flex-end;
 			justify-content: center;
+			position: relative;
 			@include mediaQuery(tablet){
-				justify-content: flex-start;
+				justify-content: center;
+				align-items: center;
+				&::before{
+					content: " ";
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					background: setColor(yellow);
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					z-index: -10;
+					clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 4% 100%);
+				}
 			}
 			img{
 				width: auto;
-				height: 500px;
+				height: 98%;
+				position: absolute;
 				@include mediaQuery(tablet){
 					height: 400px;
+					position: relative;
 				}
 			}
 				.item-title{
 					display: inherit;
 					width: auto;
 					height: auto;
-					font-size:4rem;
-					line-height: 70px;
+					font-size:11vw;
+					line-height: 90px;
 					display: none;
+					font-family: $font-terciary-bold;
+					letter-spacing: -4px;
+					span{
+						font-family: $font-primary-medium;
+					}
 					@include mediaQuery(tablet){
-					display: inherit;
-					display: flex;
-					flex-direction: column;
-					align-items: flex-start;
+						display: flex;
+						flex-direction: column;
+						align-items: flex-end;
+						width: 60%;
+						height: 100%;
+						padding-right: 4rem;
+						@include mediaQuery(mobile){
+							font-size: 20vw;
+							line-height: 61px;
+							padding-right: 2rem;
+							@include mediaQuery(mobilexs){
+								font-size: 24vw;
+								line-height: 61px;
+							}
+						}
 					}
 				}
 		}
@@ -799,22 +851,22 @@ body{
 			.content-card-items{
 				width: 90%;
 				height: 80%;
-				max-width: 600px;
+				padding-top: 3rem;
+				//max-width: 600px;
 				background: orange;
 				display: grid;
 			    grid-template-rows: repeat(2,50%);
 			    background: setColor(white);
 			    grid-template-columns: repeat(2,50%);
-			    @include mediaQuery(tablet){
-					display: block;
-			    }
-			    @include mediaQuery(desktop){
-					width: 90%;
-					height: 80%;
+			    @include mediaQuery(desktopCustom){
+					padding: 1rem 0;
+					@include mediaQuery(tablet){
+						display: block;
+					}
 			    }
 				.item-service{
 					display: grid;
-					grid-template-rows: 20% 10% 70%;
+					grid-template-rows: 20% 20% 60%;
 					padding: 1rem 1rem 1rem 2rem;
 					@include mediaQuery(tablet){
 						    grid-template-rows: repeat(3,auto);
@@ -824,32 +876,62 @@ body{
 
 					}
 					.icon-service{
-						font-size: 1.5rem;
 						text-align: left;
-						@include mediaQuery(tablet){
-						 		font-size: 2rem;
-						 	}
+						display: flex;
+						justify-content: flex-start;
+						align-items: center;
+						padding-left: 2rem;
+						position: relative;
+						img{
+							position: absolute;
+							height: 80px;
+							width: auto;
+							@include mediaQuery(desktopCustom){
+								height: 70px;
+								@include mediaQuery(tablet){
+									height: 60px;
+									position: relative;
+									@include mediaQuery(tablet){
+										height: 100px;
+									}
+								}
+							}
+						}
 					}
 					.title-service{
-						font-size: 1rem;
+						font-size: 1.3rem;
 						text-align: left;
-						@include mediaQuery(tablet){
-						 	padding: .5rem 0;
-						 	@include mediaQuery(mobile){
-						 		font-size: 1.2rem;
-						 	}
+						padding-left: 3rem;
+						display: flex;
+						justify-content: flex-start;
+						align-items: center;
+						@include mediaQuery(desktopCustom){
+							font-size: 1.1vw;
+							@include mediaQuery(tablet){
+								padding: .5rem 0 .5rem 3rem;
+								font-size: 2.8vw;
+								@include mediaQuery(mobile){
+									font-size: 1.2rem;
+								}
+						   }
 						}
 					}
 					.description-service{
 						display: flex;
-    					align-items: center;
+						align-items: flex-start;
+						font-family: $font-primary-light;
+						padding-left: 3rem;
 						.list-service{
 							list-style: none;
 							margin: 0;
 							padding: 0;
-							font-size: .8rem;
-							@include mediaQuery(mobile){
-						 		font-size: 1rem;
+							font-size: 1vw;
+							padding: 0;
+							@include mediaQuery(desktopCustom){
+								 font-size: 1vw;
+								 @include mediaQuery(tablet){
+									font-size: 2.5vw;
+								 }
 						 	}
 						}
 					}
@@ -863,9 +945,18 @@ body{
 			.item-title{
 				width: auto;
 				height: auto;
-				font-size:5rem;
-				line-height: 70px;
+				font-size:10vw;
 				font-family: $font-terciary-bold;
+				letter-spacing: -14px;
+				span{
+					font-family: $font-primary-medium;
+				}
+				div:nth-child(2){
+					line-height: 65px;
+				}
+				div:nth-child(3){
+					line-height: 211px;
+				}
 			}
 			@include mediaQuery(tablet){
 				display: none;
@@ -881,6 +972,9 @@ body{
 			bottom: 0;
 			z-index: -10;
 			clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 4% 100%);
+			@include mediaQuery(tablet){
+				display: none;
+			}
 		}
 	}
 }
@@ -891,6 +985,7 @@ body{
 	display: flex;
 	align-items: center;
 	position: relative;
+	padding: 5rem 0;
 	@include mediaQuery(tablet){
 		height: auto;
 		margin-top: 8rem;
@@ -901,18 +996,23 @@ body{
 		padding: 2rem 0;
 		background: setColor(black);
 		display: flex;
-		justify-content: flex-start;
-		overflow-x: hidden;		
+		justify-content: center;
+		overflow-x: hidden;
+		@include mediaQuery(desktopHR){
+			justify-content: flex-start;
+		}
 		img{
-			padding-left: 6rem;
 			width: auto;
-			height: 200px;
-			@include mediaQuery(tablet){
-				height: 80px;
-				padding-left: 3rem;
-				@include mediaQuery(mobile){
-					height: 70px;
-					padding-left: 7px;
+			height: 300px;
+			margin-left: 8rem;
+			@include mediaQuery(desktopHR){
+				margin-left: 5rem;
+				@include mediaQuery(tablet){
+					height: 180px;
+					margin-left: 2rem;				
+					@include mediaQuery(mobile){
+						height: 70px;
+					}
 				}
 			}
 		}
@@ -920,13 +1020,13 @@ body{
 
 	.img-girl{
 		width: auto;
-		height: 590px;
+		height: 790px;
 		position: absolute;
 		bottom: -70px;
 		right: 20%;
 		z-index: 500;
 		@include mediaQuery(tablet){
-			height: 320px;
+			height: 520px;
 			right: 3%;
 			bottom: -40px;
 			@include mediaQuery(mobile){
@@ -1068,7 +1168,7 @@ body{
 		  .col {
 		    grid-row-end: unset;
 		    grid-column-end: unset;
-		    height: 250px;
+		    //height: 250px;
 		  }
 		  .grid-area {
 		    display: flex;
@@ -1230,7 +1330,7 @@ body{
 
 .container-customers{
 	width: 100vw;
-	height: 38rem;
+	height: $height-secundary;
 	background: black;
 	overflow-x: hidden;
 	@include mediaQuery(tablet){
@@ -1241,7 +1341,7 @@ body{
 		width: 100%;
 		height: 100%;
 		display: grid;
-		grid-template-columns: 70% 30%;
+		grid-template-columns: 65% 35%;
 		overflow: hidden;
 		@include mediaQuery(tablet){
 			grid-template-columns: auto;
@@ -1249,7 +1349,7 @@ body{
 		}	
 		.content-items-customers{
 		display: grid;
-		grid-template-rows: 25% 75%;
+		grid-template-rows: 30% 70%;
 		@include mediaQuery(tablet){
 			grid-template-rows: auto;
 		}
@@ -1257,10 +1357,14 @@ body{
 				color:setColor(yellow);
 				display: flex;
 			    flex-direction: column;
-			    justify-content: flex-end;
-			    padding-left: 4rem;
+				justify-content: flex-end;
+				align-items: flex-start;
+				padding-left: 11rem;
+				@include mediaQuery(desktopHR){
+					padding-left: 7rem;
+				}
 				div:first-child{
-					font-size: 2rem;
+					font-size: 3.6vw;
 					font-weight: 100;
 					font-family: $font-secundary-light;
 					@include mediaQuery(tablet){
@@ -1268,7 +1372,7 @@ body{
 					}
 				}
 				div:last-child{
-					font-size: 4rem;
+					font-size: 6.5vw;
 					font-family: $font-secundary-bold;
 					@include mediaQuery(tablet){
 						font-size: 3rem;
@@ -1289,8 +1393,8 @@ body{
 						overflow:hidden;
 				}
 				.items-logos{
-					width: 90%;
-					height: 90%;
+					width: 80%;
+					height: 80%;
 					display: grid;
 					grid-template-columns: repeat(5,20%);
 		    		grid-auto-rows: auto;
@@ -1309,8 +1413,8 @@ body{
 							margin: 5px .7rem;
 						}
 						img{
-							width: auto;
-							height: 60px;
+							width: 140px;
+							height: auto;
 							@include mediaQuery(tablet){
 								height: 70px;
 							}
@@ -1324,12 +1428,14 @@ body{
 		.content-img-customer{
 			display: flex;
 			align-items: flex-end;
+			position: relative;
 			@include mediaQuery(tablet){
 					justify-content: flex-end;
 			}
 			img{
+				position: absolute;
 				width: auto;
-				height: 530px;
+				height: 90%;
 				@include mediaQuery(tablet){
 					height: 300px;
 				}
@@ -1340,7 +1446,7 @@ body{
 
 .container-contact-us{
 	width: 100vw;
-	height: 45rem;
+	height: $height-secundary;
 	overflow-x: hidden;
 	background: setColor(yellow);
 	@include mediaQuery(tablet){
@@ -1350,7 +1456,7 @@ body{
 		width: 100%;
 		height: 100%;
 		display: grid;
-		grid-template-columns: 38% 62%;
+		grid-template-columns: 45% 55%;
 		position: relative;
 		@include mediaQuery(tablet){
 			grid-template-columns: auto;
@@ -1376,7 +1482,8 @@ body{
 			z-index: 400;
 			img{
 				width: auto;
-				height: 580px;
+				height: 98%;
+				position: absolute;
 				@include mediaQuery(tablet){
 					height: 360px;
 				}
@@ -1384,7 +1491,7 @@ body{
 		}
 		.content-form{
 			display: grid;
-			grid-template-rows: 85% 15%;
+			grid-template-rows: 80% 20%;
 			z-index: 400;
 			width: 100%;
 			height: 100%;
@@ -1392,6 +1499,10 @@ body{
 					grid-template-rows: auto;
 			}
 			.item-form{
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: space-around;
 				.title-form{
 					display: flex;
 					justify-content: center;
@@ -1399,13 +1510,19 @@ body{
 					padding: .5rem 0;
 					img{
 						width: auto;
-						height: 120px;
-						@include mediaQuery(tablet){
-							height: 86px;
+						height: 11vw;
+						@include mediaQuery(desktopCustom){
+							height: 10vw;
+							@include mediaQuery(tablet){
+								height: 86px;
+							}
 						}
 					}
 				}
 				.content-form-contact{
+					width: 100%;
+					display: flex;
+					justify-content: center;
 					.form-contact{
 						width: 70%;
 						margin: auto;
@@ -1425,8 +1542,11 @@ body{
 								width: 100%;
 								padding: 7px;
 								outline: none;
-								@include mediaQuery(tablet){
-									width: 95%;
+								@include mediaQuery(desktopCustom){
+									height: 20px;
+									@include mediaQuery(tablet){
+										width: 95%;
+									}
 								}
 							}
 						}
@@ -1448,14 +1568,17 @@ body{
 							display: flex;
 							justify-content: center;
 							.btn-send-message-fo{
-								font-size: .8rem;
-								padding: 10px 3rem;
+								font-size: 1rem;
+								padding: 1.1rem 3rem;
 								background: setColor(yellow);
 								color: setColor(black);
 								text-transform: uppercase;
 								font-weight: 500;
 								border: none;
 								cursor: pointer;
+								@include mediaQuery(desktopCustom){
+									padding: .8em 3rem;
+								}
 								&:hover{
 									transition: all ease-in-out .5s;
 									border: 2px solid setColor(yellow);

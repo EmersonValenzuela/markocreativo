@@ -76,7 +76,7 @@
             
                 if(!nameValue || !lastNameValue || !emailValue || !phoneValue || !servicesValue){
                     isVisibleItem(stateMessage,"inherit");
-                    stateMessage.innerHTML = "*Ups te falto llenar todo el formulario";
+                    stateMessage.innerHTML = "*Ups te falto llenar el formulario";
                     stateMessage.style.color = "red";
                     setLocalStorage("activeAlert",{"isVisibleAlert":false});
 

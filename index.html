@@ -6,6 +6,9 @@
 	<title>MarkoCreativo</title>
 	<link rel="stylesheet" href="css/styles.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!--Import customers logos-->
+	<script src="./js/customers.js"></script>
 </head>
 <body style="position: relative;">
 
@@ -153,7 +156,7 @@
 					<img class="img-services-an002" src="./images/sections/services/toy-black.png" alt="Servicios Us">
 					<div class="item-title">
 						<div>SER</div>
-						<div>VICI</div>
+						<div>V<span>I</span>C<span>I</span></div>
 						<div>OS</div>
 					</div>
 			</div>
@@ -162,7 +165,7 @@
 
 					<div class="item-service">
 						<div class="icon-service">
-							<i class="fa fa-pencil"></i>	
+							<img src="./images/icons/branding.png" alt="Branding MarkoCreativo">
 						</div>
 						<div class="title-service">
 							<span>IDENTIDAD Y BRANDING</span>
@@ -180,7 +183,7 @@
 					</div>
 					<div class="item-service">
 						<div class="icon-service">
-							<i class="fa fa-pencil"></i>	
+							<img src="./images/icons/publicidadd.png" alt="">
 						</div>
 						<div class="title-service">
 							<span>PUBLICIDAD</span>
@@ -198,7 +201,7 @@
 					</div>
 					<div class="item-service">
 						<div class="icon-service">
-							<i class="fa fa-pencil"></i>	
+							<img src="./images/icons/web.png" alt="Diseño Web MarkoCreativo">
 						</div>
 						<div class="title-service">
 							<span>DISEÑO WEB / APPS</span>
@@ -216,7 +219,7 @@
 					</div>
 					<div class="item-service">
 						<div class="icon-service">
-							<i class="fa fa-pencil"></i>	
+							<img src="./images/icons/fotografia.png" alt="Fotografia MarkoCreativo">
 						</div>
 						<div class="title-service">
 							<span>FOTOGRAFÍA</span>
@@ -236,7 +239,7 @@
 			<div class="content-title-service">
 				<div class="item-title">
 					<div>SER</div>
-					<div>VICI</div>
+					<div>V<span>I</span>C<span>I</span></div>
 					<div>OS</div>
 				</div>
 			</div>
@@ -393,69 +396,19 @@
 						<div>NOSOTROS</div>
 					</div>
 					<div class="content-logos-customers">
-						<div class="items-logos">
+						<div class="items-logos" id="item-customers-logotipo">
 							
-							<div class="item-logo">
-								<img src="images/sections/customers/logo-temp.png" alt="">
-							</div>
-
-							<div class="item-logo">
-								<img src="images/sections/customers/logo-temp.png" alt="">
-							</div>
-
-							<div class="item-logo">
-								<img src="images/sections/customers/logo-temp.png" alt="">
-							</div>
-
-							<div class="item-logo">
-								<img src="images/sections/customers/logo-temp.png" alt="">
-							</div>
-
-
-							<div class="item-logo">
-								<img src="images/sections/customers/logo-temp.png" alt="">
-							</div>
-
-							<div class="item-logo">
-								<img src="images/sections/customers/logo-temp.png" alt="">
-							</div>
-
-							<div class="item-logo">
-								<img src="images/sections/customers/logo-temp.png" alt="">
-							</div>
-
-							<div class="item-logo">
-								<img src="images/sections/customers/logo-temp.png" alt="">
-							</div>
-
-							<div class="item-logo">
-								<img src="images/sections/customers/logo-temp.png" alt="">
-							</div>
-
-							<div class="item-logo">
-								<img src="images/sections/customers/logo-temp.png" alt="">
-							</div>
-
-							<div class="item-logo">
-								<img src="images/sections/customers/logo-temp.png" alt="">
-							</div>
-
-							<div class="item-logo">
-								<img src="images/sections/customers/logo-temp.png" alt="">
-							</div>
-
-							<div class="item-logo">
-								<img src="images/sections/customers/logo-temp.png" alt="">
-							</div>
-
-
-							<div class="item-logo">
-								<img src="images/sections/customers/logo-temp.png" alt="">
-							</div>
-
-							<div class="item-logo">
-								<img src="images/sections/customers/logo-temp.png" alt="">
-							</div>
+							<script>
+									let containerLogos = document.querySelector("#item-customers-logotipo");
+									for(let data of customers){
+										data 
+										? containerLogos.innerHTML += `<div class="item-logo">
+											<img src="images/customers-logos/${data.name}.png" alt="${data.name} MarkoCreativo">
+										</div>`
+										: "<p>No se encontro datos...</p>";
+									}
+							</script>
+						
 						</div>
 					</div>
 				</div>

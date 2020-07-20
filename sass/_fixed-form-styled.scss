@@ -115,7 +115,7 @@ flex-wrap: wrap;
     @media(min-width: $tablet) {
         width: auto;
         right: 0;
-        top: 7%;
+        top: 4%;
         clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%, 0 95%);
     }
 
@@ -131,6 +131,7 @@ flex-wrap: wrap;
 
             .element-bg-color{
                 background-color: #ffffff;
+                padding: 1rem 0 0 0;
             }
         }
 
@@ -140,10 +141,11 @@ flex-wrap: wrap;
             display: flex;
             justify-content: center;
             align-items: flex-end;
-            background: linear-gradient(0deg, #ffffff 20%, rgba(0,0,0,0.9) 20%);
+            background: linear-gradient(0deg, #ffffff 20.8%, rgba(0,0,0,0.9) 20%);
+            margin-bottom: -5px;
             @media(min-width: $tablet) {
                 color: setColor(black);
-                background: linear-gradient(0deg, #ffffff 20%, transparent 20%);
+                background: linear-gradient(0deg, #ffffff 20.8%, transparent 20%);
             }
             .image-form-contact{
                 width: auto;
@@ -241,6 +243,7 @@ flex-wrap: wrap;
             }
             #state-message{
                 font-size: map-get($fontSize, "medium");
+                text-align: center;
         }
     }
 }
