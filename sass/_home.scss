@@ -411,7 +411,7 @@ body{
 									color: setColor(black);
 									text-align: center;
 									padding: 3rem 0 0 0;
-									span:nth-child(1){
+									div:nth-child(1){
 										font-size: 4.5rem;
 										font-family: $font-secundary-light;
 										@include mediaQuery(desktopCustom){
@@ -424,11 +424,11 @@ body{
 											}
 										}
 										.text-bold{
-											font-family: $font-secundary-bold;
+											font-family: $font-primary-medium;
 											letter-spacing: 3px;
 										}
 									}
-									span:nth-child(2){
+									div:nth-child(2){
 										font-size: 14.8rem;
 										font-family: $font-secundary-bold;
 										@include mediaQuery(desktopCustom){
@@ -873,7 +873,6 @@ body{
 						    @include mediaQuery(mobile){
 						 		padding: 2rem 1rem;
 						 	}
-
 					}
 					.icon-service{
 						text-align: left;

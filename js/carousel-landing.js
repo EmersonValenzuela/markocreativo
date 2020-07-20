@@ -39,12 +39,12 @@ var slide = 0,
       autonext = setInterval(function() {
         slide++;
         currentSlide();
-      }, 7000);
+      }, 99999999000);
     },
     
     autonext = setInterval(function() {
       next();
-    }, 7000);
+    }, 99999999000);
 
 
 //Buttons
