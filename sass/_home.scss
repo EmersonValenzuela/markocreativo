@@ -1512,9 +1512,9 @@ body{
 						width: auto;
 						height: 11vw;
 						@include mediaQuery(desktopCustom){
-							height: 10vw;
+							height: 9vw;
 							@include mediaQuery(tablet){
-								height: 86px;
+								height: 10vw;
 							}
 						}
 					}
@@ -1543,7 +1543,6 @@ body{
 								padding: 7px;
 								outline: none;
 								@include mediaQuery(desktopCustom){
-									height: 20px;
 									@include mediaQuery(tablet){
 										width: 95%;
 									}
@@ -1577,7 +1576,7 @@ body{
 								border: none;
 								cursor: pointer;
 								@include mediaQuery(desktopCustom){
-									padding: .8em 3rem;
+									padding: .7em 3rem;
 								}
 								&:hover{
 									transition: all ease-in-out .5s;
