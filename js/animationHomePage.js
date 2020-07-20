@@ -20,7 +20,7 @@ const imgGirlTitleJobsUsAn003 = document.getElementsByClassName("img-girl-title-
 			  overflow: true,
 			  orientation: "up",
 			  delay: 1.9,
-			  scale: 1.7,
+			  scale: 1.2,
 			  transition: "cubic-bezier(0,0,0,1)"
 	});
 
