@@ -6,91 +6,99 @@ let inputPhone = document.querySelector("#input-phone");
 let inputEmail = document.querySelector("#input-email");
 let textAreaDescription = document.querySelector("#text-area-description");
 
-inputNameAndLastname.addEventListener("input", function(){getDataItems(inputNameAndLastname,inputNameAndLastname.value,"nameAndLastname")});
-inputPhone.addEventListener("input", function(){getDataItems(inputPhone,inputPhone.value,"phone")});
-inputEmail.addEventListener("input", function(){getDataItems(inputEmail,inputEmail.value,"email")});
-textAreaDescription.addEventListener("input", function(){getDataItems(textAreaDescription,textAreaDescription.value,"message")});
+inputNameAndLastname.addEventListener("input", function () {
+	getDataItems(inputNameAndLastname, inputNameAndLastname.value, "nameAndLastname");
+});
+inputPhone.addEventListener("input", function () {
+	getDataItems(inputPhone, inputPhone.value, "phone");
+});
+inputEmail.addEventListener("input", function () {
+	getDataItems(inputEmail, inputEmail.value, "email");
+});
+textAreaDescription.addEventListener("input", function () {
+	getDataItems(textAreaDescription, textAreaDescription.value, "message");
+});
 
-
-function validateFormContact(){		
-
-	if(!validateEmailFormat("email",inputEmail.value) || !sessionStorage.getItem("nameAndLastname") || !sessionStorage.getItem("phone") || !sessionStorage.getItem("email")){
+function validateFormContact() {
+	if (
+		!validateEmailFormat("email", inputEmail.value) ||
+		!sessionStorage.getItem("nameAndLastname") ||
+		!sessionStorage.getItem("phone") ||
+		!sessionStorage.getItem("email")
+	) {
 		return false;
-	}else{
+	} else {
 		const nameAndLastname_ = sessionStorage.getItem("nameAndLastname");
 		const phone_ = sessionStorage.getItem("phone");
 		const email_ = sessionStorage.getItem("email");
 		const message_ = sessionStorage.getItem("message");
 
 		const refMessage = `https://api.whatsapp.com/send?phone=+51931296582&text=*_MENSAJE DE CONSULTA DESDE WEB MARKOCREATIVO_*%0A%0A*Nombres y apellidos:*%0A${nameAndLastname_}%0A%0A*Cell:*%0A${phone_}%0A%0A*Email:*%0A${email_}%0A%0A*Mensaje:*%0A${message_}`;
-    	window.open(refMessage);
+		window.open(refMessage);
 		sessionStorage.clear();
 		return true;
-	}	
+	}
 }
 
-function getDataItems(item,value,key){
-
-	if(value.length <= 1 ){
-		sessionStorage.setItem(key,value)
-		return addClassNew(item,"warning-border")
-	}else{
-		addClassNew(item,"-");
-		setSessionStorage(key,value);
-		validateEmailFormat(key,value);
-	};
+function getDataItems(item, value, key) {
+	if (value.length <= 1) {
+		sessionStorage.setItem(key, value);
+		return addClassNew(item, "warning-border");
+	} else {
+		addClassNew(item, "-");
+		setSessionStorage(key, value);
+		validateEmailFormat(key, value);
+	}
 }
 
-
-function setSessionStorage(key,value){
-	sessionStorage.setItem(key,value);
+function setSessionStorage(key, value) {
+	sessionStorage.setItem(key, value);
 }
 
-function addClassNew(item,value){
-		return item.className = value;
-};
+function addClassNew(item, value) {
+	return (item.className = value);
+}
 
-function setClassNameAll(value){
+function setClassNameAll(value) {
 	inputNameAndLastname.className = value;
 	inputPhone.className = value;
 	inputEmail.className = value;
 	textAreaDescription.className = value;
 }
 
-function defaultValueItems(){
+function defaultValueItems() {
 	const nameAndLastname_ = sessionStorage.getItem("nameAndLastname");
 	const phone_ = sessionStorage.getItem("phone");
 	const email_ = sessionStorage.getItem("email");
 	const message_ = sessionStorage.getItem("message");
-	
-	if(nameAndLastname_.length >= 1 && nameAndLastname_.length !== null){
+
+	if (nameAndLastname_.length >= 1 && nameAndLastname_.length !== null) {
 		inputNameAndLastname.value = nameAndLastname_;
 	}
-	if(phone_.length >= 1 && phone_.length !== null){
+	if (phone_.length >= 1 && phone_.length !== null) {
 		inputPhone.value = phone_;
 	}
-	if(email_.length >= 1 && email_.length !== null){
+	if (email_.length >= 1 && email_.length !== null) {
 		inputEmail.value = email_;
 	}
-	if(message_.length >= 1 && message_.length !== null){
+	if (message_.length >= 1 && message_.length !== null) {
 		textAreaDescription.value = message_;
 	}
-};
+}
 
-function validateEmailFormat(key,valueEmail){
+function validateEmailFormat(key, valueEmail) {
 	const regexEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-    if (key === "email") {
-    	let result = regexEmail.test(String(valueEmail).toLowerCase());
-	    if(result){
-	    	warningMessage.style.display = "none";
-	    	return result;
-	    }else{
-	    	warningMessage.style.display = "inherit";
-	    	return result;
-	    }
-    }
-} 
+	if (key === "email") {
+		let result = regexEmail.test(String(valueEmail).toLowerCase());
+		if (result) {
+			warningMessage.style.display = "none";
+			return result;
+		} else {
+			warningMessage.style.display = "inherit";
+			return result;
+		}
+	}
+}
 
 defaultValueItems();
-
