@@ -1159,10 +1159,12 @@ body {
         .container-services .content-services .content-title-service .item-title span {
           font-family: "DINPro-Medium"; }
         .container-services .content-services .content-title-service .item-title div:nth-child(2) {
+          /* line-height: 110px; */
           line-height: 69px;
           margin-left: 7px; }
         .container-services .content-services .content-title-service .item-title div:nth-child(3) {
-          line-height: 211px; }
+          /* line-height: 253px; */
+          line-height: 207px; }
           @media screen and (max-width: 1650px) {
             .container-services .content-services .content-title-service .item-title div:nth-child(3) {
               line-height: 154px; } }
