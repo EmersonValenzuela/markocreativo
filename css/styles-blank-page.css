@@ -1,76 +1,76 @@
 /*FONTS NAVBAR MENU*/
 @font-face {
-  font-family: 'UnitedSansReg-Extra-Bold';
+  font-family: "UnitedSansReg-Extra-Bold";
   font-style: normal;
   src: url("../fonts/UnitedSansReg-Extra-Bold.otf");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
 
 @font-face {
-  font-family: 'UnitedSansReg-Medium';
+  font-family: "UnitedSansReg-Medium";
   font-style: normal;
   src: url("../fonts/UnitedSansReg-Medium.otf");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
 
 @font-face {
-  font-family: 'UnitedSansReg-Bold';
+  font-family: "UnitedSansReg-Bold";
   font-style: normal;
   src: url("../fonts/UnitedSansReg-Bold.otf");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
 
 /*OTHERS*/
 @font-face {
-  font-family: 'Code-Light';
+  font-family: "Code-Light";
   font-style: normal;
   src: url("../fonts/Code-Light.otf");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
 
 @font-face {
-  font-family: 'Code-Bold';
+  font-family: "Code-Bold";
   font-style: normal;
   src: url("../fonts/Code-Bold.otf");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
 
 /*SLIDER1*/
 @font-face {
-  font-family: 'UnitedItalicReg-Black';
+  font-family: "UnitedItalicReg-Black";
   font-style: normal;
   src: url("../fonts/UnitedItalicReg-Black.otf");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
 
 @font-face {
-  font-family: 'UnitedItalicReg-Black';
+  font-family: "UnitedItalicReg-Black";
   font-style: normal;
   src: url("../fonts/UnitedItalicReg-Black.otf");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
 
 @font-face {
-  font-family: 'UnitedItalicReg-Stencil';
+  font-family: "UnitedItalicReg-Stencil";
   font-style: normal;
   src: url("../fonts/UnitedItalicReg-Stencil.otf");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
 
 /*SLIDER3*/
 @font-face {
-  font-family: 'FuturaCondensedExtraBold';
+  font-family: "FuturaCondensedExtraBold";
   font-style: normal;
   src: url("../fonts/FuturaCondensedExtraBold.otf");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
 
 /*FONT GENERAL*/
 @font-face {
-  font-family: 'DINPro';
+  font-family: "DINPro";
   font-style: normal;
   src: url("../fonts/DINPro.otf");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
 
 @font-face {
-  font-family: 'DINPro-Medium';
+  font-family: "DINPro-Medium";
   font-style: normal;
   src: url("../fonts/DINPro-Medium.otf");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
 
 @font-face {
-  font-family: 'DINPro-Light';
+  font-family: "DINPro-Light";
   font-style: normal;
   src: url("../fonts/DINPro-Light.otf");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
@@ -82,7 +82,7 @@
 
 #warning-message {
   color: red;
-  font-size: .8rem;
+  font-size: 0.8rem;
   padding: 5px; }
 
 body {
@@ -92,7 +92,7 @@ body {
   box-sizing: border-box; }
 
 body {
-  background: #F9FF00; }
+  background: #f9ff00; }
   @media screen and (max-width: 1125px) {
     body {
       background: #141414; } }
@@ -101,7 +101,7 @@ body {
   padding: 1rem;
   font-size: 2rem;
   text-align: center;
-  color: #F9FF00;
+  color: #f9ff00;
   background: #333333; }
   @media screen and (max-width: 1125px) {
     .description-blank {

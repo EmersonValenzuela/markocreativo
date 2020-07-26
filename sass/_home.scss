@@ -1,9 +1,9 @@
-html{
+html {
 	scroll-behavior: smooth;
 }
 
-body{
-	margin:0;
+body {
+	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	font-family: $font-primary;
@@ -28,10 +28,10 @@ body{
 }
 //--/>//
 
-.container-menu-mobile{
+.container-menu-mobile {
 	display: none;
 	position: fixed;
-	z-index:999;
+	z-index: 999;
 	top: 0;
 	bottom: 0;
 	left: 0;
@@ -41,21 +41,17 @@ body{
 		    rgba(249, 255, 0, 0.9) 0%,
 		    white 85%
 		  );*/
-	background: linear-gradient(
-		    to bottom,
-		    rgba(0, 0, 0, 0.9) 0%,
-		    black 85%
-	);
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 0%, black 85%);
 	width: 100%;
 	height: 100%;
-	.item-close-menu-mobile{
+	.item-close-menu-mobile {
 		width: auto;
 		height: 15vh;
 		display: flex;
 		justify-content: flex-start;
 		align-items: center;
 		padding-left: 1.3rem;
-		.icon-menu-close-mb{
+		.icon-menu-close-mb {
 			position: fixed;
 			font-size: 2rem;
 			color: setColor(white);
@@ -63,20 +59,20 @@ body{
 			font-family: $font-primary;
 		}
 	}
-	.content-list-menu-mobile{
+	.content-list-menu-mobile {
 		width: 100%;
 		height: auto;
 		position: fixed;
-		.menu{
-			.list{
+		.menu {
+			.list {
 				display: flex;
 				flex-direction: column;
 				align-items: center;
 				padding: 0;
-				li{
+				li {
 					padding: 1rem;
 					list-style: none;
-					a{
+					a {
 						text-decoration: none;
 						font-size: 2rem;
 						font-family: $font-primary-medium;
@@ -89,59 +85,61 @@ body{
 	}
 }
 
-.container-initial{
+.container-initial {
 	width: 100vw;
 	height: 100vh;
 	background: black;
-	@include mediaQuery(desktopHR){
+	@include mediaQuery(desktopHR) {
 		height: 95vh;
-		@include mediaQuery(tablet){
+		@include mediaQuery(tablet) {
 			height: 100vh;
 		}
 	}
 
-	.container-logo{
+	.container-logo {
 		width: 100%;
 		height: 13%;
 		background: setColor(black);
 		display: grid;
 		grid-template-columns: none;
 		align-items: center;
-		@include mediaQuery(tablet){
+		@include mediaQuery(tablet) {
 			height: 10vh;
 			grid-template-columns: 20% 60% 20%;
 		}
-		.icon-menu-open-mb{
+		.icon-menu-open-mb {
 			width: 100%;
 			height: 100%;
 			cursor: pointer;
 			@include flexCenter();
 			font-size: 1.5rem;
-			i{
+			i {
 				color: setColor(white);
 			}
 			display: none;
-			@include mediaQuery(tablet){
+			@include mediaQuery(tablet) {
 				display: inherit;
 				font-size: 3.5rem;
-				@include mediaQuery(mobile){
+				@include mediaQuery(mobile) {
 					font-size: 1.5rem;
-					@include mediaQuery(mobilexs){
+					@include mediaQuery(mobilexs) {
 						font-size: 1.5rem;
 					}
 				}
 			}
 		}
-		.item-logo{
+		.item-logo {
+			position: relative;
 			@include flexCenter();
-			img{
+			img {
 				width: auto;
-				height: 8vw;
-				@include mediaQuery(desktopHR){
+				height: 7.5vw;
+				position: absolute;
+				@include mediaQuery(desktopHR) {
 					height: 7vw;
-					@include mediaQuery(desktop){
+					@include mediaQuery(desktop) {
 						height: 6vw;
-						@include mediaQuery(tablet){
+						@include mediaQuery(tablet) {
 							height: 14vw;
 						}
 					}
@@ -150,41 +148,41 @@ body{
 		}
 	}
 
-	.container-nabvar{
+	.container-nabvar {
 		width: 100%;
 		height: 5%;
 		background: setColor(yellow);
-		@include mediaQuery(tablet){
+		@include mediaQuery(tablet) {
 			display: none;
 		}
-		.menu{
+		.menu {
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			width: 100%;
-    		height: 100%;
-			.list{
+			height: 100%;
+			.list {
 				list-style: none;
 				width: 45%;
 				display: grid;
-				grid-template-columns: repeat(5,calc(100% / 5));
+				grid-template-columns: repeat(5, calc(100% / 5));
 				justify-content: center;
 				font-family: $font-terciary-extra-bold;
 				margin: 0;
 				padding: 0;
-				@include mediaQuery(desktopCustom){
+				@include mediaQuery(desktopCustom) {
 					width: 50%;
 				}
-				li{
+				li {
 					padding: 5px;
 					cursor: pointer;
 					@include flexCenter();
-					a{
+					a {
 						text-decoration: none;
 						color: setColor(black);
 						font-weight: 400;
 						font-size: 1.6rem;
-						@include mediaQuery(desktopHR){
+						@include mediaQuery(desktopHR) {
 							font-size: 1.1rem;
 						}
 					}
@@ -193,464 +191,456 @@ body{
 		}
 	}
 
-	.container-slider{
+	.container-slider {
 		width: 100%;
 		height: 82%;
 		position: relative;
-		@include mediaQuery(tablet){
+		@include mediaQuery(tablet) {
 			height: 90vh;
 		}
-		
-			#slideshow{
-			 line-height: 1;
-			 font-family:Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
-			  position: relative;
-			  height: 100%;
-			  width: 100%;
-			}
-			.control {
-				width: 100%;
-				height: 100%;
-				//height: calc(100% - 36px);
-				position: absolute;
-				//top:36px;
-				margin: 0;
-				z-index: 99;
-			  	display: block;
-			}
-			.control > button {
-				width: 16.7%;
-				height: calc(100% - 36px);
-				opacity: 1;
-				color:#212121;
-			  	background-color: transparent;
-				border: 0;
-			  	cursor: pointer;
-			  	font-size: 10vh;
-			  	outline: none;
-			}
-			#previous{
-			  float: left;
-			}
-			#next{
-			  float: right;
-			}
-			#slides {
-				padding: 0;
-				margin: 0;
-				background: #000;
-				overflow: hidden;	
 
-				.item-slider-1{
-						background: url("../images/sliders/bg-slider1-desktop.jpg");
-						background-size: cover;
-						background-position: center center;
-						background-repeat: no-repeat;
-						@include mediaQuery(desktop){
-							background: url("../images/sliders/bg-slider1-mobile.jpg");
-							background-size: cover;
-							background-position: center center;
-							background-repeat: no-repeat;
-						}
-						.content-slider {
-							position: relative;
-							display: flex;
+		#slideshow {
+			line-height: 1;
+			font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter",
+				Monaco, "Courier New", monospace;
+			position: relative;
+			height: 100%;
+			width: 100%;
+		}
+		.control {
+			width: 100%;
+			height: 100%;
+			//height: calc(100% - 36px);
+			position: absolute;
+			//top:36px;
+			margin: 0;
+			z-index: 99;
+			display: block;
+		}
+		.control > button {
+			width: 16.7%;
+			height: calc(100% - 36px);
+			opacity: 1;
+			color: #212121;
+			background-color: transparent;
+			border: 0;
+			cursor: pointer;
+			font-size: 10vh;
+			outline: none;
+		}
+		#previous {
+			float: left;
+		}
+		#next {
+			float: right;
+		}
+		#slides {
+			padding: 0;
+			margin: 0;
+			background: #000;
+			overflow: hidden;
+
+			.item-slider-1 {
+				background: url("../images/sliders/bg-slider1-desktop.jpg");
+				background-size: cover;
+				background-position: center center;
+				background-repeat: no-repeat;
+				@include mediaQuery(desktop) {
+					background: url("../images/sliders/bg-slider1-mobile.jpg");
+					background-size: cover;
+					background-position: center center;
+					background-repeat: no-repeat;
+				}
+				.content-slider {
+					position: relative;
+					display: flex;
+					width: 100%;
+					height: 100%;
+					justify-content: center;
+					align-items: center;
+					@include mediaQuery(desktop) {
+						flex-direction: column;
+					}
+
+					.item-img-slider {
+						height: 100%;
+						width: auto;
+						background-color: $bg-visible-container1;
+						display: flex;
+						justify-content: flex-start;
+						align-items: center;
+						@include mediaQuery(desktop) {
+							order: 1;
+							height: 70%;
 							width: 100%;
-							height: 100%;
-						    justify-content: center;
-						    align-items: center;
-						    @include mediaQuery(desktop){
-						    	flex-direction: column;						    	
+							justify-content: center;
+							align-items: flex-end;
+							background-color: $bg-visible-container1;
+							@include mediaQuery(tablet) {
+								height: 65%;
 							}
-
-							.item-img-slider{
+						}
+						.img-slider1 {
+							width: auto;
+							height: 90%;
+							@include mediaQuery(desktop) {
 								height: 100%;
 								width: auto;
-								background-color: $bg-visible-container1;
-								display: flex;
-								justify-content: flex-start;
-								align-items: center;
-								@include mediaQuery(desktop){
-									order: 1;
-									height: 70%;
-									width: 100%;
-									justify-content: center;
-									align-items: flex-end;
-									background-color: $bg-visible-container1;
-									@include mediaQuery(tablet){
-										height: 65%;
-									}
-								}
-								.img-slider1{
-									width: auto;
-									height: 90%;
-									@include mediaQuery(desktop){
-										height: 100%;
-										width: auto;
-									}
-								}
-							}
-						    .item-text-slider{
-								height: 100%;
-								width: auto;
-								background-color: $bg-visible-container2;
-								display: flex;
-								justify-content: center;
-								align-items: center;
-								padding-left: 4rem;	
-								@include mediaQuery(desktop){
-									order: 0;
-									padding: 0;
-									height: 30%;
-									width: 100%;
-									background-color: $bg-visible-container2;
-									@include mediaQuery(tablet){
-										height: 35%;
-									}
-								}
-								.text-slider{		
-									/*background: rgba(0,0,0,.5);*/
-									margin: 0;
-									font-family: $font-slider-1-bold;
-									display: flex;
-									flex-direction: column;
-									align-items: center;
-									color: setColor(black);
-									span:nth-child(1){
-										font-size: 5.4vw;
-										font-family: $font-slider-1-bold;
-										@include mediaQuery(desktopCustom){
-											font-size: 5rem;
-											margin-left: 30px;
-											@include mediaQuery(desktop){
-												font-size: 8vw;
-												margin-left: 31px;
-												@include mediaQuery(tablet){
-													margin-left: 12px;
-												}
-											}
-										}
-									}
-									span:nth-child(2){
-										font-size: 10.5vw;
-										font-family: $font-slider-1-stencil;
-										margin-left: -35px;
-										@include mediaQuery(desktopCustom){
-											font-size: 9.8rem;
-											margin-left: 10px;
-											@include mediaQuery(desktop){
-												font-size: 15.5vw;
-												margin: 0;
-											}
-										}
-									}
-									span:nth-child(3){
-										font-size: 8.1vw;
-										font-family: $font-slider-1-bold;
-										margin-left: -82px;
-										line-height: 0.7;
-										@include mediaQuery(desktopCustom){
-											font-size: 7.6rem;
-											margin-left: -25px;
-											@include mediaQuery(desktop){
-												font-size: 12vw;
-												margin-left: -31px;
-												@include mediaQuery(tablet){
-													margin-left: -9px;
-												}
-											}
-										}
-									}
-									@include mediaQuery(tablet){
-									
-									}
-								}
 							}
 						}
 					}
-
-					.item-slider-2{
-						background: url("../images/sliders/bg-slider2-desktop.jpg");
-						background-size: cover;
-						background-position: center center;
-						background-repeat: no-repeat;
-						@include mediaQuery(tablet){
-							background: url("../images/sliders/bg-slider2-mobile.jpg");
-							background-size: cover;
-							background-position: center center;
-							background-repeat: no-repeat;
-						}
-						.content-slider {
-							position: relative;
-							display: flex;
+					.item-text-slider {
+						height: 100%;
+						width: auto;
+						background-color: $bg-visible-container2;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						padding-left: 4rem;
+						@include mediaQuery(desktop) {
+							order: 0;
+							padding: 0;
+							height: 30%;
 							width: 100%;
+							background-color: $bg-visible-container2;
+							@include mediaQuery(tablet) {
+								height: 35%;
+							}
+						}
+						.text-slider {
+							/*background: rgba(0,0,0,.5);*/
+							margin: 0;
+							font-family: $font-slider-1-bold;
+							display: flex;
+							flex-direction: column;
+							align-items: center;
+							color: setColor(black);
+							span:nth-child(1) {
+								font-size: 5.4vw;
+								font-family: $font-slider-1-bold;
+								@include mediaQuery(desktopCustom) {
+									font-size: 5rem;
+									margin-left: 30px;
+									@include mediaQuery(desktop) {
+										font-size: 8vw;
+										margin-left: 31px;
+										@include mediaQuery(tablet) {
+											margin-left: 12px;
+										}
+									}
+								}
+							}
+							span:nth-child(2) {
+								font-size: 10.5vw;
+								font-family: $font-slider-1-stencil;
+								margin-left: -35px;
+								@include mediaQuery(desktopCustom) {
+									font-size: 9.8rem;
+									margin-left: 10px;
+									@include mediaQuery(desktop) {
+										font-size: 15.5vw;
+										margin: 0;
+									}
+								}
+							}
+							span:nth-child(3) {
+								font-size: 8.1vw;
+								font-family: $font-slider-1-bold;
+								margin-left: -82px;
+								line-height: 0.7;
+								@include mediaQuery(desktopCustom) {
+									font-size: 7.6rem;
+									margin-left: -25px;
+									@include mediaQuery(desktop) {
+										font-size: 12vw;
+										margin-left: -31px;
+										@include mediaQuery(tablet) {
+											margin-left: -9px;
+										}
+									}
+								}
+							}
+							@include mediaQuery(tablet) {
+							}
+						}
+					}
+				}
+			}
+
+			.item-slider-2 {
+				background: url("../images/sliders/bg-slider2-desktop.jpg");
+				background-size: cover;
+				background-position: center center;
+				background-repeat: no-repeat;
+				@include mediaQuery(tablet) {
+					background: url("../images/sliders/bg-slider2-mobile.jpg");
+					background-size: cover;
+					background-position: center center;
+					background-repeat: no-repeat;
+				}
+				.content-slider {
+					position: relative;
+					display: flex;
+					width: 100%;
+					height: 100%;
+					justify-content: center;
+					align-items: center;
+					@include mediaQuery(desktop) {
+						flex-direction: column;
+					}
+					.item-text-slider {
+						height: 100%;
+						width: auto;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						background-color: $bg-visible-container1;
+						@include mediaQuery(desktopHR) {
+							padding: 0;
+							width: auto;
+							height: 30%;
+							@include mediaQuery(desktop) {
+								height: 35%;
+							}
+						}
+						.text-slider {
+							/*background: rgba(0,0,0,.5);*/
+							margin: 0;
+							color: setColor(black);
+							text-align: center;
+							padding: 3rem 0 0 0;
+							div:nth-child(1) {
+								font-size: 4.5rem;
+								font-family: $font-secundary-light;
+								@include mediaQuery(desktopCustom) {
+									font-size: 3rem;
+									@include mediaQuery(desktop) {
+										font-size: 5.8vw;
+										@include mediaQuery(tablet) {
+											font-size: 5.3vw;
+										}
+									}
+								}
+								.text-bold {
+									font-family: $font-primary-medium;
+									letter-spacing: 3px;
+								}
+							}
+							div:nth-child(2) {
+								font-size: 14.8rem;
+								font-family: $font-secundary-bold;
+								@include mediaQuery(desktopCustom) {
+									font-size: 10rem;
+									@include mediaQuery(desktop) {
+										font-size: 19.3vw;
+									}
+								}
+							}
+							@include mediaQuery(tablet) {
+							}
+						}
+					}
+					.item-img-slider {
+						height: 100%;
+						width: auto;
+						display: flex;
+						justify-content: flex-start;
+						align-items: flex-end;
+						background-color: $bg-visible-container2;
+						@include mediaQuery(desktopHR) {
+							width: auto;
 							height: 100%;
-						    justify-content: center;
-						    align-items: center;
-						    @include mediaQuery(desktop){
-								flex-direction: column;
-							}
-						    .item-text-slider{
-								height: 100%;
-								width: auto;
-								display: flex;
-								justify-content: center;
-								align-items: center;
-								background-color: $bg-visible-container1;
-								@include mediaQuery(desktopHR){
-									padding: 0;
-									width: auto;
-									height: 30%;
-									@include mediaQuery(desktop){
-										height: 35%;
-									}
-								}
-								.text-slider{		
-									/*background: rgba(0,0,0,.5);*/
-									margin: 0;
-									color: setColor(black);
-									text-align: center;
-									padding: 3rem 0 0 0;
-									div:nth-child(1){
-										font-size: 4.5rem;
-										font-family: $font-secundary-light;
-										@include mediaQuery(desktopCustom){
-											font-size: 3rem;
-											@include mediaQuery(desktop){
-												font-size: 5.8vw;
-												@include mediaQuery(tablet){
-													font-size: 5.3vw;
-												}
-											}
-										}
-										.text-bold{
-											font-family: $font-primary-medium;
-											letter-spacing: 3px;
-										}
-									}
-									div:nth-child(2){
-										font-size: 14.8rem;
-										font-family: $font-secundary-bold;
-										@include mediaQuery(desktopCustom){
-											font-size: 10rem;
-											@include mediaQuery(desktop){
-												font-size: 19.3vw;
-											}
-										}
-									}
-									@include mediaQuery(tablet){
-										
-									}
-								}
-							}
-							.item-img-slider{
-								height: 100%;
-								width: auto;;
-								display: flex;
-								justify-content: flex-start;
+							justify-content: center;
+							@include mediaQuery(desktop) {
+								height: 65%;
 								align-items: flex-end;
-								background-color: $bg-visible-container2;
-								@include mediaQuery(desktopHR){
-									width: auto;
-									height: 100%;
-									justify-content: center;
-									@include mediaQuery(desktop){
-										height: 65%;
-										align-items: flex-end;
-									}
-								}
-								.img-slider2{
-									width: auto;
-									height: 98%;
-									@include mediaQuery(desktopHR){
-										
-										@include mediaQuery(tablet){
-									
-										}
-									}
+							}
+						}
+						.img-slider2 {
+							width: auto;
+							height: 98%;
+							@include mediaQuery(desktopHR) {
+								@include mediaQuery(tablet) {
 								}
 							}
 						}
 					}
+				}
+			}
 
+			.item-slider-3 {
+				background: url("../images/sliders/bg-slider3-desktop.jpg");
+				background-size: cover;
+				background-position: center center;
+				background-repeat: no-repeat;
+				@include mediaQuery(tablet) {
+					background: url("../images/sliders/bg-slider3-mobile.jpg");
+					background-size: cover;
+					background-position: center center;
+					background-repeat: no-repeat;
+				}
+				.content-slider {
+					position: relative;
+					display: flex;
+					width: 100%;
+					height: 100%;
+					justify-content: center;
+					align-items: center;
 
-					.item-slider-3{
-						background: url("../images/sliders/bg-slider3-desktop.jpg");
-						background-size: cover;
-						background-position: center center;
-						background-repeat: no-repeat;
-						@include mediaQuery(tablet){
-							background: url("../images/sliders/bg-slider3-mobile.jpg");
-							background-size: cover;
-							background-position: center center;
-							background-repeat: no-repeat;
+					@include mediaQuery(desktop) {
+						flex-direction: column;
+						padding: 0;
+						@include mediaQuery(tablet) {
+							align-items: flex-start;
 						}
-						.content-slider {
-							position: relative;
-							display: flex;
+					}
+					.item-img-slider {
+						height: 100%;
+						width: auto;
+						background-color: $bg-visible-container1;
+						display: flex;
+						justify-content: flex-start;
+						align-items: flex-start;
+						padding-top: 2rem;
+						@include mediaQuery(desktop) {
+							order: 1;
 							width: 100%;
-							height: 100%;
-						    justify-content: center;
-							align-items: center;	
-
-							@include mediaQuery(desktop){
-								flex-direction: column;
-								padding: 0;
-								@include mediaQuery(tablet){
-									align-items: flex-start;
-									
-								}
-							}
-							.item-img-slider{
+							height: 60%;
+							padding: 0;
+							justify-content: center;
+							align-items: flex-end;
+						}
+						.img-slider3 {
+							width: auto;
+							height: 95%;
+							@include mediaQuery(desktop) {
 								height: 100%;
-								width: auto;
-								background-color: $bg-visible-container1;
-								display: flex;
-								justify-content: flex-start;
-								align-items: flex-start;
-								padding-top: 2rem;
-								@include mediaQuery(desktop){
-									order: 1;
-									width: 100%;
-									height: 60%;
-									padding: 0;
-									justify-content: center;
-									align-items: flex-end;
-								}
-								.img-slider3{
-									width: auto;
-									height: 95%;
-									@include mediaQuery(desktop){
-										height: 100%;
-									}
-								}
-							}
-						    .item-text-slider{
-								height: 100%;
-								width: auto;
-								background-color: $bg-visible-container2;
-								display: flex;
-								justify-content: center;
-								align-items: center;
-								padding-left: 8rem;
-								@include mediaQuery(desktop){
-									order: 0;
-									width: 100%;
-									height: 40%;
-									padding: 0;
-								}
-								.text-slider{		
-									/*background: rgba(0,0,0,.5);*/
-									margin: 0;
-									font-family: $font-slider-3-bold;
-									display: flex;
-									flex-direction: column;
-									align-items: center;
-									color: setColor(white);
-									span:nth-child(1){
-										font-size: 9rem;
-										letter-spacing: -9px;
-										@include mediaQuery(desktopCustom){
-											font-size: 6rem;
-											@include mediaQuery(desktop){
-												font-size: 11vw;
-												letter-spacing: -3px;
-												@include mediaQuery(desktop){
-													letter-spacing: -2px;
-												}
-											}
-										}
-									}
-									span:nth-child(2){
-										font-size: 15.7rem;
-										color: setColor(yellow);
-										letter-spacing: -17px;
-										@include mediaQuery(desktopCustom){
-											font-size: 10rem;
-											letter-spacing: -13px;
-											@include mediaQuery(desktop){
-												font-size: 17.5vw;
-												letter-spacing: -10px;
-												padding: 0;
-												@include mediaQuery(tablet){
-													font-size: 19.2vw;
-													letter-spacing: -4px;
-												}
-											}
-										}
-									}
-									span:nth-child(3){
-										font-size: 9rem;
-										line-height: 0.7;
-										letter-spacing: -9px;
-										@include mediaQuery(desktopCustom){
-											font-size: 6rem;
-											@include mediaQuery(desktop){
-												font-size: 11vw;
-												letter-spacing: -3px;
-												@include mediaQuery(desktop){
-													letter-spacing: -2px;
-												}
-											}
-										}
-									}
-									@include mediaQuery(tablet){
-										
-									}
-								}
 							}
 						}
 					}
+					.item-text-slider {
+						height: 100%;
+						width: auto;
+						background-color: $bg-visible-container2;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						padding-left: 8rem;
+						@include mediaQuery(desktop) {
+							order: 0;
+							width: 100%;
+							height: 40%;
+							padding: 0;
+						}
+						.text-slider {
+							/*background: rgba(0,0,0,.5);*/
+							margin: 0;
+							font-family: $font-slider-3-bold;
+							display: flex;
+							flex-direction: column;
+							align-items: center;
+							color: setColor(white);
+							span:nth-child(1) {
+								font-size: 9rem;
+								letter-spacing: -9px;
+								@include mediaQuery(desktopCustom) {
+									font-size: 6rem;
+									@include mediaQuery(desktop) {
+										font-size: 11vw;
+										letter-spacing: -3px;
+										@include mediaQuery(desktop) {
+											letter-spacing: -2px;
+										}
+									}
+								}
+							}
+							span:nth-child(2) {
+								font-size: 15.7rem;
+								color: setColor(yellow);
+								letter-spacing: -17px;
+								@include mediaQuery(desktopCustom) {
+									font-size: 10rem;
+									letter-spacing: -13px;
+									@include mediaQuery(desktop) {
+										font-size: 17.5vw;
+										letter-spacing: -10px;
+										padding: 0;
+										@include mediaQuery(tablet) {
+											font-size: 19.2vw;
+											letter-spacing: -4px;
+										}
+									}
+								}
+							}
+							span:nth-child(3) {
+								font-size: 9rem;
+								line-height: 0.7;
+								letter-spacing: -9px;
+								@include mediaQuery(desktopCustom) {
+									font-size: 6rem;
+									@include mediaQuery(desktop) {
+										font-size: 11vw;
+										letter-spacing: -3px;
+										@include mediaQuery(desktop) {
+											letter-spacing: -2px;
+										}
+									}
+								}
+							}
+							@include mediaQuery(tablet) {
+							}
+						}
+					}
+				}
+			}
+		}
 
-			}
+		#slides > li {
+			position: absolute;
+			clear: both;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			width: 100%;
+			height: 100%;
+			margin: 0 auto;
+			overflow: hidden;
+			opacity: 0;
+		}
+		#slides li.slideActive {
+			z-index: 2;
+			opacity: 1;
+			transition: 1s;
+		}
+		#first {
+			background: #f44336;
+		}
+		#second {
+			background: #e91e63;
+		}
+		#third {
+			background: #9c27b0;
+		}
 
-			#slides > li {
-				position: absolute;
-				clear:both;
-				top: 0;
-				left: 0;
-				right: 0;
-				bottom: 0;
-				width: 100%;
-				height: 100%;
-				margin: 0 auto;
-				overflow: hidden;
-				opacity: 0;
-				
-			}
-			#slides li.slideActive {
-				z-index: 2;
-				opacity: 1;
-				transition: 1s;
-			}
-			#first {
-				background: #F44336;
-			}
-			#second {
-				background: #E91E63;
-			}
-			#third {
-				background: #9C27B0;
-			}
-			
-			.pager ul {
-				display: table;
-				width: 80%;
-				position: absolute;
-				z-index: 999;
+		.pager ul {
+			display: table;
+			width: 80%;
+			position: absolute;
+			z-index: 999;
 
-				visibility: hidden;
-			}
+			visibility: hidden;
+		}
 
-			.pager ul li {
+		.pager ul li {
 			display: table-cell;
-			 line-height: 36px;
-			 text-align: center;
-			 color: #fff;
-			 text-decoration: none;
-			 cursor:pointer;
-			}
-			/*.progressbar{
+			line-height: 36px;
+			text-align: center;
+			color: #fff;
+			text-decoration: none;
+			cursor: pointer;
+		}
+		/*.progressbar{
 				position:absolute;
 				bottom: 0;
 				width:100%;
@@ -671,42 +661,42 @@ body{
 	}
 }
 
-.container-about-us{
+.container-about-us {
 	width: 100vw;
 	height: $height-primary;
 	overflow-x: hidden;
 	padding-top: 4rem;
-	@include mediaQuery(tablet){
+	@include mediaQuery(tablet) {
 		height: auto;
 		padding-top: 0;
 	}
-	.content-about{
+	.content-about {
 		display: grid;
-		grid-template-columns: 15% 45% 40%;
+		grid-template-columns: 15% 50% 35%;
 		width: 100%;
-    	height: 100%;
-    	@include mediaQuery(tablet){
+		height: 100%;
+		@include mediaQuery(tablet) {
 			grid-template-columns: none;
 			grid-template-rows: repeat(3, auto);
-    	}
-		.content-title{
+		}
+		.content-title {
 			position: relative;
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			background: linear-gradient(90deg, setColor(yellow) 20%, transparent 20%);
-			@include mediaQuery(tablet){
+			background: linear-gradient(90deg, setColor(yellow) 25%, transparent 20%);
+			padding-left: 2rem;
+			@include mediaQuery(tablet) {
 				background: none;
 				padding-top: 3rem;
 			}
-			.title-reverse{
+			.title-reverse {
 				position: absolute;
 				transform: rotate(-90deg);
-				font-size:7.3vw;
+				font-size: 6.8vw;
 				text-transform: uppercase;
-				@include mediaQuery(desktopHR){
-					
-					@include mediaQuery(tablet){
+				@include mediaQuery(desktopHR) {
+					@include mediaQuery(tablet) {
 						transform: none;
 						font-size: 7vw;
 						position: relative;
@@ -716,81 +706,80 @@ body{
 				}
 			}
 		}
-		.content-description{
+		.content-description {
 			display: flex;
 			align-items: center;
-			.description{
+			.description {
 				width: 100%;
-				height: 70%;
+				height: auto;
 				align-items: center;
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
-				font-size: 1.7rem;
+				font-size: 1.6vw;
 				font-family: $font-primary-light;
 				padding: 0 7rem 0 1rem;
-				@include mediaQuery(desktopHR){
-					font-size:1.3rem;
+				@include mediaQuery(desktopHR) {
+					font-size: 1.39rem;
 					font-weight: 200;
-					@include mediaQuery(tablet){
-						font-size:4vw;
+					@include mediaQuery(tablet) {
+						font-size: 4vw;
 						padding: 0 3rem 2rem 3rem;
-						@include mediaQuery(mobile){
+						@include mediaQuery(mobile) {
 							padding: 0 2rem 2rem 2rem;
 						}
 					}
 				}
-				p{
-				text-align: justify;
+				p {
+					text-align: justify;
 				}
 			}
 		}
-		.content-image{
+		.content-image {
 			display: flex;
 			align-items: flex-end;
 			justify-content: center;
-			background: linear-gradient(90deg, setColor(yellow) 70%, transparent 70%);
+			background: linear-gradient(90deg, setColor(yellow) 75%, transparent 70%);
 			position: relative;
-			img{
+			img {
 				position: absolute;
 				width: auto;
 				height: 97%;
-				@include mediaQuery(tablet){
+				@include mediaQuery(tablet) {
 					position: relative;
 					height: 500px;
 				}
 			}
 		}
-
 	}
 }
 
-.container-services{
+.container-services {
 	width: 100vw;
-	height: $height-primary;
+	height: $height-secundary;
 	overflow-x: hidden;
-	@include mediaQuery(tablet){
+	@include mediaQuery(tablet) {
 		height: auto;
 	}
-	.content-services{
+	.content-services {
 		width: 100%;
 		height: 100%;
 		display: grid;
 		grid-template-columns: 25% 50% 25%;
 		position: relative;
-		@include mediaQuery(tablet){
+		@include mediaQuery(tablet) {
 			grid-template-columns: none;
 			grid-template-rows: repeat(3, auto);
 		}
-		.content-img{
+		.content-img {
 			display: flex;
 			align-items: flex-end;
 			justify-content: center;
 			position: relative;
-			@include mediaQuery(tablet){
+			@include mediaQuery(tablet) {
 				justify-content: center;
 				align-items: center;
-				&::before{
+				&::before {
 					content: " ";
 					width: 100%;
 					height: 100%;
@@ -804,165 +793,169 @@ body{
 					clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 4% 100%);
 				}
 			}
-			img{
+			img {
 				width: auto;
 				height: 98%;
 				position: absolute;
-				@include mediaQuery(tablet){
+				@include mediaQuery(tablet) {
 					height: 400px;
 					position: relative;
 				}
 			}
-				.item-title{
-					display: inherit;
-					width: auto;
-					height: auto;
-					font-size:11vw;
-					line-height: 90px;
-					display: none;
-					font-family: $font-terciary-bold;
-					letter-spacing: -4px;
-					span{
-						font-family: $font-primary-medium;
-					}
-					@include mediaQuery(tablet){
-						display: flex;
-						flex-direction: column;
-						align-items: flex-end;
-						width: 60%;
-						height: 100%;
-						padding-right: 4rem;
-						@include mediaQuery(mobile){
-							font-size: 20vw;
+			.item-title {
+				display: inherit;
+				width: auto;
+				height: auto;
+				font-size: 11vw;
+				line-height: 90px;
+				display: none;
+				font-family: $font-terciary-bold;
+				letter-spacing: -4px;
+				span {
+					font-family: $font-primary-medium;
+				}
+				@include mediaQuery(tablet) {
+					display: flex;
+					flex-direction: column;
+					align-items: flex-end;
+					width: 60%;
+					height: 100%;
+					padding-right: 4rem;
+					@include mediaQuery(mobile) {
+						font-size: 20vw;
+						line-height: 61px;
+						padding-right: 2rem;
+						@include mediaQuery(mobilexs) {
+							font-size: 24vw;
 							line-height: 61px;
-							padding-right: 2rem;
-							@include mediaQuery(mobilexs){
-								font-size: 24vw;
-								line-height: 61px;
-							}
 						}
 					}
 				}
+			}
 		}
-		.content-items-services{
+		.content-items-services {
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			.content-card-items{
+			.content-card-items {
 				width: 90%;
-				height: 80%;
+				height: 70%;
 				padding-top: 3rem;
 				//max-width: 600px;
 				background: orange;
 				display: grid;
-			    grid-template-rows: repeat(2,50%);
-			    background: setColor(white);
-			    grid-template-columns: repeat(2,50%);
-			    @include mediaQuery(desktopCustom){
+				grid-template-rows: repeat(2, 50%);
+				background: setColor(white);
+				grid-template-columns: repeat(2, 50%);
+				@include mediaQuery(desktopCustom) {
 					padding: 1rem 0;
-					@include mediaQuery(tablet){
+					@include mediaQuery(tablet) {
 						display: block;
 					}
-			    }
-				.item-service{
+				}
+				.item-service {
 					display: grid;
 					grid-template-rows: 20% 20% 60%;
 					padding: 1rem 1rem 1rem 2rem;
-					@include mediaQuery(tablet){
-						    grid-template-rows: repeat(3,auto);
-						    @include mediaQuery(mobile){
-						 		padding: 2rem 1rem;
-						 	}
+					@include mediaQuery(tablet) {
+						grid-template-rows: repeat(3, auto);
+						@include mediaQuery(mobile) {
+							padding: 2rem 1rem;
+						}
 					}
-					.icon-service{
+					.icon-service {
 						text-align: left;
 						display: flex;
 						justify-content: flex-start;
 						align-items: center;
 						padding-left: 2rem;
 						position: relative;
-						img{
+						img {
 							position: absolute;
 							height: 80px;
 							width: auto;
-							@include mediaQuery(desktopCustom){
+							@include mediaQuery(desktopCustom) {
 								height: 60px;
-								@include mediaQuery(tablet){
+								@include mediaQuery(tablet) {
 									height: 60px;
 									position: relative;
-									@include mediaQuery(tablet){
+									@include mediaQuery(tablet) {
 										height: 100px;
 									}
 								}
 							}
 						}
 					}
-					.title-service{
+					.title-service {
 						font-size: 1.3rem;
 						text-align: left;
 						padding-left: 3rem;
 						display: flex;
 						justify-content: flex-start;
 						align-items: center;
-						@include mediaQuery(desktopCustom){
+						@include mediaQuery(desktopCustom) {
 							font-size: 1.1vw;
-							@include mediaQuery(tablet){
-								padding: .5rem 0 .5rem 3rem;
+							@include mediaQuery(tablet) {
+								padding: 0.5rem 0 0.5rem 3rem;
 								font-size: 2.8vw;
-								@include mediaQuery(mobile){
+								@include mediaQuery(mobile) {
 									font-size: 1.2rem;
 								}
-						   }
+							}
 						}
 					}
-					.description-service{
+					.description-service {
 						display: flex;
 						align-items: flex-start;
 						font-family: $font-primary-light;
 						padding-left: 3rem;
-						.list-service{
+						.list-service {
 							list-style: none;
 							margin: 0;
 							padding: 0;
 							font-size: 1vw;
 							padding: 0;
-							@include mediaQuery(desktopCustom){
-								 font-size: 1vw;
-								 @include mediaQuery(tablet){
+							@include mediaQuery(desktopCustom) {
+								font-size: 1vw;
+								@include mediaQuery(tablet) {
 									font-size: 2.5vw;
-								 }
-						 	}
+								}
+							}
 						}
 					}
 				}
 			}
 		}
-		.content-title-service{
+		.content-title-service {
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			.item-title{
+			.item-title {
 				width: auto;
 				height: auto;
-				font-size:10vw;
+				font-size: 9vw;
 				font-family: $font-terciary-bold;
 				letter-spacing: -14px;
-				span{
+				span {
 					font-family: $font-primary-medium;
 				}
-				div:nth-child(2){
-					line-height: 65px;
+				div:nth-child(2) {
+					line-height: 69px;
+					margin-left: 7px;
 				}
-				div:nth-child(3){
+				div:nth-child(3) {
 					line-height: 211px;
+					@include mediaQuery(desktopHR) {
+						line-height: 154px;
+					}
 				}
 			}
-			@include mediaQuery(tablet){
+			@include mediaQuery(tablet) {
 				display: none;
 			}
 		}
-	
-	.background-absolute{
+
+		.background-absolute {
 			position: absolute;
 			background: setColor(yellow);
 			top: 0;
@@ -971,25 +964,28 @@ body{
 			bottom: 0;
 			z-index: -10;
 			clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 4% 100%);
-			@include mediaQuery(tablet){
+			@include mediaQuery(tablet) {
 				display: none;
 			}
 		}
 	}
 }
 
-.container-banner-title-jobs{
+.container-banner-title-jobs {
 	width: 100vw;
 	height: 35rem;
 	display: flex;
 	align-items: center;
 	position: relative;
 	padding: 4rem 0;
-	@include mediaQuery(tablet){
-		height: auto;
-		margin-top: 8rem;
+	@include mediaQuery(desktopHR) {
+		padding: 1rem 0;
+		@include mediaQuery(tablet) {
+			height: auto;
+			margin-top: 8rem;
+		}
 	}
-	.container-text-title{
+	.container-text-title {
 		width: 100%;
 		height: auto;
 		padding: 2rem 0;
@@ -997,19 +993,20 @@ body{
 		display: flex;
 		justify-content: center;
 		overflow-x: hidden;
-		@include mediaQuery(desktopHR){
+		@include mediaQuery(desktopCustom) {
+			padding: 1.5rem 0;
 			justify-content: flex-start;
 		}
-		img{
+		img {
 			width: auto;
-			height: 300px;
-			margin-left: 8rem;
-			@include mediaQuery(desktopHR){
-				margin-left: 5rem;
-				@include mediaQuery(tablet){
+			height: 420px;
+			@include mediaQuery(desktopHR) {
+				height: 320px;
+				margin-left: 6rem;
+				@include mediaQuery(tablet) {
 					height: 180px;
-					margin-left: 2rem;				
-					@include mediaQuery(mobile){
+					margin-left: 2rem;
+					@include mediaQuery(mobile) {
 						height: 70px;
 					}
 				}
@@ -1017,455 +1014,475 @@ body{
 		}
 	}
 
-	.img-girl{
+	.img-girl {
 		width: auto;
 		height: 790px;
 		position: absolute;
 		bottom: -70px;
 		right: 20%;
 		z-index: 500;
-		@include mediaQuery(tablet){
-			height: 520px;
-			right: 3%;
-			bottom: -40px;
-			@include mediaQuery(mobile){
-				height: 280px;
-				bottom: -45px;
+		@include mediaQuery(desktopHR) {
+			height: 690px;
+			@include mediaQuery(tablet) {
+				height: 520px;
+				right: 3%;
+				bottom: -40px;
+				@include mediaQuery(mobile) {
+					height: 280px;
+					bottom: -45px;
+				}
 			}
 		}
 	}
 }
 
-.container-briefcase{
+.container-briefcase {
 	width: 100vw;
 	height: auto;
 	z-index: 500;
-    position: relative;
+	position: relative;
 	background: setColor(black);
 	.grid-container {
-			width: 100%;
-		    max-width: 2200px;
-		    margin: 0 auto;
-		    @include mediaQuery(desktopHR){
+		width: 100%;
+		max-width: 2200px;
+		margin: 0 auto;
+		@include mediaQuery(desktopHR) {
 			max-width: none;
-		  }
 		}
+	}
 
-		.cols {
-		  margin: 0 auto;
-		  width: 100%;
-		  max-width: 2200px;
-		  @include mediaQuery(desktopHR){
+	.cols {
+		margin: 0 auto;
+		width: 100%;
+		max-width: 2200px;
+		@include mediaQuery(desktopHR) {
 			max-width: none;
-		  }
 		}
+	}
 
-		.col {
-		  width: 25%;
-		  height: 250px;
-		  float: left;
-		  margin: 0;
-		}
+	.col {
+		width: 25%;
+		height: 250px;
+		float: left;
+		margin: 0;
+	}
 
-		.col img {
-		  display: block;
-		  position: relative;
-		  width: 100%;
-		  height: 100%;
-		  object-fit: cover;
-		  object-position: center;
-		  opacity: 0.8;
-		}
+	.col img {
+		display: block;
+		position: relative;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+		opacity: 0.8;
+	}
 
-		.col h2 {
-		  font-weight: 900;
-		  color: #fff;
-		  text-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
-		}
+	.col h2 {
+		font-weight: 900;
+		color: #fff;
+		text-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+	}
 
-		.grid-1 {
-		  width: 50%;
-		}
+	.grid-1 {
+		width: 50%;
+	}
 
-		.grid-3 {
-		  float: right;
-		  height: 500px;
-		}
+	.grid-3 {
+		float: right;
+		height: 500px;
+	}
 
-		.grid-5 {
-		  display: table;
-		}
+	.grid-5 {
+		display: table;
+	}
 
-		.grid-5 > * {
-		  display: table-cell;
-		}
+	.grid-5 > * {
+		display: table-cell;
+	}
 
-		.grid-5 > .text-container {
-		  text-align: center;
-		  vertical-align: middle;
-		  width: 50%;
-		}
+	.grid-5 > .text-container {
+		text-align: center;
+		vertical-align: middle;
+		width: 50%;
+	}
 
-		.grid-5 img {
-		  object-position: right;
-		}
+	.grid-5 img {
+		object-position: right;
+	}
 
-		.grid-7 {
-		  width: 50%;
-		}
+	.grid-7 {
+		width: 50%;
+	}
 
-		@supports (display: grid) or (display: -ms-grid) {
-		  .grid-area {
-		    display: grid;
-		    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-		    grid-auto-rows: 450px;
+	@supports (display: grid) or (display: -ms-grid) {
+		.grid-area {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+			grid-auto-rows: 450px;
 			justify-content: center;
-			@include mediaQuery(desktopCustom){
+			@include mediaQuery(desktopCustom) {
 				grid-auto-rows: 350px;
 				grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-				@include mediaQuery(tablet){
+				@include mediaQuery(tablet) {
 					grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
 					grid-auto-rows: auto;
-				};
+				}
 			}
-		  }
-		  .col {
-		    width: 100%;
-		    height: 100%;
-		    float: none;
-		  }
-		  .grid-1 {
+		}
+		.col {
+			width: 100%;
+			height: 100%;
+			float: none;
+		}
+		.grid-1 {
 			grid-column-end: span 2;
-		  }
-		  .grid-2 {
-
-		  }
-		  .grid-3 {
-		    grid-row-end: span 2;
-		  }
-		  .grid-4 {
+		}
+		.grid-2 {
+		}
+		.grid-3 {
+			grid-row-end: span 2;
+		}
+		.grid-4 {
 			grid-column-end: span 2;
-		  }
-		  .grid-5 {
-		    /* grid-column-end: span 2; */
-		  }
-		  .grid-6 {
-		    grid-row-end: span 2;
-		  }
-		  .grid-7 {
-		    grid-column-end: span 3;
-		  }
-		  .grid-9 {
-		    
-		  }
-		  .grid-9 {
-		    
-		  }
-		  .grid-10 {
-		    
-		  }
 		}
-
-		/* Media queries for other screen widths */
-		@include mediaQuery(mobile) {
-		  .col {
-		    grid-row-end: unset;
-		    grid-column-end: unset;
-		    //height: 250px;
-		  }
-		  .grid-area {
-		    display: flex;
-		    flex-direction: column;
-		  }
-		  .grid-3 {
-		    order: -1;
-		    height: 500px;
-		  }
+		.grid-5 {
+			/* grid-column-end: span 2; */
 		}
-
-		@include mediaQuery(tablet) {
-		  .grid-2 {
-		    display: none;
-		  }
+		.grid-6 {
+			grid-row-end: span 2;
 		}
-
-		/************ Hover effect styles *************/
-
-		figure {
-		  position: relative;
-		  overflow: hidden;
-		  text-align: center;
-		  cursor: pointer;
+		.grid-7 {
+			grid-column-end: span 3;
 		}
-
-		figure figcaption {
-		  color: #fff;
-		  backface-visibility: hidden;
+		.grid-9 {
 		}
-
-		figure figcaption::before,
-		figure figcaption::after {
-		  pointer-events: none;
+		.grid-9 {
 		}
-
-		figure figcaption,
-		figure figcaption > a {
-		  position: absolute;
-		  top: 0;
-		  left: 0;
-		  width: 100%;
-		  height: 100%;
+		.grid-10 {
 		}
+	}
 
-		/* Anchor will cover the whole item by default */
-
-		/* For some effects it will show as a button */
-
-		figure figcaption > a {
-		  z-index: 1000;
-		  text-indent: 200%;
-		  white-space: nowrap;
-		  font-size: 0;
-		  opacity: 0;
+	/* Media queries for other screen widths */
+	@include mediaQuery(mobile) {
+		.col {
+			grid-row-end: unset;
+			grid-column-end: unset;
+			//height: 250px;
 		}
-
-		figure h2 {
-		  word-spacing: -0.15em;
-		  font-weight: 300;
+		.grid-area {
+			display: flex;
+			flex-direction: column;
 		}
-
-		figure h2 span {
-		  font-weight: 800;
+		.grid-3 {
+			order: -1;
+			height: 500px;
 		}
+	}
 
-		figure h2,
-		figure p {
-		  margin: 0;
+	@include mediaQuery(tablet) {
+		.grid-2 {
+			display: none;
 		}
+	}
 
-		figure button.rww_grid_button {
-		  background-color: transparent;
-		  border: 2px solid #fff;
-		  border-radius: 5px;
-		  margin: 0 auto;
-		  padding: 0.5rem;
-		  font-family: $font-primary;
-		  font-weight: bold;
-		  font-size: smaller;
-		  color: #fff;
-		  text-transform: uppercase;
-		  transition: all 0.3s;
-		}
+	/************ Hover effect styles *************/
 
-		figure p {
-		  letter-spacing: 1px;
-		  font-size: smaller;
-		  font-family: $font-primary;
-		}
+	figure {
+		position: relative;
+		overflow: hidden;
+		text-align: center;
+		cursor: pointer;
+	}
 
-		figure figcaption::before {
-		  position: absolute;
-		  top: 0;
-		  left: 0;
-		  width: 100%;
-		  height: 100%;
-		  background: linear-gradient(
-		    to bottom,
-		    rgba(72, 76, 97, 0) 0%,
-		    rgba(249, 255, 0, 0.34) 85%
-		  );
-		  content: "";
-		  opacity: 0;
-		  transform: translate3d(0, 50%, 0);
-		}
+	figure figcaption {
+		color: #fff;
+		backface-visibility: hidden;
+	}
 
-		figure h2 {
-		  position: absolute;
-		  top: 50%;
-		  left: 0;
-		  width: 100%;
-		  color: #484c61;
-		  transition: all 0.35s;
-		  transform: translate3d(0, -50%, 0);
-		}
+	figure figcaption::before,
+	figure figcaption::after {
+		pointer-events: none;
+	}
 
-		figure figcaption::before,
-		figure p,
-		figure .grid-button-wrapper {
-		  transition: all 0.35s;
-		}
+	figure figcaption,
+	figure figcaption > a {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
 
-		figure .grid-button-wrapper {
-		  position: absolute;
-		  bottom: 35%;
-		  left: 0;
-		  right: 0;
-		  width: 100%;
-		  opacity: 0;
-		  transform: translate3d(0, 20px, 0);
-		}
+	/* Anchor will cover the whole item by default */
 
-		figure p {
-		  position: absolute;
-		  bottom: 10px;
-		  left: 0;
-		  right: 0;
-		  padding-bottom: 3rem;
-		  width: 100%;
-		  opacity: 0;
-		  transform: translate3d(0, 10px, 0);
-		}
+	/* For some effects it will show as a button */
 
-		figure:hover h2 {
-		  background: none;
-		  color: #fff;
-		  transform: translate3d(0, -50%, 0) translate3d(0, -40px, 0);
-		}
+	figure figcaption > a {
+		z-index: 1000;
+		text-indent: 200%;
+		white-space: nowrap;
+		font-size: 0;
+		opacity: 0;
+	}
 
-		figure:hover figcaption::before,
-		figure:hover p,
-		figure:hover .grid-button-wrapper {
-		  opacity: 1;
-		  transform: translate3d(0, 0, 0);
-		}
+	figure h2 {
+		word-spacing: -0.15em;
+		font-weight: 300;
+	}
 
+	figure h2 span {
+		font-weight: 800;
+	}
+
+	figure h2,
+	figure p {
+		margin: 0;
+	}
+
+	figure button.rww_grid_button {
+		background-color: transparent;
+		border: 2px solid #fff;
+		border-radius: 5px;
+		margin: 0 auto;
+		padding: 0.5rem;
+		font-family: $font-primary;
+		font-weight: bold;
+		font-size: smaller;
+		color: #fff;
+		text-transform: uppercase;
+		transition: all 0.3s;
+	}
+
+	figure p {
+		letter-spacing: 1px;
+		font-size: smaller;
+		font-family: $font-primary;
+	}
+
+	figure figcaption::before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(
+			to bottom,
+			rgba(72, 76, 97, 0) 0%,
+			rgba(249, 255, 0, 0.34) 85%
+		);
+		content: "";
+		opacity: 0;
+		transform: translate3d(0, 50%, 0);
+	}
+
+	figure h2 {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 100%;
+		color: #484c61;
+		transition: all 0.35s;
+		transform: translate3d(0, -50%, 0);
+	}
+
+	figure figcaption::before,
+	figure p,
+	figure .grid-button-wrapper {
+		transition: all 0.35s;
+	}
+
+	figure .grid-button-wrapper {
+		position: absolute;
+		bottom: 35%;
+		left: 0;
+		right: 0;
+		width: 100%;
+		opacity: 0;
+		transform: translate3d(0, 20px, 0);
+	}
+
+	figure p {
+		position: absolute;
+		bottom: 10px;
+		left: 0;
+		right: 0;
+		padding-bottom: 3rem;
+		width: 100%;
+		opacity: 0;
+		transform: translate3d(0, 10px, 0);
+	}
+
+	figure:hover h2 {
+		background: none;
+		color: #fff;
+		transform: translate3d(0, -50%, 0) translate3d(0, -40px, 0);
+	}
+
+	figure:hover figcaption::before,
+	figure:hover p,
+	figure:hover .grid-button-wrapper {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
 }
 
-.container-customers{
+.container-customers {
 	width: 100vw;
 	height: $height-secundary;
 	background: black;
 	overflow-x: hidden;
-	@include mediaQuery(tablet){
+	@include mediaQuery(tablet) {
 		height: auto;
 	}
-	
-	.content-customers{
+
+	.content-customers {
 		width: 100%;
 		height: 100%;
 		display: grid;
 		grid-template-columns: 65% 35%;
 		overflow: hidden;
-		@include mediaQuery(tablet){
+		@include mediaQuery(tablet) {
 			grid-template-columns: auto;
 			grid-template-rows: auto;
-		}	
-		.content-items-customers{
-		display: grid;
-		grid-template-rows: 30% 70%;
-		@include mediaQuery(tablet){
-			grid-template-rows: auto;
 		}
-			.item-title-customers{
-				color:setColor(yellow);
+		.content-items-customers {
+			display: grid;
+			grid-template-rows: 30% 70%;
+			@include mediaQuery(desktopCustom) {
+				grid-template-rows: 25% 75%;
+				@include mediaQuery(tablet) {
+					grid-template-rows: auto;
+				}
+			}
+			.item-title-customers {
+				color: setColor(yellow);
 				display: flex;
-			    flex-direction: column;
+				flex-direction: column;
 				justify-content: flex-end;
 				align-items: flex-start;
-				padding-left: 11rem;
-				@include mediaQuery(desktopHR){
-					padding-left: 7rem;
+				padding-left: 7rem;
+				@include mediaQuery(desktopHR) {
+					padding-left: 6rem;
 				}
-				div:first-child{
+				div:first-child {
 					font-size: 3.6vw;
 					font-weight: 100;
 					font-family: $font-secundary-light;
-					@include mediaQuery(tablet){
-						font-size:1.5rem;
+					@include mediaQuery(desktopHR) {
+						font-size: 3.1vw;
+						@include mediaQuery(tablet) {
+							font-size: 1.5rem;
+						}
 					}
 				}
-				div:last-child{
+				div:last-child {
 					font-size: 6.5vw;
 					font-family: $font-secundary-bold;
-					@include mediaQuery(tablet){
-						font-size: 3rem;
+					@include mediaQuery(desktopHR) {
+						font-size: 6vw;
+						@include mediaQuery(tablet) {
+							font-size: 3rem;
+						}
 					}
 				}
-				@include mediaQuery(tablet){
+				@include mediaQuery(tablet) {
 					padding: 2rem 1rem;
 				}
 			}
 
-			.content-logos-customers{
+			.content-logos-customers {
 				display: flex;
 				justify-content: center;
-				align-items: center;
-				@include mediaQuery(tablet){
-					padding: 2rem 1rem;
-					overflow-x: scroll;
-						overflow:hidden;
+				align-items: flex-start;
+				padding-top: 2rem;
+				@include mediaQuery(desktopCustom) {
+					align-items: center;
+					padding: 0 0 1rem 0;
+					@include mediaQuery(tablet) {
+						padding: 2rem 1rem;
+						overflow-x: scroll;
+						overflow: hidden;
+					}
 				}
-				.items-logos{
-					width: 80%;
+				.items-logos {
+					width: 90%;
 					height: 80%;
 					display: grid;
-					grid-template-columns: repeat(5,20%);
-		    		grid-auto-rows: auto;
-		    		@include mediaQuery(tablet){
+					grid-template-columns: repeat(5, 20%);
+					grid-auto-rows: auto;
+					@include mediaQuery(tablet) {
 						display: flex;
 						width: 300px;
-						overflow-x: scroll; 
+						overflow-x: scroll;
 						padding: 1rem 0;
-					}	
+					}
 
-					.item-logo{
+					.item-logo {
 						display: flex;
 						justify-content: center;
 						align-items: center;
-						@include mediaQuery(tablet){
-							margin: 5px .7rem;
+						@include mediaQuery(tablet) {
+							margin: 5px 0.7rem;
 						}
-						img{
-							width: 140px;
+						img {
+							width: 180px;
 							height: auto;
-							@include mediaQuery(tablet){
-								height: 70px;
+							@include mediaQuery(desktopCustom) {
+								width: 160px;
+								@include mediaQuery(desktopHR) {
+									width: 150px;
+									@include mediaQuery(tablet) {
+										height: 70px;
+									}
+								}
 							}
 						}
 					}
 				}
-
 			}
 		}
 
-		.content-img-customer{
+		.content-img-customer {
 			display: flex;
-			align-items: flex-end;
+			align-items: center;
 			position: relative;
-			@include mediaQuery(tablet){
-					justify-content: flex-end;
+			@include mediaQuery(tablet) {
+				justify-content: flex-end;
 			}
-			img{
+			img {
 				position: absolute;
 				width: auto;
 				height: 90%;
-				@include mediaQuery(tablet){
-					height: 300px;
+				@include mediaQuery(desktopCustom) {
+					height: 85%;
+					@include mediaQuery(tablet) {
+						height: 300px;
+					}
 				}
 			}
 		}
 	}
 }
 
-.container-contact-us{
+.container-contact-us {
 	width: 100vw;
 	height: $height-secundary;
 	overflow-x: hidden;
 	background: setColor(yellow);
-	@include mediaQuery(tablet){
+	@include mediaQuery(tablet) {
 		height: auto;
 	}
-	.content-items-contact{
+	.content-items-contact {
 		width: 100%;
 		height: 100%;
 		display: grid;
 		grid-template-columns: 45% 55%;
 		position: relative;
-		@include mediaQuery(tablet){
+		@include mediaQuery(tablet) {
 			grid-template-columns: auto;
-			grid-template-rows:auto;
+			grid-template-rows: auto;
 		}
-		.background-black{
+		.background-black {
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -1474,102 +1491,123 @@ body{
 			z-index: 200;
 			background: setColor(black);
 			clip-path: polygon(37% 0%, 100% 0%, 100% 100%, 21% 100%);
-			@include mediaQuery(tablet){
-				clip-path: polygon(37% 0%, 100% 0%, 100% 100%, -61% 100%);	
+			@include mediaQuery(tablet) {
+				clip-path: polygon(37% 0%, 100% 0%, 100% 100%, -61% 100%);
 			}
 		}
-		.content-img{
+		.content-img {
 			display: flex;
 			align-items: flex-end;
 			justify-content: flex-end;
 			z-index: 400;
-			img{
+			position: relative;
+			.img-contact-lines {
+				position: absolute;
+				top: -13px;
+				right: 0;
+				width: auto;
+				height: 81%;
+			}
+			img {
 				width: auto;
 				height: 98%;
 				position: absolute;
-				@include mediaQuery(tablet){
+				@include mediaQuery(tablet) {
 					height: 360px;
 				}
 			}
 		}
-		.content-form{
+		.content-form {
 			display: grid;
-			grid-template-rows: 80% 20%;
+			grid-template-rows: 85% 15%;
 			z-index: 400;
 			width: 100%;
 			height: 100%;
-			@include mediaQuery(tablet){
+			@include mediaQuery(desktopCustom) {
+				grid-template-rows: 80% 20%;
+				@include mediaQuery(tablet) {
 					grid-template-rows: auto;
+				}
 			}
-			.item-form{
+			.item-form {
 				display: flex;
 				flex-direction: column;
 				align-items: center;
 				justify-content: space-around;
-				.title-form{
+				.title-form {
 					display: flex;
 					justify-content: center;
 					align-items: center;
-					padding: .5rem 0;
-					img{
+					padding: 0.5rem 0;
+					img {
 						width: auto;
-						height: 11vw;
-						@include mediaQuery(desktopCustom){
-							height: 9vw;
-							@include mediaQuery(tablet){
-								height: 10vw;
+						height: 13vw;
+						@include mediaQuery(desktopCustom) {
+							height: 13vw;
+							@include mediaQuery(tablet) {
+								height: 27vw;
 							}
 						}
 					}
 				}
-				.content-form-contact{
+				.content-form-contact {
 					width: 100%;
 					display: flex;
 					justify-content: center;
-					.form-contact{
+					.form-contact {
 						width: 70%;
 						margin: auto;
-						@include mediaQuery(tablet){
+						@include mediaQuery(tablet) {
 							width: 90%;
 						}
-						.item-group-form{
+						.item-group-form {
 							width: 100%;
-							padding: 1rem 0;
-							label{
+							padding: 0 0 1rem 0;
+							label {
 								color: setColor(white);
 								font-weight: 500;
 								text-align: left;
+								font-size: 0.9rem;
+								@include mediaQuery(desktopCustom) {
+									font-size: 0.8rem;
+								}
 							}
-							input, textarea{
+							input,
+							textarea {
 								margin-top: 5px;
 								width: 100%;
-								padding: 7px;
+								padding: 0.6rem 7px;
+								font-size: 1.2rem;
 								outline: none;
-								@include mediaQuery(desktopCustom){
-									@include mediaQuery(tablet){
+								font-family: inherit;
+								@include mediaQuery(desktopCustom) {
+									padding: 0.3rem 7px;
+									font-size: 1rem;
+									@include mediaQuery(tablet) {
 										width: 95%;
 									}
 								}
 							}
 						}
-						.group-by-flex{
+						.group-by-flex {
 							display: flex;
 							justify-content: space-between;
-							@include mediaQuery(tablet){
-								flex-direction:column;
+							@include mediaQuery(tablet) {
+								flex-direction: column;
 							}
-							.item-group-form{
+							.item-group-form {
 								width: 47%;
-								@include mediaQuery(tablet){
+								@include mediaQuery(tablet) {
 									width: 100%;
 								}
 							}
 						}
-						.item-button-send{
+						.item-button-send {
 							width: 100%;
 							display: flex;
 							justify-content: center;
-							.btn-send-message-fo{
+							padding-top: 1rem;
+							.btn-send-message-fo {
 								font-size: 1rem;
 								padding: 1.1rem 3rem;
 								background: setColor(yellow);
@@ -1578,13 +1616,13 @@ body{
 								font-weight: 500;
 								border: none;
 								cursor: pointer;
-								@include mediaQuery(desktopCustom){
-									padding: .7em 3rem;
+								@include mediaQuery(desktopCustom) {
+									padding: 0.7em 3rem;
 								}
-								&:hover{
-									transition: all ease-in-out .5s;
+								&:hover {
+									transition: all ease-in-out 0.5s;
 									border: 2px solid setColor(yellow);
-									background-color: setColor(black);	
+									background-color: setColor(black);
 									color: setColor(yellow);
 								}
 							}
@@ -1603,42 +1641,37 @@ body{
 				}
 			}
 
-			.item-footer-redes{
+			.item-footer-redes {
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				@include mediaQuery(tablet){
+				@include mediaQuery(tablet) {
 					align-items: flex-start;
-					flex-direction:column;
+					flex-direction: column;
 					padding: 2rem 0;
 				}
-				.item-contact{
+				.item-contact {
 					display: flex;
 					align-items: center;
-					.icon{
+					.icon {
 						display: flex;
 						justify-content: center;
 						align-items: center;
 						width: 30px;
 						height: 30px;
-						border-radius:50%;
+						border-radius: 50%;
 						background: setColor(yellow);
 						color: setColor(black);
 						padding: 5px;
-						margin:.3rem 1.2rem;
+						margin: 0.3rem 1.2rem;
 					}
-					span{
+					span {
 						font-weight: 500;
 						font-size: 1.2rem;
-						color:setColor(yellow);
-
+						color: setColor(yellow);
 					}
 				}
 			}
 		}
 	}
 }
-
-
-
-
