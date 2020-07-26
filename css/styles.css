@@ -617,7 +617,13 @@ body {
                   margin: -10% 0; } }
               .container-initial .container-slider #slides .item-slider-2 .content-slider .item-text-slider .text-slider div:nth-child(1) {
                 font-size: 3.7rem;
-                font-family: "Montserrat-Light"; }
+                font-family: "Montserrat-Light";
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                justify-content: space-between; }
                 @media screen and (max-width: 1805px) {
                   .container-initial .container-slider #slides .item-slider-2 .content-slider .item-text-slider .text-slider div:nth-child(1) {
                     font-size: 3rem;
@@ -632,14 +638,14 @@ body {
                   font-family: "Montserrat-Medium";
                   letter-spacing: 3px; }
               .container-initial .container-slider #slides .item-slider-2 .content-slider .item-text-slider .text-slider div:nth-child(2) {
-                font-size: 11.6rem;
+                font-size: 9.5vw;
                 font-family: "Montserrat-Regular"; }
                 @media screen and (max-width: 1805px) {
                   .container-initial .container-slider #slides .item-slider-2 .content-slider .item-text-slider .text-slider div:nth-child(2) {
-                    font-size: 10rem; } }
+                    font-size: 10.6vw; } }
   @media screen and (max-width: 1805px) and (max-width: 1250px) {
     .container-initial .container-slider #slides .item-slider-2 .content-slider .item-text-slider .text-slider div:nth-child(2) {
-      font-size: 19.3vw; } }
+      font-size: 16.6vw; } }
           .container-initial .container-slider #slides .item-slider-2 .content-slider .item-img-slider {
             height: 100%;
             width: auto;
@@ -1167,10 +1173,10 @@ body {
       position: relative; } }
   @media screen and (max-width: 1805px) and (max-width: 1125px) and (max-width: 768px) {
     .container-services .content-services .content-items-services .content-card-items .item-service .icon-service img {
-      height: 70px; } }
+      height: 60px; } }
   @media screen and (max-width: 1805px) and (max-width: 1125px) and (max-width: 768px) and (max-width: 325px) {
     .container-services .content-services .content-items-services .content-card-items .item-service .icon-service img {
-      height: 70px; } }
+      height: 60px; } }
           .container-services .content-services .content-items-services .content-card-items .item-service .title-service {
             font-size: 1.3rem;
             text-align: left;
