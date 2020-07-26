@@ -6,26 +6,17 @@
 	<link rel="icon" type="image/png" href="images/otros/favicon.png"/>
 	<link rel="icon" type="image/png" href="https://example.com/images/otros/favicon.png"/>
 	<title>MarkoCreativo</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="css/styles.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/animate.min.css"/>
+	<link rel="stylesheet" href="./css/animate.css"/>
 
 	<!--Import customers logos-->
 	<script src="./js/customers.js"></script>
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="./js/wow.min.js"></script>
+	<script src="./js/wow.js"></script>
 	<script>
-		wow = new WOW(
-						{
-						boxClass:     'wow',      // default
-						animateClass: 'animated', // default
-						offset:       0,          // default
-						mobile:       true,       // default
-						live:         true        // default
-						}
-						)
-						wow.init();
+		new WOW().init();
 	</script>
 </head>
 <body style="position: relative;">
@@ -149,7 +140,7 @@
 				<div class="title-reverse">Nosotros</div>
 			</div>
 			<div class="content-description">
-				<div class="description wow slideInLeft" data-wow-duration="2s" data-wow-delay="5s">
+				<div class="wow slideInLeft description" data-wow-duration="2s" data-wow-delay="5s">
 					<p>Somos un equipo creativo que nos enfocamos en dar la mejor imagen corporativa a nuestros clientes. Profesionales en la carrera de dirección, diseño gráfico y publicitario.</p>
 					
 					<p>Transformamos ideas en emociones y experiencias, que generan en más negocio a nuestros clientes.</p>
