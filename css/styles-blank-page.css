@@ -1,3 +1,58 @@
+/*OTHERS FONTS*/
+@font-face {
+  font-family: "amarurgt";
+  font-style: normal;
+  src: url("../fonts/amarurgt.ttf");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
+
+@font-face {
+  font-family: "Montserrat-Light";
+  font-style: normal;
+  src: url("../fonts/Montserrat-Light.otf");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
+
+@font-face {
+  font-family: "Montserrat-Regular";
+  font-style: normal;
+  src: url("../fonts/Montserrat-Regular.ttf");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
+
+@font-face {
+  font-family: "Montserrat-Medium";
+  font-style: normal;
+  src: url("../fonts/Montserrat-Medium.otf");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
+
+@font-face {
+  font-family: "Montserrat-SemiBold";
+  font-style: normal;
+  src: url("../fonts/Montserrat-SemiBold.otf");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
+
+@font-face {
+  font-family: "Montserrat-Bold";
+  font-style: normal;
+  src: url("../fonts/Montserrat-Bold.otf");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
+
+@font-face {
+  font-family: "Montserrat-ExtraBold";
+  font-style: normal;
+  src: url("../fonts/Montserrat-ExtraBold.otf");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
+
+@font-face {
+  font-family: "Code-Light";
+  font-style: normal;
+  src: url("../fonts/Code-Light.otf");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
+
+@font-face {
+  font-family: "Code-Bold";
+  font-style: normal;
+  src: url("../fonts/Code-Bold.otf");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
+
 /*FONTS NAVBAR MENU*/
 @font-face {
   font-family: "UnitedSansReg-Extra-Bold";
@@ -15,19 +70,6 @@
   font-family: "UnitedSansReg-Bold";
   font-style: normal;
   src: url("../fonts/UnitedSansReg-Bold.otf");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
-
-/*OTHERS*/
-@font-face {
-  font-family: "Code-Light";
-  font-style: normal;
-  src: url("../fonts/Code-Light.otf");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
-
-@font-face {
-  font-family: "Code-Bold";
-  font-style: normal;
-  src: url("../fonts/Code-Bold.otf");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
 
 /*SLIDER1*/
@@ -75,8 +117,7 @@
   src: url("../fonts/DINPro-Light.otf");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
 
-/*fonts principales*/
-/*fonts sliders y otros*/
+/**************FONTS GENERAL*************/
 .warning-border {
   border: 3px solid #ff1212; }
 

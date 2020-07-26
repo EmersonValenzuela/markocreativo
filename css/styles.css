@@ -1,3 +1,58 @@
+/*OTHERS FONTS*/
+@font-face {
+  font-family: "amarurgt";
+  font-style: normal;
+  src: url("../fonts/amarurgt.ttf");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
+
+@font-face {
+  font-family: "Montserrat-Light";
+  font-style: normal;
+  src: url("../fonts/Montserrat-Light.otf");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
+
+@font-face {
+  font-family: "Montserrat-Regular";
+  font-style: normal;
+  src: url("../fonts/Montserrat-Regular.ttf");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
+
+@font-face {
+  font-family: "Montserrat-Medium";
+  font-style: normal;
+  src: url("../fonts/Montserrat-Medium.otf");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
+
+@font-face {
+  font-family: "Montserrat-SemiBold";
+  font-style: normal;
+  src: url("../fonts/Montserrat-SemiBold.otf");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
+
+@font-face {
+  font-family: "Montserrat-Bold";
+  font-style: normal;
+  src: url("../fonts/Montserrat-Bold.otf");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
+
+@font-face {
+  font-family: "Montserrat-ExtraBold";
+  font-style: normal;
+  src: url("../fonts/Montserrat-ExtraBold.otf");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
+
+@font-face {
+  font-family: "Code-Light";
+  font-style: normal;
+  src: url("../fonts/Code-Light.otf");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
+
+@font-face {
+  font-family: "Code-Bold";
+  font-style: normal;
+  src: url("../fonts/Code-Bold.otf");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
+
 /*FONTS NAVBAR MENU*/
 @font-face {
   font-family: "UnitedSansReg-Extra-Bold";
@@ -15,19 +70,6 @@
   font-family: "UnitedSansReg-Bold";
   font-style: normal;
   src: url("../fonts/UnitedSansReg-Bold.otf");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
-
-/*OTHERS*/
-@font-face {
-  font-family: "Code-Light";
-  font-style: normal;
-  src: url("../fonts/Code-Light.otf");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
-
-@font-face {
-  font-family: "Code-Bold";
-  font-style: normal;
-  src: url("../fonts/Code-Bold.otf");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
 
 /*SLIDER1*/
@@ -75,8 +117,7 @@
   src: url("../fonts/DINPro-Light.otf");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
 
-/*fonts principales*/
-/*fonts sliders y otros*/
+/**************FONTS GENERAL*************/
 .warning-border {
   border: 3px solid #ff1212; }
 
@@ -270,7 +311,7 @@ body {
       height: 100%; }
       .container-initial .container-nabvar .menu .list {
         list-style: none;
-        width: 45%;
+        width: 55%;
         display: -ms-grid;
         display: grid;
         -ms-grid-columns: (calc(100% / 5))[5];
@@ -300,10 +341,12 @@ body {
             text-decoration: none;
             color: #000000;
             font-weight: 400;
-            font-size: 1.6rem; }
+            font-size: 1.6rem;
+            margin-bottom: -4px; }
             @media screen and (max-width: 1650px) {
               .container-initial .container-nabvar .menu .list li a {
-                font-size: 1.1rem; } }
+                font-size: 1.1rem;
+                margin-bottom: -4px; } }
   .container-initial .container-slider {
     width: 100%;
     height: 82%;
@@ -542,8 +585,8 @@ body {
               -ms-flex-direction: column;
               flex-direction: column; } }
           .container-initial .container-slider #slides .item-slider-2 .content-slider .item-text-slider {
-            height: 100%;
             width: auto;
+            height: 100%;
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
@@ -567,13 +610,18 @@ body {
               margin: 0;
               color: #000000;
               text-align: center;
-              padding: 3rem 0 0 0; }
+              padding: 3rem 0 0 0;
+              margin: -10% 20% 0 0; }
+              @media screen and (max-width: 1650px) {
+                .container-initial .container-slider #slides .item-slider-2 .content-slider .item-text-slider .text-slider {
+                  margin: -10% 0; } }
               .container-initial .container-slider #slides .item-slider-2 .content-slider .item-text-slider .text-slider div:nth-child(1) {
-                font-size: 4.5rem;
-                font-family: "Code-Light"; }
+                font-size: 3.7rem;
+                font-family: "Montserrat-Light"; }
                 @media screen and (max-width: 1805px) {
                   .container-initial .container-slider #slides .item-slider-2 .content-slider .item-text-slider .text-slider div:nth-child(1) {
-                    font-size: 3rem; } }
+                    font-size: 3rem;
+                    margin-top: -13%; } }
   @media screen and (max-width: 1805px) and (max-width: 1250px) {
     .container-initial .container-slider #slides .item-slider-2 .content-slider .item-text-slider .text-slider div:nth-child(1) {
       font-size: 5.8vw; } }
@@ -581,11 +629,11 @@ body {
     .container-initial .container-slider #slides .item-slider-2 .content-slider .item-text-slider .text-slider div:nth-child(1) {
       font-size: 5.3vw; } }
                 .container-initial .container-slider #slides .item-slider-2 .content-slider .item-text-slider .text-slider div:nth-child(1) .text-bold {
-                  font-family: "DINPro-Medium";
+                  font-family: "Montserrat-Medium";
                   letter-spacing: 3px; }
               .container-initial .container-slider #slides .item-slider-2 .content-slider .item-text-slider .text-slider div:nth-child(2) {
-                font-size: 14.8rem;
-                font-family: "Code-Bold"; }
+                font-size: 11.6rem;
+                font-family: "Montserrat-Regular"; }
                 @media screen and (max-width: 1805px) {
                   .container-initial .container-slider #slides .item-slider-2 .content-slider .item-text-slider .text-slider div:nth-child(2) {
                     font-size: 10rem; } }
@@ -901,11 +949,11 @@ body {
         -ms-flex-pack: center;
         justify-content: center;
         font-size: 1.6vw;
-        font-family: "DINPro-Light";
+        font-family: "DINPro";
         padding: 0 7rem 0 1rem; }
         @media screen and (max-width: 1650px) {
           .container-about-us .content-about .content-description .description {
-            font-size: 1.39rem;
+            font-size: 1.38rem;
             font-weight: 200; } }
   @media screen and (max-width: 1650px) and (max-width: 1125px) {
     .container-about-us .content-about .content-description .description {
@@ -958,8 +1006,8 @@ body {
     height: 100%;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 25% 50% 25%;
-    grid-template-columns: 25% 50% 25%;
+    -ms-grid-columns: 25% 55% 20%;
+    grid-template-columns: 25% 55% 20%;
     position: relative; }
     @media screen and (max-width: 1125px) {
       .container-services .content-services {
@@ -1012,12 +1060,9 @@ body {
         width: auto;
         height: auto;
         font-size: 11vw;
-        line-height: 90px;
         display: none;
-        font-family: "UnitedSansReg-Bold";
-        letter-spacing: -4px; }
-        .container-services .content-services .content-img .item-title span {
-          font-family: "DINPro-Medium"; }
+        font-family: "amarurgt";
+        letter-spacing: -1px; }
         @media screen and (max-width: 1125px) {
           .container-services .content-services .content-img .item-title {
             display: -webkit-box;
@@ -1036,12 +1081,16 @@ body {
   @media screen and (max-width: 1125px) and (max-width: 768px) {
     .container-services .content-services .content-img .item-title {
       font-size: 20vw;
-      line-height: 61px;
       padding-right: 2rem; } }
   @media screen and (max-width: 1125px) and (max-width: 768px) and (max-width: 325px) {
     .container-services .content-services .content-img .item-title {
-      font-size: 24vw;
-      line-height: 61px; } }
+      font-size: 24vw; } }
+        .container-services .content-services .content-img .item-title div {
+          width: auto;
+          height: 90px; }
+          @media screen and (max-width: 768px) {
+            .container-services .content-services .content-img .item-title div {
+              height: 70px; } }
     .container-services .content-services .content-items-services {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -1052,6 +1101,12 @@ body {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center; }
+      @media screen and (max-width: 1125px) {
+        .container-services .content-services .content-items-services {
+          padding: 4rem 0 0 0; } }
+  @media screen and (max-width: 1125px) and (max-width: 768px) {
+    .container-services .content-services .content-items-services {
+      padding: 1rem 0 0 0; } }
       .container-services .content-services .content-items-services .content-card-items {
         width: 90%;
         height: 70%;
@@ -1108,9 +1163,12 @@ body {
                   height: 60px; } }
   @media screen and (max-width: 1805px) and (max-width: 1125px) {
     .container-services .content-services .content-items-services .content-card-items .item-service .icon-service img {
-      height: 60px;
+      height: 110px;
       position: relative; } }
   @media screen and (max-width: 1805px) and (max-width: 1125px) and (max-width: 768px) {
+    .container-services .content-services .content-items-services .content-card-items .item-service .icon-service img {
+      height: 70px; } }
+  @media screen and (max-width: 1805px) and (max-width: 1125px) and (max-width: 768px) and (max-width: 325px) {
     .container-services .content-services .content-items-services .content-card-items .item-service .icon-service img {
       height: 70px; } }
           .container-services .content-services .content-items-services .content-card-items .item-service .title-service {
@@ -1135,7 +1193,8 @@ body {
       font-size: 2.8vw; } }
   @media screen and (max-width: 1805px) and (max-width: 1125px) and (max-width: 768px) {
     .container-services .content-services .content-items-services .content-card-items .item-service .title-service {
-      font-size: 1.2rem; } }
+      font-size: 1.2rem;
+      padding: 0; } }
   @media screen and (max-width: 1805px) and (max-width: 1125px) and (max-width: 768px) and (max-width: 325px) {
     .container-services .content-services .content-items-services .content-card-items .item-service .title-service {
       padding: 0 0 0 1rem; } }
@@ -1148,9 +1207,12 @@ body {
             align-items: flex-start;
             font-family: "DINPro-Light";
             padding-left: 3rem; }
-            @media screen and (max-width: 325px) {
+            @media screen and (max-width: 768px) {
               .container-services .content-services .content-items-services .content-card-items .item-service .description-service {
-                padding: 1rem 0 0 1rem; } }
+                padding: 1rem 0; } }
+  @media screen and (max-width: 768px) and (max-width: 325px) {
+    .container-services .content-services .content-items-services .content-card-items .item-service .description-service {
+      padding: 1rem 0; } }
             .container-services .content-services .content-items-services .content-card-items .item-service .description-service .list-service {
               list-style: none;
               margin: 0;
@@ -1163,7 +1225,10 @@ body {
   @media screen and (max-width: 1805px) and (max-width: 1125px) {
     .container-services .content-services .content-items-services .content-card-items .item-service .description-service .list-service {
       font-size: 2.5vw; } }
-  @media screen and (max-width: 1805px) and (max-width: 1125px) and (max-width: 325px) {
+  @media screen and (max-width: 1805px) and (max-width: 1125px) and (max-width: 768px) {
+    .container-services .content-services .content-items-services .content-card-items .item-service .description-service .list-service {
+      font-size: 3.5vw; } }
+  @media screen and (max-width: 1805px) and (max-width: 1125px) and (max-width: 768px) and (max-width: 325px) {
     .container-services .content-services .content-items-services .content-card-items .item-service .description-service .list-service {
       font-size: 5vw; } }
     .container-services .content-services .content-title-service {
@@ -1173,27 +1238,26 @@ body {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center; }
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start; }
       .container-services .content-services .content-title-service .item-title {
         width: auto;
         height: auto;
         font-size: 9vw;
-        font-family: "UnitedSansReg-Bold";
-        letter-spacing: -14px; }
-        .container-services .content-services .content-title-service .item-title span {
-          font-family: "DINPro-Medium"; }
-        .container-services .content-services .content-title-service .item-title div:nth-child(2) {
-          /* line-height: 110px; */
-          line-height: 69px;
-          margin-left: 7px; }
-        .container-services .content-services .content-title-service .item-title div:nth-child(3) {
-          /* line-height: 253px; */
-          line-height: 207px; }
+        font-family: "amarurgt";
+        letter-spacing: -7px; }
+        @media screen and (max-width: 1650px) {
+          .container-services .content-services .content-title-service .item-title {
+            letter-spacing: -5px; } }
+        .container-services .content-services .content-title-service .item-title div {
+          height: 125px; }
           @media screen and (max-width: 1650px) {
-            .container-services .content-services .content-title-service .item-title div:nth-child(3) {
-              line-height: 154px; } }
+            .container-services .content-services .content-title-service .item-title div {
+              height: 95px; } }
+  @media screen and (max-width: 1650px) and (max-width: 1125px) {
+    .container-services .content-services .content-title-service .item-title div {
+      height: 105px; } }
       @media screen and (max-width: 1125px) {
         .container-services .content-services .content-title-service {
           display: none; } }
@@ -1205,15 +1269,14 @@ body {
       right: 0;
       bottom: 0;
       z-index: -10;
-      -webkit-clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 4% 100%);
-      clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 4% 100%); }
+      -webkit-clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 6% 100%);
+      clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 6% 100%); }
       @media screen and (max-width: 1125px) {
         .container-services .content-services .background-absolute {
           display: none; } }
 
 .container-banner-title-jobs {
   width: 100vw;
-  height: 35rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1221,18 +1284,17 @@ body {
   -ms-flex-align: center;
   align-items: center;
   position: relative;
-  padding: 4rem 0; }
+  padding: 9rem 0; }
   @media screen and (max-width: 1650px) {
     .container-banner-title-jobs {
-      padding: 1rem 0; } }
+      padding: 7rem 0; } }
   @media screen and (max-width: 1650px) and (max-width: 1125px) {
     .container-banner-title-jobs {
       height: auto;
-      margin-top: 3rem;
-      padding: 4rem 0; } }
-  @media screen and (max-width: 1650px) and (max-width: 1125px) and (max-width: 1125px) {
+      padding: 5rem 0; } }
+  @media screen and (max-width: 1650px) and (max-width: 1125px) and (max-width: 768px) {
     .container-banner-title-jobs {
-      padding: 1rem 0; } }
+      padding: 2rem 0; } }
   .container-banner-title-jobs .container-text-title {
     width: 100%;
     height: auto;
@@ -1261,7 +1323,7 @@ body {
   @media screen and (max-width: 1650px) and (max-width: 1125px) {
     .container-banner-title-jobs .container-text-title img {
       height: 230px;
-      margin-left: 4rem; } }
+      margin-left: 2rem; } }
   @media screen and (max-width: 1650px) and (max-width: 1125px) and (max-width: 768px) {
     .container-banner-title-jobs .container-text-title img {
       height: 90px; } }
@@ -1271,7 +1333,7 @@ body {
       height: 80px; } }
   .container-banner-title-jobs .img-girl {
     width: auto;
-    height: 790px;
+    height: 880px;
     position: absolute;
     bottom: -70px;
     right: 20%;
@@ -1834,6 +1896,9 @@ body {
                 @media screen and (max-width: 1805px) {
                   .container-contact-us .content-items-contact .content-form .item-form .content-form-contact .form-contact .item-group-form label {
                     font-size: 0.8rem; } }
+              .container-contact-us .content-items-contact .content-form .item-form .content-form-contact .form-contact .item-group-form textarea {
+                max-width: 100%;
+                max-height: 150px; }
               .container-contact-us .content-items-contact .content-form .item-form .content-form-contact .form-contact .item-group-form input,
               .container-contact-us .content-items-contact .content-form .item-form .content-form-contact .form-contact .item-group-form textarea {
                 margin-top: 5px;
