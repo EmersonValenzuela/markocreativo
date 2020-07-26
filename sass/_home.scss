@@ -524,13 +524,14 @@ body {
 						background-color: $bg-visible-container2;
 						display: flex;
 						justify-content: center;
-						align-items: center;
+						align-items: flex-start;
 						padding-left: 8rem;
 						@include mediaQuery(desktop) {
 							order: 0;
 							width: 100%;
 							height: 40%;
 							padding: 0;
+							align-items: center;
 						}
 						.text-slider {
 							/*background: rgba(0,0,0,.5);*/
@@ -539,7 +540,9 @@ body {
 							display: flex;
 							flex-direction: column;
 							align-items: center;
+							justify-content: center;
 							color: setColor(white);
+							height: calc(100% - 14%);
 							span:nth-child(1) {
 								font-size: 9rem;
 								letter-spacing: -9px;
