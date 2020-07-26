@@ -129,10 +129,12 @@ body {
 			}
 		}
 		.item-logo {
+			position: relative;
 			@include flexCenter();
 			img {
 				width: auto;
-				height: 8vw;
+				height: 7.5vw;
+				position: absolute;
 				@include mediaQuery(desktopHR) {
 					height: 7vw;
 					@include mediaQuery(desktop) {
@@ -670,7 +672,7 @@ body {
 	}
 	.content-about {
 		display: grid;
-		grid-template-columns: 15% 45% 40%;
+		grid-template-columns: 15% 50% 35%;
 		width: 100%;
 		height: 100%;
 		@include mediaQuery(tablet) {
@@ -682,7 +684,8 @@ body {
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			background: linear-gradient(90deg, setColor(yellow) 20%, transparent 20%);
+			background: linear-gradient(90deg, setColor(yellow) 25%, transparent 20%);
+			padding-left: 2rem;
 			@include mediaQuery(tablet) {
 				background: none;
 				padding-top: 3rem;
@@ -690,7 +693,7 @@ body {
 			.title-reverse {
 				position: absolute;
 				transform: rotate(-90deg);
-				font-size: 7.3vw;
+				font-size: 6.8vw;
 				text-transform: uppercase;
 				@include mediaQuery(desktopHR) {
 					@include mediaQuery(tablet) {
@@ -708,16 +711,16 @@ body {
 			align-items: center;
 			.description {
 				width: 100%;
-				height: 70%;
+				height: auto;
 				align-items: center;
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
-				font-size: 1.7rem;
+				font-size: 1.6vw;
 				font-family: $font-primary-light;
 				padding: 0 7rem 0 1rem;
 				@include mediaQuery(desktopHR) {
-					font-size: 1.3rem;
+					font-size: 1.39rem;
 					font-weight: 200;
 					@include mediaQuery(tablet) {
 						font-size: 4vw;
@@ -736,7 +739,7 @@ body {
 			display: flex;
 			align-items: flex-end;
 			justify-content: center;
-			background: linear-gradient(90deg, setColor(yellow) 70%, transparent 70%);
+			background: linear-gradient(90deg, setColor(yellow) 75%, transparent 70%);
 			position: relative;
 			img {
 				position: absolute;
@@ -753,7 +756,7 @@ body {
 
 .container-services {
 	width: 100vw;
-	height: $height-primary;
+	height: $height-secundary;
 	overflow-x: hidden;
 	@include mediaQuery(tablet) {
 		height: auto;
@@ -836,7 +839,7 @@ body {
 			align-items: center;
 			.content-card-items {
 				width: 90%;
-				height: 80%;
+				height: 70%;
 				padding-top: 3rem;
 				//max-width: 600px;
 				background: orange;
@@ -930,17 +933,21 @@ body {
 			.item-title {
 				width: auto;
 				height: auto;
-				font-size: 10vw;
+				font-size: 9vw;
 				font-family: $font-terciary-bold;
 				letter-spacing: -14px;
 				span {
 					font-family: $font-primary-medium;
 				}
 				div:nth-child(2) {
-					line-height: 65px;
+					line-height: 69px;
+					margin-left: 7px;
 				}
 				div:nth-child(3) {
 					line-height: 211px;
+					@include mediaQuery(desktopHR) {
+						line-height: 154px;
+					}
 				}
 			}
 			@include mediaQuery(tablet) {
@@ -971,9 +978,12 @@ body {
 	align-items: center;
 	position: relative;
 	padding: 4rem 0;
-	@include mediaQuery(tablet) {
-		height: auto;
-		margin-top: 8rem;
+	@include mediaQuery(desktopHR) {
+		padding: 1rem 0;
+		@include mediaQuery(tablet) {
+			height: auto;
+			margin-top: 8rem;
+		}
 	}
 	.container-text-title {
 		width: 100%;
@@ -983,15 +993,16 @@ body {
 		display: flex;
 		justify-content: center;
 		overflow-x: hidden;
-		@include mediaQuery(desktopHR) {
+		@include mediaQuery(desktopCustom) {
+			padding: 1.5rem 0;
 			justify-content: flex-start;
 		}
 		img {
 			width: auto;
-			height: 300px;
-			margin-left: 8rem;
+			height: 420px;
 			@include mediaQuery(desktopHR) {
-				margin-left: 5rem;
+				height: 320px;
+				margin-left: 6rem;
 				@include mediaQuery(tablet) {
 					height: 180px;
 					margin-left: 2rem;
@@ -1010,13 +1021,16 @@ body {
 		bottom: -70px;
 		right: 20%;
 		z-index: 500;
-		@include mediaQuery(tablet) {
-			height: 520px;
-			right: 3%;
-			bottom: -40px;
-			@include mediaQuery(mobile) {
-				height: 280px;
-				bottom: -45px;
+		@include mediaQuery(desktopHR) {
+			height: 690px;
+			@include mediaQuery(tablet) {
+				height: 520px;
+				right: 3%;
+				bottom: -40px;
+				@include mediaQuery(mobile) {
+					height: 280px;
+					bottom: -45px;
+				}
 			}
 		}
 	}
@@ -1334,8 +1348,11 @@ body {
 		.content-items-customers {
 			display: grid;
 			grid-template-rows: 30% 70%;
-			@include mediaQuery(tablet) {
-				grid-template-rows: auto;
+			@include mediaQuery(desktopCustom) {
+				grid-template-rows: 25% 75%;
+				@include mediaQuery(tablet) {
+					grid-template-rows: auto;
+				}
 			}
 			.item-title-customers {
 				color: setColor(yellow);
@@ -1343,23 +1360,29 @@ body {
 				flex-direction: column;
 				justify-content: flex-end;
 				align-items: flex-start;
-				padding-left: 11rem;
+				padding-left: 7rem;
 				@include mediaQuery(desktopHR) {
-					padding-left: 7rem;
+					padding-left: 6rem;
 				}
 				div:first-child {
 					font-size: 3.6vw;
 					font-weight: 100;
 					font-family: $font-secundary-light;
-					@include mediaQuery(tablet) {
-						font-size: 1.5rem;
+					@include mediaQuery(desktopHR) {
+						font-size: 3.1vw;
+						@include mediaQuery(tablet) {
+							font-size: 1.5rem;
+						}
 					}
 				}
 				div:last-child {
 					font-size: 6.5vw;
 					font-family: $font-secundary-bold;
-					@include mediaQuery(tablet) {
-						font-size: 3rem;
+					@include mediaQuery(desktopHR) {
+						font-size: 6vw;
+						@include mediaQuery(tablet) {
+							font-size: 3rem;
+						}
 					}
 				}
 				@include mediaQuery(tablet) {
@@ -1370,14 +1393,19 @@ body {
 			.content-logos-customers {
 				display: flex;
 				justify-content: center;
-				align-items: center;
-				@include mediaQuery(tablet) {
-					padding: 2rem 1rem;
-					overflow-x: scroll;
-					overflow: hidden;
+				align-items: flex-start;
+				padding-top: 2rem;
+				@include mediaQuery(desktopCustom) {
+					align-items: center;
+					padding: 0 0 1rem 0;
+					@include mediaQuery(tablet) {
+						padding: 2rem 1rem;
+						overflow-x: scroll;
+						overflow: hidden;
+					}
 				}
 				.items-logos {
-					width: 80%;
+					width: 90%;
 					height: 80%;
 					display: grid;
 					grid-template-columns: repeat(5, 20%);
@@ -1397,10 +1425,16 @@ body {
 							margin: 5px 0.7rem;
 						}
 						img {
-							width: 140px;
+							width: 180px;
 							height: auto;
-							@include mediaQuery(tablet) {
-								height: 70px;
+							@include mediaQuery(desktopCustom) {
+								width: 160px;
+								@include mediaQuery(desktopHR) {
+									width: 150px;
+									@include mediaQuery(tablet) {
+										height: 70px;
+									}
+								}
 							}
 						}
 					}
@@ -1410,7 +1444,7 @@ body {
 
 		.content-img-customer {
 			display: flex;
-			align-items: flex-end;
+			align-items: center;
 			position: relative;
 			@include mediaQuery(tablet) {
 				justify-content: flex-end;
@@ -1419,8 +1453,11 @@ body {
 				position: absolute;
 				width: auto;
 				height: 90%;
-				@include mediaQuery(tablet) {
-					height: 300px;
+				@include mediaQuery(desktopCustom) {
+					height: 85%;
+					@include mediaQuery(tablet) {
+						height: 300px;
+					}
 				}
 			}
 		}
@@ -1463,6 +1500,14 @@ body {
 			align-items: flex-end;
 			justify-content: flex-end;
 			z-index: 400;
+			position: relative;
+			.img-contact-lines {
+				position: absolute;
+				top: -13px;
+				right: 0;
+				width: auto;
+				height: 81%;
+			}
 			img {
 				width: auto;
 				height: 98%;
@@ -1474,12 +1519,15 @@ body {
 		}
 		.content-form {
 			display: grid;
-			grid-template-rows: 80% 20%;
+			grid-template-rows: 85% 15%;
 			z-index: 400;
 			width: 100%;
 			height: 100%;
-			@include mediaQuery(tablet) {
-				grid-template-rows: auto;
+			@include mediaQuery(desktopCustom) {
+				grid-template-rows: 80% 20%;
+				@include mediaQuery(tablet) {
+					grid-template-rows: auto;
+				}
 			}
 			.item-form {
 				display: flex;
@@ -1493,11 +1541,11 @@ body {
 					padding: 0.5rem 0;
 					img {
 						width: auto;
-						height: 11vw;
+						height: 13vw;
 						@include mediaQuery(desktopCustom) {
-							height: 9vw;
+							height: 13vw;
 							@include mediaQuery(tablet) {
-								height: 10vw;
+								height: 27vw;
 							}
 						}
 					}
@@ -1514,19 +1562,27 @@ body {
 						}
 						.item-group-form {
 							width: 100%;
-							padding: 1rem 0;
+							padding: 0 0 1rem 0;
 							label {
 								color: setColor(white);
 								font-weight: 500;
 								text-align: left;
+								font-size: 0.9rem;
+								@include mediaQuery(desktopCustom) {
+									font-size: 0.8rem;
+								}
 							}
 							input,
 							textarea {
 								margin-top: 5px;
 								width: 100%;
-								padding: 7px;
+								padding: 0.6rem 7px;
+								font-size: 1.2rem;
 								outline: none;
+								font-family: inherit;
 								@include mediaQuery(desktopCustom) {
+									padding: 0.3rem 7px;
+									font-size: 1rem;
 									@include mediaQuery(tablet) {
 										width: 95%;
 									}
@@ -1550,6 +1606,7 @@ body {
 							width: 100%;
 							display: flex;
 							justify-content: center;
+							padding-top: 1rem;
 							.btn-send-message-fo {
 								font-size: 1rem;
 								padding: 1.1rem 3rem;

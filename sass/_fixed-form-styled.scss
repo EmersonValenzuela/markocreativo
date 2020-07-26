@@ -116,7 +116,6 @@ $fontSize: (
 		width: auto;
 		right: 0;
 		top: 4%;
-		clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%, 0 95%);
 	}
 
 	form {
@@ -132,6 +131,7 @@ $fontSize: (
 			.element-bg-color {
 				background-color: #ffffff;
 				padding: 1rem 0 0 0;
+				clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%, 0 95%);
 			}
 		}
 
@@ -156,26 +156,18 @@ $fontSize: (
 				font-weight: 600;
 				color: setColor(white);
 				position: absolute;
-				top: 12px;
-				left: 13px;
-				width: 100px;
+				top: 0;
+				left: 5px;
+				width: 80px;
+				height: auto;
 				cursor: pointer;
 				@media (min-width: $tablet) {
+					position: absolute;
 					font-size: 1.5rem;
-					top: 4px;
-					left: 0;
-					i {
-						color: setColor(black);
-						background: red;
-						color: setColor(white);
-						border-radius: 50%;
-						padding: 10px;
-						width: 15px;
-						height: 15px;
-						display: flex;
-						justify-content: center;
-						align-items: center;
-					}
+					top: 60%;
+					left: -35px;
+					width: 80px;
+					height: auto;
 				}
 			}
 		}
