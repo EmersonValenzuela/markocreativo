@@ -163,7 +163,7 @@ body {
 			height: 100%;
 			.list {
 				list-style: none;
-				width: 45%;
+				width: 55%;
 				display: grid;
 				grid-template-columns: repeat(5, calc(100% / 5));
 				justify-content: center;
@@ -182,8 +182,10 @@ body {
 						color: setColor(black);
 						font-weight: 400;
 						font-size: 1.6rem;
+						margin-bottom: -4px;
 						@include mediaQuery(desktopHR) {
 							font-size: 1.1rem;
+							margin-bottom: -4px;
 						}
 					}
 				}
@@ -389,8 +391,8 @@ body {
 						flex-direction: column;
 					}
 					.item-text-slider {
-						height: 100%;
 						width: auto;
+						height: 100%;
 						display: flex;
 						justify-content: center;
 						align-items: center;
@@ -409,11 +411,16 @@ body {
 							color: setColor(black);
 							text-align: center;
 							padding: 3rem 0 0 0;
+							margin: -10% 20% 0 0;
+							@include mediaQuery(desktopHR) {
+								margin: -10% 0;
+							}
 							div:nth-child(1) {
-								font-size: 4.5rem;
-								font-family: $font-secundary-light;
+								font-size: 3.7rem;
+								font-family: $montserrat-light;
 								@include mediaQuery(desktopCustom) {
 									font-size: 3rem;
+									margin-top: -13%;
 									@include mediaQuery(desktop) {
 										font-size: 5.8vw;
 										@include mediaQuery(tablet) {
@@ -422,13 +429,13 @@ body {
 									}
 								}
 								.text-bold {
-									font-family: $font-primary-medium;
+									font-family: $montserrat-medium;
 									letter-spacing: 3px;
 								}
 							}
 							div:nth-child(2) {
-								font-size: 14.8rem;
-								font-family: $font-secundary-bold;
+								font-size: 11.6rem;
+								font-family: $montserrat-regular;
 								@include mediaQuery(desktopCustom) {
 									font-size: 10rem;
 									@include mediaQuery(desktop) {
@@ -721,10 +728,10 @@ body {
 				flex-direction: column;
 				justify-content: center;
 				font-size: 1.6vw;
-				font-family: $font-primary-light;
+				font-family: $font-primary;
 				padding: 0 7rem 0 1rem;
 				@include mediaQuery(desktopHR) {
-					font-size: 1.39rem;
+					font-size: 1.38rem;
 					font-weight: 200;
 					@include mediaQuery(tablet) {
 						font-size: 4vw;
@@ -772,7 +779,7 @@ body {
 		width: 100%;
 		height: 100%;
 		display: grid;
-		grid-template-columns: 25% 50% 25%;
+		grid-template-columns: 25% 55% 20%;
 		position: relative;
 		@include mediaQuery(tablet) {
 			grid-template-columns: none;
@@ -814,13 +821,9 @@ body {
 				width: auto;
 				height: auto;
 				font-size: 11vw;
-				line-height: 90px;
 				display: none;
 				font-family: $font-terciary-bold;
 				letter-spacing: -4px;
-				span {
-					font-family: $font-primary-medium;
-				}
 				@include mediaQuery(tablet) {
 					display: flex;
 					flex-direction: column;
@@ -830,12 +833,17 @@ body {
 					padding-right: 4rem;
 					@include mediaQuery(mobile) {
 						font-size: 20vw;
-						line-height: 61px;
 						padding-right: 2rem;
 						@include mediaQuery(mobilexs) {
 							font-size: 24vw;
-							line-height: 61px;
 						}
+					}
+				}
+				div {
+					width: auto;
+					height: 90px;
+					@include mediaQuery(mobile) {
+						height: 70px;
 					}
 				}
 			}
@@ -948,7 +956,7 @@ body {
 		.content-title-service {
 			display: flex;
 			align-items: center;
-			justify-content: center;
+			justify-content: flex-start;
 			.item-title {
 				width: auto;
 				height: auto;
@@ -958,17 +966,17 @@ body {
 				span {
 					font-family: $font-primary-medium;
 				}
-				div:nth-child(2) {
-					/* line-height: 110px; */
-					line-height: 69px;
-					margin-left: 7px;
-				}
-				div:nth-child(3) {
-					/* line-height: 253px; */
-					line-height: 207px;
+				div {
+					height: 135px;
 					@include mediaQuery(desktopHR) {
-						line-height: 154px;
+						height: 105px;
+						@include mediaQuery(tablet) {
+							height: 105px;
+						}
 					}
+				}
+				div:nth-child(2) {
+					margin-left: 7px;
 				}
 			}
 			@include mediaQuery(tablet) {
@@ -984,7 +992,7 @@ body {
 			right: 0;
 			bottom: 0;
 			z-index: -10;
-			clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 4% 100%);
+			clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 6% 100%);
 			@include mediaQuery(tablet) {
 				display: none;
 			}
@@ -994,19 +1002,17 @@ body {
 
 .container-banner-title-jobs {
 	width: 100vw;
-	height: 35rem;
 	display: flex;
 	align-items: center;
 	position: relative;
-	padding: 4rem 0;
+	padding: 9rem 0;
 	@include mediaQuery(desktopHR) {
-		padding: 1rem 0;
+		padding: 7rem 0;
 		@include mediaQuery(tablet) {
 			height: auto;
-			margin-top: 3rem;
-			padding: 4rem 0;
-			@include mediaQuery(tablet) {
-				padding: 1rem 0;
+			padding: 5rem 0;
+			@include mediaQuery(mobile) {
+				padding: 2rem 0;
 			}
 		}
 	}
@@ -1030,7 +1036,7 @@ body {
 				margin-left: 6rem;
 				@include mediaQuery(tablet) {
 					height: 230px;
-					margin-left: 4rem;
+					margin-left: 2rem;
 					@include mediaQuery(mobile) {
 						height: 90px;
 						@include mediaQuery(mobilexs) {
@@ -1045,7 +1051,7 @@ body {
 
 	.img-girl {
 		width: auto;
-		height: 790px;
+		height: 880px;
 		position: absolute;
 		bottom: -70px;
 		right: 20%;

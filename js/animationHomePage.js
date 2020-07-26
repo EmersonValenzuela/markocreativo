@@ -29,8 +29,8 @@ const imgTextTitleJobUs = document.getElementsByClassName("img-text-title-job-us
 new simpleParallax(imgTextTitleJobUs, {
 	overflow: true,
 	orientation: "right",
-	delay: 2.5,
-	scale: 2.0,
+	delay: 1.9,
+	scale: 1.5,
 	transition: "cubic-bezier(0,0,0,1)",
 });
 
