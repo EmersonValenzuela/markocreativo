@@ -822,8 +822,8 @@ body {
 				height: auto;
 				font-size: 11vw;
 				display: none;
-				font-family: $font-terciary-bold;
-				letter-spacing: -4px;
+				font-family: $amarurgt;
+				letter-spacing: -1px;
 				@include mediaQuery(tablet) {
 					display: flex;
 					flex-direction: column;
@@ -852,6 +852,12 @@ body {
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			@include mediaQuery(tablet) {
+				padding: 4rem 0 0 0;
+				@include mediaQuery(mobile) {
+					padding: 1rem 0 0 0;
+				}
+			}
 			.content-card-items {
 				width: 90%;
 				height: 70%;
@@ -895,10 +901,13 @@ body {
 							@include mediaQuery(desktopCustom) {
 								height: 60px;
 								@include mediaQuery(tablet) {
-									height: 60px;
+									height: 110px;
 									position: relative;
 									@include mediaQuery(mobile) {
 										height: 70px;
+										@include mediaQuery(mobilexs) {
+											height: 70px;
+										}
 									}
 								}
 							}
@@ -918,6 +927,7 @@ body {
 								font-size: 2.8vw;
 								@include mediaQuery(mobile) {
 									font-size: 1.2rem;
+									padding: 0;
 									@include mediaQuery(mobilexs) {
 										padding: 0 0 0 1rem;
 									}
@@ -930,8 +940,11 @@ body {
 						align-items: flex-start;
 						font-family: $font-primary-light;
 						padding-left: 3rem;
-						@include mediaQuery(mobilexs) {
-							padding: 1rem 0 0 1rem;
+						@include mediaQuery(mobile) {
+							padding: 1rem 0;
+							@include mediaQuery(mobilexs) {
+								padding: 1rem 0;
+							}
 						}
 						.list-service {
 							list-style: none;
@@ -943,8 +956,11 @@ body {
 								font-size: 1vw;
 								@include mediaQuery(tablet) {
 									font-size: 2.5vw;
-									@include mediaQuery(mobilexs) {
-										font-size: 5vw;
+									@include mediaQuery(mobile) {
+										font-size: 3.5vw;
+										@include mediaQuery(mobilexs) {
+											font-size: 5vw;
+										}
 									}
 								}
 							}
@@ -961,22 +977,19 @@ body {
 				width: auto;
 				height: auto;
 				font-size: 9vw;
-				font-family: $font-terciary-bold;
-				letter-spacing: -14px;
-				span {
-					font-family: $font-primary-medium;
+				font-family: $amarurgt;
+				letter-spacing: -7px;
+				@include mediaQuery(desktopHR) {
+					letter-spacing: -5px;
 				}
 				div {
-					height: 135px;
+					height: 125px;
 					@include mediaQuery(desktopHR) {
-						height: 105px;
+						height: 95px;
 						@include mediaQuery(tablet) {
 							height: 105px;
 						}
 					}
-				}
-				div:nth-child(2) {
-					margin-left: 7px;
 				}
 			}
 			@include mediaQuery(tablet) {
@@ -1619,6 +1632,10 @@ body {
 								@include mediaQuery(desktopCustom) {
 									font-size: 0.8rem;
 								}
+							}
+							textarea {
+								max-width: 100%;
+								max-height: 150px;
 							}
 							input,
 							textarea {
