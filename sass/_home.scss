@@ -692,6 +692,7 @@ body {
 			@include mediaQuery(tablet) {
 				background: none;
 				padding-top: 3rem;
+				padding-left: 0;
 			}
 			.title-reverse {
 				position: absolute;
@@ -744,6 +745,9 @@ body {
 			justify-content: center;
 			background: linear-gradient(90deg, setColor(yellow) 75%, transparent 70%);
 			position: relative;
+			@include mediaQuery(tablet) {
+				background: linear-gradient(90deg, setColor(yellow) 75%, transparent 70%);
+			}
 			img {
 				position: absolute;
 				width: auto;
@@ -873,6 +877,9 @@ body {
 						align-items: center;
 						padding-left: 2rem;
 						position: relative;
+						@include mediaQuery(mobile) {
+							padding-left: 0;
+						}
 						img {
 							position: absolute;
 							height: 80px;
@@ -882,8 +889,8 @@ body {
 								@include mediaQuery(tablet) {
 									height: 60px;
 									position: relative;
-									@include mediaQuery(tablet) {
-										height: 100px;
+									@include mediaQuery(mobile) {
+										height: 70px;
 									}
 								}
 							}
@@ -903,6 +910,9 @@ body {
 								font-size: 2.8vw;
 								@include mediaQuery(mobile) {
 									font-size: 1.2rem;
+									@include mediaQuery(mobilexs) {
+										padding: 0 0 0 1rem;
+									}
 								}
 							}
 						}
@@ -912,6 +922,9 @@ body {
 						align-items: flex-start;
 						font-family: $font-primary-light;
 						padding-left: 3rem;
+						@include mediaQuery(mobilexs) {
+							padding: 1rem 0 0 1rem;
+						}
 						.list-service {
 							list-style: none;
 							margin: 0;
@@ -922,6 +935,9 @@ body {
 								font-size: 1vw;
 								@include mediaQuery(tablet) {
 									font-size: 2.5vw;
+									@include mediaQuery(mobilexs) {
+										font-size: 5vw;
+									}
 								}
 							}
 						}
@@ -987,7 +1003,11 @@ body {
 		padding: 1rem 0;
 		@include mediaQuery(tablet) {
 			height: auto;
-			margin-top: 8rem;
+			margin-top: 3rem;
+			padding: 4rem 0;
+			@include mediaQuery(tablet) {
+				padding: 1rem 0;
+			}
 		}
 	}
 	.container-text-title {
@@ -1009,10 +1029,14 @@ body {
 				height: 320px;
 				margin-left: 6rem;
 				@include mediaQuery(tablet) {
-					height: 180px;
-					margin-left: 2rem;
+					height: 230px;
+					margin-left: 4rem;
 					@include mediaQuery(mobile) {
-						height: 70px;
+						height: 90px;
+						@include mediaQuery(mobilexs) {
+							margin-left: 0;
+							height: 80px;
+						}
 					}
 				}
 			}
@@ -1030,7 +1054,7 @@ body {
 			height: 690px;
 			@include mediaQuery(tablet) {
 				height: 520px;
-				right: 3%;
+				right: 15%;
 				bottom: -40px;
 				@include mediaQuery(mobile) {
 					height: 280px;
@@ -1338,6 +1362,7 @@ body {
 	overflow-x: hidden;
 	@include mediaQuery(tablet) {
 		height: auto;
+		padding: 3rem 0;
 	}
 
 	.content-customers {
@@ -1368,6 +1393,12 @@ body {
 				padding-left: 7rem;
 				@include mediaQuery(desktopHR) {
 					padding-left: 6rem;
+					@include mediaQuery(tablet) {
+						padding: 0 3rem;
+						@include mediaQuery(mobile) {
+							padding: 0 1.5rem;
+						}
+					}
 				}
 				div:first-child {
 					font-size: 3.6vw;
@@ -1376,7 +1407,10 @@ body {
 					@include mediaQuery(desktopHR) {
 						font-size: 3.1vw;
 						@include mediaQuery(tablet) {
-							font-size: 1.5rem;
+							font-size: 5vw;
+							@include mediaQuery(mobile) {
+								font-size: 6vw;
+							}
 						}
 					}
 				}
@@ -1386,12 +1420,12 @@ body {
 					@include mediaQuery(desktopHR) {
 						font-size: 6vw;
 						@include mediaQuery(tablet) {
-							font-size: 3rem;
+							font-size: 10vw;
+							@include mediaQuery(mobile) {
+								font-size: 12vw;
+							}
 						}
 					}
-				}
-				@include mediaQuery(tablet) {
-					padding: 2rem 1rem;
 				}
 			}
 
@@ -1404,7 +1438,7 @@ body {
 					align-items: center;
 					padding: 0 0 1rem 0;
 					@include mediaQuery(tablet) {
-						padding: 2rem 1rem;
+						padding: 4rem 1rem;
 						overflow-x: scroll;
 						overflow: hidden;
 					}
@@ -1417,7 +1451,7 @@ body {
 					grid-auto-rows: auto;
 					@include mediaQuery(tablet) {
 						display: flex;
-						width: 300px;
+						width: calc(100% - 10%);
 						overflow-x: scroll;
 						padding: 1rem 0;
 					}
@@ -1437,7 +1471,7 @@ body {
 								@include mediaQuery(desktopHR) {
 									width: 150px;
 									@include mediaQuery(tablet) {
-										height: 70px;
+										width: 160px;
 									}
 								}
 							}
@@ -1461,7 +1495,8 @@ body {
 				@include mediaQuery(desktopCustom) {
 					height: 85%;
 					@include mediaQuery(tablet) {
-						height: 300px;
+						position: relative;
+						height: 30vh;
 					}
 				}
 			}
@@ -1476,6 +1511,8 @@ body {
 	background: setColor(yellow);
 	@include mediaQuery(tablet) {
 		height: auto;
+		background: setColor(black);
+		padding-bottom: 4rem;
 	}
 	.content-items-contact {
 		width: 100%;
@@ -1497,7 +1534,7 @@ body {
 			background: setColor(black);
 			clip-path: polygon(37% 0%, 100% 0%, 100% 100%, 21% 100%);
 			@include mediaQuery(tablet) {
-				clip-path: polygon(37% 0%, 100% 0%, 100% 100%, -61% 100%);
+				clip-path: none;
 			}
 		}
 		.content-img {
