@@ -418,6 +418,8 @@ body {
 							div:nth-child(1) {
 								font-size: 3.7rem;
 								font-family: $montserrat-light;
+								display: flex;
+								justify-content: space-between;
 								@include mediaQuery(desktopCustom) {
 									font-size: 3rem;
 									margin-top: -13%;
@@ -434,12 +436,12 @@ body {
 								}
 							}
 							div:nth-child(2) {
-								font-size: 11.6rem;
+								font-size: 9.5vw;
 								font-family: $montserrat-regular;
 								@include mediaQuery(desktopCustom) {
-									font-size: 10rem;
+									font-size: 10.6vw;
 									@include mediaQuery(desktop) {
-										font-size: 19.3vw;
+										font-size: 16.6vw;
 									}
 								}
 							}
@@ -904,9 +906,9 @@ body {
 									height: 110px;
 									position: relative;
 									@include mediaQuery(mobile) {
-										height: 70px;
+										height: 60px;
 										@include mediaQuery(mobilexs) {
-											height: 70px;
+											height: 60px;
 										}
 									}
 								}
