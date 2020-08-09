@@ -34,11 +34,11 @@ var slide = 0,
 		autonext = setInterval(function () {
 			slide++;
 			currentSlide();
-		}, 999999000);
+		}, 4000);
 	},
 	autonext = setInterval(function () {
 		next();
-	}, 999999000);
+	}, 4000);
 
 //Buttons
 document.querySelector("#first").addEventListener(
