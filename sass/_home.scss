@@ -221,21 +221,43 @@ body {
 			display: block;
 		}
 		.control > button {
-			width: 16.7%;
-			height: calc(100% - 36px);
+			width: 4.7%;
+			height: 100%;
 			opacity: 1;
-			color: #212121;
+			color: setColor(black);
 			background-color: transparent;
 			border: 0;
 			cursor: pointer;
-			font-size: 10vh;
+			font-size: 2rem;
 			outline: none;
 		}
 		#previous {
 			float: left;
+			i {
+				cursor: pointer;
+				transition: all ease-in-out 0.2s;
+				&:hover {
+					-webkit-text-stroke: 2px setColor(black);
+					color: setColor(yellow);
+				}
+				@include mediaQuery(mobile) {
+					display: none;
+				}
+			}
 		}
 		#next {
 			float: right;
+			i {
+				transition: all ease-in-out 0.2s;
+				cursor: pointer;
+				&:hover {
+					-webkit-text-stroke: 2px setColor(black);
+					color: setColor(yellow);
+				}
+				@include mediaQuery(mobile) {
+					display: none;
+				}
+			}
 		}
 		#slides {
 			padding: 0;
@@ -1069,7 +1091,7 @@ body {
 		width: auto;
 		height: 880px;
 		position: absolute;
-		bottom: -70px;
+		bottom: -80px;
 		right: 20%;
 		z-index: 500;
 		@include mediaQuery(desktopHR) {
@@ -1077,7 +1099,7 @@ body {
 			@include mediaQuery(tablet) {
 				height: 520px;
 				right: 15%;
-				bottom: -40px;
+				bottom: -43px;
 				@include mediaQuery(mobile) {
 					height: 280px;
 					bottom: -45px;
@@ -1709,8 +1731,8 @@ body {
 }
 
 #item-scroll-top {
-	width: 50px;
-	height: 50px;
+	width: 35px;
+	height: 35px;
 	position: fixed;
 	bottom: 5%;
 	right: 2%;
@@ -1722,6 +1744,9 @@ body {
 	justify-content: center;
 	align-items: center;
 	z-index: 9999;
+	@include mediaQuery(mobile) {
+		bottom: 8%;
+	}
 	i {
 		font-size: 1rem;
 	}
