@@ -19,7 +19,7 @@ if(isset($_POST['btn-send-message-fo'])){
     }else{
         
     $subject = "Consulta de usuario desde pagina web";
-    $to = "mariano260996@gmail.com";
+    $to = "markocreativo@gmail.com,mariano260996@gmail.com";
     
     $message = "
     <html>
