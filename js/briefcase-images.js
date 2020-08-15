@@ -48,10 +48,14 @@ let briefcaseImages = [
 		],
 	},
 	{
-		category: "nofound",
-		namePrimary: "nofound",
-		urlPrimary: "nofound.jpg",
-		imagesSecondary: [{name: "nofound.jpg", url: "nofound.jpg"}],
+		category: "imgage-a",
+		namePrimary: "imgage-a",
+		urlPrimary: "a-1.jpg",
+		urlSecond: "a-2.jpg",
+		imagesSecondary: [
+			{name: "a-1", url: "a-1.jpg"},
+			{name: "a-2", url: "a-2.jpg"},
+		],
 	},
 	{
 		category: "web f2",
@@ -137,10 +141,14 @@ let briefcaseImages = [
 		],
 	},
 	{
-		category: "nofound",
-		namePrimary: "nofound",
-		urlPrimary: "nofound.jpg",
-		imagesSecondary: [{name: "nofound.jpg", url: "nofound.jpg"}],
+		category: "imgage-b",
+		namePrimary: "imgage-b",
+		urlPrimary: "b-1.jpg",
+		urlSecond: "b-2.jpg",
+		imagesSecondary: [
+			{name: "b-1", url: "b-1.jpg"},
+			{name: "b-2", url: "b-2.jpg"},
+		],
 	},
 	{
 		category: "outdoor banner f4",
@@ -226,9 +234,13 @@ let briefcaseImages = [
 		],
 	},
 	{
-		category: "nofound",
-		namePrimary: "nofound",
-		urlPrimary: "nofound.jpg",
-		imagesSecondary: [{name: "nofound.jpg", url: "nofound.jpg"}],
+		category: "imgage-c",
+		namePrimary: "imgage-c",
+		urlPrimary: "c-1.jpg",
+		urlSecond: "c-2.jpg",
+		imagesSecondary: [
+			{name: "c-1", url: "c-1.jpg"},
+			{name: "c-2", url: "c-2.jpg"},
+		],
 	},
 ];
