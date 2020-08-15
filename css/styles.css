@@ -1514,7 +1514,7 @@ body {
   .container-briefcase figure h2,
   .container-briefcase figure p {
     margin: 0; }
-  .container-briefcase figure button.rww_grid_button {
+  .container-briefcase figure button .rww_grid_button {
     background-color: transparent;
     border: 2px solid #fff;
     border-radius: 5px;
@@ -1529,7 +1529,7 @@ body {
     -o-transition: all 0.3s;
     transition: all 0.3s;
     cursor: pointer; }
-    .container-briefcase figure button.rww_grid_button a {
+    .container-briefcase figure button .rww_grid_button a {
       color: #fff;
       text-decoration: none; }
   .container-briefcase figure p {
