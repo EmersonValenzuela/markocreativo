@@ -48,8 +48,8 @@ let briefcaseImages = [
 		],
 	},
 	{
-		category: "imgage-a",
-		namePrimary: "imgage-a",
+		category: "image-a",
+		namePrimary: "image-a",
 		urlPrimary: "a-1.jpg",
 		urlSecond: "a-2.jpg",
 		imagesSecondary: [
@@ -141,8 +141,8 @@ let briefcaseImages = [
 		],
 	},
 	{
-		category: "imgage-b",
-		namePrimary: "imgage-b",
+		category: "image-b",
+		namePrimary: "image-b",
 		urlPrimary: "b-1.jpg",
 		urlSecond: "b-2.jpg",
 		imagesSecondary: [
@@ -234,8 +234,8 @@ let briefcaseImages = [
 		],
 	},
 	{
-		category: "imgage-c",
-		namePrimary: "imgage-c",
+		category: "image-c",
+		namePrimary: "image-c",
 		urlPrimary: "c-1.jpg",
 		urlSecond: "c-2.jpg",
 		imagesSecondary: [

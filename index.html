@@ -13,7 +13,6 @@
 	<!--Import customers logos-->
 	<script src="./js/customers.js"></script>
 	<script src="./js/briefcase-images.js"></script>
-
 	<script src="./js/wow.js"></script>
 	<script>
 		new WOW().init();
@@ -36,7 +35,7 @@
 						<li><a class="active-item-mobile" href="#container-customers">CLIENTES</a></li>
 						<li><a class="active-item-mobile" href="#container-contact-us">CONTACTOS</a></li>
 					</ul>
-				</nav>
+			</nav>
 		</div>
 	</section>
 
@@ -268,14 +267,14 @@
 
 				<script>
 					let gridAreaJobs = document.querySelector("#grid-area-jobs");
-					briefcaseImages.map((item,index)=> gridAreaJobs.innerHTML += `<figure class="col grid-${index+1}" onclick="viewAlbumImg('${item.category}')">
+					briefcaseImages.map((item,index)=> gridAreaJobs.innerHTML += `<figure class="col grid-${index+1}" id="${[5,13,21].includes(index+1) && `onMouseEfect-${index+1}`}" onclick="viewAlbumImg('${item.category}')">
 						<!--<img src="https://placeimg.com/640/640/animals" alt="">-->
-						<img src="images/briefcase-images/${item.urlPrimary}" class="wow animate__animated animate__zoomIn" data-wow-duration="1s" data-wow-delay="0.5s" alt="">
-						<figcaption>
+						<img src="images/briefcase-images/${item.urlPrimary}" id="${[5,13,21].includes(index+1) && `setImg-${index+1}`}" class="wow animate__animated animate__zoomIn" data-wow-duration="1s" data-wow-delay="0.5s" alt="${item.namePrimary} Marko Creativo">
+						<figcaption ${[5,13,21].includes(index+1) && "hidden='true'"}">
 							<div class="grid-button-wrapper">
+								<p>${item.namePrimary}</p>
 								<button class="rww_grid_button"><a href="#img-1">Ver más</<a></button>
 							</div>
-							<p>${item.namePrimary}</p>
 						</figcaption>
 					</figure>`);
 				</script>
