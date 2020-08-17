@@ -1,6 +1,6 @@
 let briefcaseImages = [
 	{
-		category: "logos f1",
+		category: "Identidad",
 		namePrimary: "zooquillapampa",
 		urlPrimary: "zooquillapampa.jpg",
 		imagesSecondary: [
@@ -12,7 +12,7 @@ let briefcaseImages = [
 		],
 	},
 	{
-		category: "identidad f1",
+		category: "Branding",
 		namePrimary: "sebas tarjeta",
 		urlPrimary: "sebastarjeta.jpg",
 		imagesSecondary: [
@@ -24,7 +24,7 @@ let briefcaseImages = [
 		],
 	},
 	{
-		category: "impresos f1",
+		category: "Impresos",
 		namePrimary: "volante esika",
 		urlPrimary: "volanteesika.jpg",
 		imagesSecondary: [
@@ -36,7 +36,7 @@ let briefcaseImages = [
 		],
 	},
 	{
-		category: "miselaneo",
+		category: "Miselaneo",
 		namePrimary: "jehova dios hombre",
 		urlPrimary: "jehovadioshombre.jpg",
 		imagesSecondary: [
@@ -58,7 +58,7 @@ let briefcaseImages = [
 		],
 	},
 	{
-		category: "web f2",
+		category: "Prensa",
 		namePrimary: "web",
 		urlPrimary: "web.jpg",
 		imagesSecondary: [
@@ -69,7 +69,7 @@ let briefcaseImages = [
 		],
 	},
 	{
-		category: "prensa f2",
+		category: "Identidad",
 		namePrimary: "lebel lederm",
 		urlPrimary: "lebellederm.jpg",
 		imagesSecondary: [
@@ -81,7 +81,7 @@ let briefcaseImages = [
 		],
 	},
 	{
-		category: "outdoor poster",
+		category: "Outdoor",
 		namePrimary: "chica banner",
 		urlPrimary: "chicabanner.jpg",
 		imagesSecondary: [
@@ -93,7 +93,7 @@ let briefcaseImages = [
 		],
 	},
 	{
-		category: "outdoor banner",
+		category: "Branding",
 		namePrimary: "outdoor banner",
 		urlPrimary: "outdoorbanner.jpg",
 		imagesSecondary: [
@@ -105,7 +105,7 @@ let briefcaseImages = [
 		],
 	},
 	{
-		category: "identidad f3",
+		category: "impresos",
 		namePrimary: "creative studio",
 		urlPrimary: "creativestudio.jpg",
 		imagesSecondary: [
@@ -129,7 +129,7 @@ let briefcaseImages = [
 		],
 	},
 	{
-		category: "logo f4",
+		category: "Outdoor",
 		namePrimary: "strong",
 		urlPrimary: "strong.jpg",
 		imagesSecondary: [
@@ -151,7 +151,7 @@ let briefcaseImages = [
 		],
 	},
 	{
-		category: "outdoor banner f4",
+		category: "Miselaneo",
 		namePrimary: "vallanavidad",
 		urlPrimary: "vallanavidad.jpg",
 		imagesSecondary: [
@@ -163,7 +163,7 @@ let briefcaseImages = [
 		],
 	},
 	{
-		category: "impresos f5",
+		category: "Web",
 		namePrimary: "room21a",
 		urlPrimary: "room21a.jpg",
 		imagesSecondary: [
@@ -175,7 +175,7 @@ let briefcaseImages = [
 		],
 	},
 	{
-		category: "miselaneo f5",
+		category: "Prensa",
 		namePrimary: "cristo hombre",
 		urlPrimary: "cristohombre2.jpg",
 		imagesSecondary: [
@@ -187,7 +187,7 @@ let briefcaseImages = [
 		],
 	},
 	{
-		category: "web f5",
+		category: "Outdoor",
 		namePrimary: "post valora",
 		urlPrimary: "postvalora.jpg",
 		imagesSecondary: [
@@ -198,7 +198,7 @@ let briefcaseImages = [
 		],
 	},
 	{
-		category: "prensa f5",
+		category: "Indoor",
 		namePrimary: "prensa marko",
 		urlPrimary: "prensamarko.jpg",
 		imagesSecondary: [
