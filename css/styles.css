@@ -1,5 +1,11 @@
 /*OTHERS FONTS*/
 @font-face {
+  font-family: "Decalotype";
+  font-style: normal;
+  src: url("../fonts/Decalotype-BlackItalic.ttf");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
+
+@font-face {
   font-family: "amarurgt";
   font-style: normal;
   src: url("../fonts/amarurgt.ttf");
@@ -1389,7 +1395,25 @@ body {
   /* Media queries for other screen widths */
   /************ Hover effect styles *************/
   /* Anchor will cover the whole item by default */
-  /* For some effects it will show as a button */ }
+  /* For some effects it will show as a button */
+  /* figure button .rww_grid_button {
+		background-color: transparent;
+		border: 2px solid #000;
+		border-radius: 5px;
+		margin: 0 auto;
+		padding: 0.5rem;
+		font-family: $font-primary;
+		font-weight: bold;
+		font-size: smaller;
+		color: #000;
+		text-transform: uppercase;
+		transition: all 0.3s;
+		cursor: pointer;
+		a {
+			color: #000000;
+			text-decoration: none;
+		}
+	} */ }
   .container-briefcase .grid-container {
     width: 100%;
     max-width: 2200px;
@@ -1499,9 +1523,11 @@ body {
     text-align: center;
     cursor: pointer; }
   .container-briefcase figure figcaption {
-    color: #fff;
+    color: #000000;
     -webkit-backface-visibility: hidden;
-    backface-visibility: hidden; }
+    backface-visibility: hidden;
+    text-align: left;
+    padding: 0 1rem; }
   .container-briefcase figure figcaption::before,
   .container-briefcase figure figcaption::after {
     pointer-events: none; }
@@ -1526,6 +1552,7 @@ body {
   .container-briefcase figure h2,
   .container-briefcase figure p {
     margin: 0; }
+<<<<<<< HEAD
   .container-briefcase figure button .rww_grid_button {
     background-color: transparent;
     border: 2px solid #fff;
@@ -1544,10 +1571,11 @@ body {
     .container-briefcase figure button .rww_grid_button a {
       color: #fff;
       text-decoration: none; }
+=======
+>>>>>>> dev
   .container-briefcase figure p {
     letter-spacing: 1px;
     font-size: 1.2rem;
-    text-shadow: 1px 1px 2px #000;
     font-family: "DINPro"; }
   .container-briefcase figure figcaption::before {
     position: absolute;
@@ -1555,25 +1583,31 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(72, 76, 97, 0)), color-stop(85%, rgba(249, 255, 0, 0.34)));
-    background: -webkit-linear-gradient(top, rgba(72, 76, 97, 0) 0%, rgba(249, 255, 0, 0.34) 85%);
-    background: -o-linear-gradient(top, rgba(72, 76, 97, 0) 0%, rgba(249, 255, 0, 0.34) 85%);
-    background: linear-gradient(to bottom, rgba(72, 76, 97, 0) 0%, rgba(249, 255, 0, 0.34) 85%);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.74)), to(rgba(255, 255, 255, 0.74)));
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.74) 0%, rgba(255, 255, 255, 0.74) 100%);
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 0.74) 0%, rgba(255, 255, 255, 0.74) 100%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.74) 0%, rgba(255, 255, 255, 0.74) 100%);
     content: "";
     opacity: 0;
     -webkit-transform: translate3d(0, 50%, 0);
     transform: translate3d(0, 50%, 0); }
-  .container-briefcase figure h2 {
+  .container-briefcase figure h3 {
     position: absolute;
-    top: 50%;
-    left: 0;
+    bottom: 10%;
+    left: 0%;
     width: 100%;
-    color: #484c61;
+    color: #000000;
     -webkit-transition: all 0.35s;
     -o-transition: all 0.35s;
     transition: all 0.35s;
-    -webkit-transform: translate3d(0, -50%, 0);
-    transform: translate3d(0, -50%, 0); }
+    -webkit-transform: translate3d(0, 20%, 0);
+    transform: translate3d(0, 20%, 0);
+    font-size: 0.8rem;
+    font-family: "Montserrat-Medium"; }
+  .container-briefcase figure a {
+    text-decoration: none;
+    color: #000000;
+    cursor: pointer; }
   .container-briefcase figure figcaption::before,
   .container-briefcase figure p,
   .container-briefcase figure .grid-button-wrapper {
@@ -1582,30 +1616,35 @@ body {
     transition: all 0.35s; }
   .container-briefcase figure .grid-button-wrapper {
     position: absolute;
-    bottom: 35%;
-    left: 0;
+    bottom: 7%;
+    left: 7%;
     right: 0;
     width: 100%;
     opacity: 0;
     -webkit-transform: translate3d(0, 20px, 0);
-    transform: translate3d(0, 20px, 0); }
-  .container-briefcase figure p {
+    transform: translate3d(0, 20px, 0);
+    font-size: 1rem;
+    font-family: "Decalotype"; }
+  .container-briefcase figure a p {
     position: absolute;
-    bottom: 10px;
+    bottom: 0;
     left: 0;
     right: 0;
-    padding-bottom: 3rem;
+    padding-bottom: 2rem;
     width: 100%;
     opacity: 0;
     -webkit-transform: translate3d(0, 10px, 0);
-    transform: translate3d(0, 10px, 0); }
+    transform: translate3d(0, 10px, 0);
+    font-size: 2rem;
+    font-family: "Decalotype";
+    cursor: pointer; }
   .container-briefcase figure:hover h2 {
     background: none;
     color: #fff;
     -webkit-transform: translate3d(0, -50%, 0) translate3d(0, -40px, 0);
     transform: translate3d(0, -50%, 0) translate3d(0, -40px, 0); }
   .container-briefcase figure:hover figcaption::before,
-  .container-briefcase figure:hover p,
+  .container-briefcase figure:hover a p,
   .container-briefcase figure:hover .grid-button-wrapper {
     opacity: 1;
     -webkit-transform: translate3d(0, 0, 0);
