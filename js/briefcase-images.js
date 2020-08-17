@@ -1,7 +1,8 @@
 let briefcaseImages = [
 	{
+		id: "1",
 		category: "Identidad",
-		namePrimary: "zooquillapampa",
+		namePrimary: "Creamos Marca",
 		urlPrimary: "zooquillapampa.jpg",
 		imagesSecondary: [
 			{name: "zooquillapampa.jpg", url: "zooquillapampa.jpg"},
@@ -12,8 +13,9 @@ let briefcaseImages = [
 		],
 	},
 	{
+		id: "2",
 		category: "Branding",
-		namePrimary: "sebas tarjeta",
+		namePrimary: "Identidad Corporativa",
 		urlPrimary: "sebastarjeta.jpg",
 		imagesSecondary: [
 			{name: "sebastarjeta.jpg", url: "sebastarjeta.jpg"},
@@ -24,8 +26,9 @@ let briefcaseImages = [
 		],
 	},
 	{
+		id: "3",
 		category: "Impresos",
-		namePrimary: "volante esika",
+		namePrimary: "Flyer / Brochure",
 		urlPrimary: "volanteesika.jpg",
 		imagesSecondary: [
 			{name: "volanteesika.jpg", url: "volanteesika.jpg"},
@@ -36,8 +39,9 @@ let briefcaseImages = [
 		],
 	},
 	{
-		category: "Miselaneo",
-		namePrimary: "jehova dios hombre",
+		id: "4",
+		category: "Miseláneo",
+		namePrimary: "Branding",
 		urlPrimary: "jehovadioshombre.jpg",
 		imagesSecondary: [
 			{name: "jehovadioshombre.jpg", url: "jehovadioshombre.jpg"},
@@ -48,6 +52,7 @@ let briefcaseImages = [
 		],
 	},
 	{
+		id: "5",
 		category: "image-a",
 		namePrimary: "image-a",
 		urlPrimary: "a-1.jpg",
@@ -58,8 +63,9 @@ let briefcaseImages = [
 		],
 	},
 	{
+		id: "6",
 		category: "Prensa",
-		namePrimary: "web",
+		namePrimary: "Magazine",
 		urlPrimary: "web.jpg",
 		imagesSecondary: [
 			{name: "web.jpg", url: "web.jpg"},
@@ -69,8 +75,9 @@ let briefcaseImages = [
 		],
 	},
 	{
+		id: "7",
 		category: "Identidad",
-		namePrimary: "lebel lederm",
+		namePrimary: "Poster / Display",
 		urlPrimary: "lebellederm.jpg",
 		imagesSecondary: [
 			{name: "lebel lederm", url: "lebellederm.jpg"},
@@ -81,8 +88,9 @@ let briefcaseImages = [
 		],
 	},
 	{
+		id: "8",
 		category: "Outdoor",
-		namePrimary: "chica banner",
+		namePrimary: "Banner / Billboard / Flags",
 		urlPrimary: "chicabanner.jpg",
 		imagesSecondary: [
 			{name: "chica banner", url: "chicabanner.jpg"},
@@ -93,8 +101,9 @@ let briefcaseImages = [
 		],
 	},
 	{
+		id: "9",
 		category: "Branding",
-		namePrimary: "outdoor banner",
+		namePrimary: "Identidad Corporativa",
 		urlPrimary: "outdoorbanner.jpg",
 		imagesSecondary: [
 			{name: "outdoor banner", url: "outdoorbanner.jpg"},
@@ -105,8 +114,9 @@ let briefcaseImages = [
 		],
 	},
 	{
-		category: "impresos",
-		namePrimary: "creative studio",
+		id: "10",
+		category: "Impresos",
+		namePrimary: "Flyer / Brochure",
 		urlPrimary: "creativestudio.jpg",
 		imagesSecondary: [
 			{name: "creative estudio", url: "creativestudio.jpg"},
@@ -117,8 +127,9 @@ let briefcaseImages = [
 		],
 	},
 	{
-		category: "impresos f3",
-		namePrimary: "pizza raul",
+		id: "11",
+		category: "Impresos",
+		namePrimary: "Flyer / Brochure",
 		urlPrimary: "pizzaraul.jpg",
 		imagesSecondary: [
 			{name: "pizza raul", url: "pizzaraul.jpg"},
@@ -129,8 +140,9 @@ let briefcaseImages = [
 		],
 	},
 	{
+		id: "12",
 		category: "Outdoor",
-		namePrimary: "strong",
+		namePrimary: "Poster / Display",
 		urlPrimary: "strong.jpg",
 		imagesSecondary: [
 			{name: "strong", url: "strong.jpg"},
@@ -141,6 +153,7 @@ let briefcaseImages = [
 		],
 	},
 	{
+		id: "13",
 		category: "image-b",
 		namePrimary: "image-b",
 		urlPrimary: "b-1.jpg",
@@ -151,8 +164,9 @@ let briefcaseImages = [
 		],
 	},
 	{
-		category: "Miselaneo",
-		namePrimary: "vallanavidad",
+		id: "14",
+		category: "Miseláneo",
+		namePrimary: "Branding",
 		urlPrimary: "vallanavidad.jpg",
 		imagesSecondary: [
 			{name: "valla navidad", url: "vallanavidad.jpg"},
@@ -163,8 +177,9 @@ let briefcaseImages = [
 		],
 	},
 	{
+		id: "15",
 		category: "Web",
-		namePrimary: "room21a",
+		namePrimary: "Social Media",
 		urlPrimary: "room21a.jpg",
 		imagesSecondary: [
 			{name: "room 21 a", url: "room21a.jpg"},
@@ -175,8 +190,9 @@ let briefcaseImages = [
 		],
 	},
 	{
+		id: "16",
 		category: "Prensa",
-		namePrimary: "cristo hombre",
+		namePrimary: "Magazine",
 		urlPrimary: "cristohombre2.jpg",
 		imagesSecondary: [
 			{name: "cristo hombre", url: "cristohombre2.jpg"},
@@ -187,8 +203,9 @@ let briefcaseImages = [
 		],
 	},
 	{
+		id: "17",
 		category: "Outdoor",
-		namePrimary: "post valora",
+		namePrimary: "Banner / Billboard / Flags",
 		urlPrimary: "postvalora.jpg",
 		imagesSecondary: [
 			{name: "post valora", url: "postvalora2.jpg"},
@@ -198,8 +215,9 @@ let briefcaseImages = [
 		],
 	},
 	{
+		id: "18",
 		category: "Indoor",
-		namePrimary: "prensa marko",
+		namePrimary: "Poster / Display",
 		urlPrimary: "prensamarko.jpg",
 		imagesSecondary: [
 			{name: "prensa marko", url: "prensamarko.jpg"},
@@ -210,8 +228,9 @@ let briefcaseImages = [
 		],
 	},
 	{
-		category: "outdoor banner f6",
-		namePrimary: "bus stop",
+		id: "19",
+		category: "Outdoor",
+		namePrimary: "Banner / Billboard / Flags",
 		urlPrimary: "busstop.jpg",
 		imagesSecondary: [
 			{name: "bus stop", url: "busstop.jpg"},
@@ -222,8 +241,9 @@ let briefcaseImages = [
 		],
 	},
 	{
-		category: "outdoor poster f6",
-		namePrimary: "mise scotiabank",
+		id: "20",
+		category: "Outdoor",
+		namePrimary: "Banner / Billboard / Flags",
 		urlPrimary: "misescotiabank.jpg",
 		imagesSecondary: [
 			{name: "mise scotiabank", url: "misescotiabank.jpg"},
@@ -234,6 +254,7 @@ let briefcaseImages = [
 		],
 	},
 	{
+		id: "21",
 		category: "image-c",
 		namePrimary: "image-c",
 		urlPrimary: "c-1.jpg",
