@@ -271,7 +271,7 @@
 						<img src="images/briefcase-images/${item.urlPrimary}" id="${[5,13,21].includes(index+1) && `setImg-${index+1}`}" class="wow animate__animated animate__zoomIn" data-wow-duration="1s" data-wow-delay="0.5s" alt="${item.namePrimary} Marko Creativo">
 						<figcaption ${[5,13,21].includes(index+1) && "hidden='true'"}">
 							<div class="grid-button-wrapper">
-								<a href="#img-1"><p>${item.category}</p></a>
+								<a href="#img-1"><p>${item.category.toUpperCase()}</p></a>
 								<h3>${item.namePrimary}</h3>	
 							</div>
 						</figcaption>
