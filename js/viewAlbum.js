@@ -27,6 +27,8 @@ imgGalleryBriefcase.addEventListener("mouseover", stopTemporizador);
 imgGalleryBriefcase.addEventListener("mouseout", startTemporizador);
 
 const viewAlbumImg = (categoryId) => {
+	if (!categoryId || categoryId == null) return null;
+
 	const images = briefcaseImages.filter((images) => images.id === categoryId);
 	const imagesSeconds = images[0].imagesSecondary;
 	newImages = imagesSeconds;
