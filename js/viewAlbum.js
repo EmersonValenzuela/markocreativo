@@ -1,3 +1,76 @@
+/***********VIEW IMAGES PORTAFOLIO*********/
+const pathImgBriefcase = "../images/briefcase-images/";
+let countImage = 0;
+let newImages = [];
+
+let temporizador;
+
+const containerModalViewGallery = document.querySelector("#container-modal-view-gallery");
+const imgGalleryBriefcase = document.querySelector("#img-gallery-briefcase");
+
+document
+	.querySelector("#close-container-modal-view-gallery")
+	.addEventListener("click", () => {
+		clearInterval(temporizador);
+		newImages = [];
+		countImage = 0;
+		imgGalleryBriefcase.src = "../images/otros/image-spinner-loader-yellow.gif";
+		containerModalViewGallery.style.display = "none";
+	});
+
+document.querySelector("#prev-gallery-briefcase").addEventListener("click", changeImage);
+
+document.querySelector("#next-gallery-briefcase").addEventListener("click", changeImage);
+
+imgGalleryBriefcase.addEventListener("mouseover", stopTemporizador);
+
+imgGalleryBriefcase.addEventListener("mouseout", startTemporizador);
+
+const viewAlbumImg = (categoryId) => {
+	const images = briefcaseImages.filter((images) => images.id === categoryId);
+	const imagesSeconds = images[0].imagesSecondary;
+	newImages = imagesSeconds;
+
+	containerModalViewGallery.style.display = "inherit";
+	temporizador = setInterval(changeImage, 3000);
+};
+
+function changeImage() {
+	buttonType = this.id;
+
+	if (buttonType != undefined) {
+		clearInterval(temporizador);
+		temporizador = setInterval(changeImage, 3000);
+	}
+
+	if (buttonType == "prev-gallery-briefcase") {
+		countImage--;
+		if (countImage < 0) {
+			countImage = newImages.length - 1;
+		}
+	} else {
+		countImage++;
+		if (countImage == newImages.length) {
+			countImage = 0;
+		}
+	}
+
+	if (newImages.length >= 1) {
+		imgGalleryBriefcase.src = pathImgBriefcase + newImages[countImage].url;
+	}
+	console.log("countImage->", countImage);
+}
+
+function stopTemporizador() {
+	clearInterval(temporizador);
+}
+
+function startTemporizador() {
+	temporizador = setInterval(changeImage, 3000);
+	console.log("countImage->", countImage);
+}
+
+/*****************************EFECTO ONMOUSE*****************************/
 let setImg5 = document.querySelector("#setImg-5");
 let setImg13 = document.querySelector("#setImg-13");
 let setImg21 = document.querySelector("#setImg-21");
@@ -5,23 +78,6 @@ let setImg21 = document.querySelector("#setImg-21");
 let onMouseEfect5 = document.querySelector("#onMouseEfect-5");
 let onMouseEfect13 = document.querySelector("#onMouseEfect-13");
 let onMouseEfect21 = document.querySelector("#onMouseEfect-21");
-
-/***********VIEW IMAGES PORTAFOLIO*********/
-const containerModalViewGallery = document.querySelector("#container-modal-view-gallery");
-
-const viewAlbumImg = (categoryImg) => {
-	let num = 0;
-	const albumImages = briefcaseImages.filter((images) => images.category === categoryImg);
-
-	containerModalViewGallery.innerHTML = `<div class="custom-modal-gallery" id="img-1">
-			<a class="close-modal-custom" href="#closealbum"><i class="fa fa-close"></i></a>
-			<div class="image" id="image-visible-album">
-                <a href="#img-1"><img src="./images/briefcase-images/${albumImages[0].imagesSecondary[num].url}" alt=""></a>
-			</div>
-		</div>`;
-};
-
-/***********EFECTO ONMOUSE*********/
 
 const filterDataImg = (idImg) => {
 	switch (idImg) {

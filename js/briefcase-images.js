@@ -69,7 +69,7 @@ let briefcaseImages = [
 		urlPrimary: "web.jpg",
 		imagesSecondary: [
 			{name: "web.jpg", url: "web.jpg"},
-			{name: "web banco financiero", url: "2.jpg"},
+			{name: "web banco financiero", url: "webbancofinanciero.jpg"},
 			{name: "face mock", url: "facemock.jpg"},
 			{name: "post valora", url: "postvalora.jpg"},
 		],
