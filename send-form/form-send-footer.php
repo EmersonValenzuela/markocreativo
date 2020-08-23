@@ -1,4 +1,3 @@
-    
 <?php
 
 $nameAndLasNameValue = "";
@@ -60,14 +59,14 @@ if(isset($_POST['btn-send-message-fo'])){
     $emailValue = "";
     $messageValue =  "";
 
-        echo `<script>
-                    if ( window.history.replaceState ) {
-                      window.history.replaceState( null, null, window.location.href );
-                      sessionStorage.clear();
-                    }
-              </script>`;
-        
-        header("location:../index.html");
+    echo `<script>
+                if ( window.history.replaceState ) {
+                window.history.replaceState( null, null, window.location.href );
+            }
+            </script>`; 
+
+    header("location:../index.html");
+
     }
 }
 ?>

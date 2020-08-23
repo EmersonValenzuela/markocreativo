@@ -2282,10 +2282,9 @@ body {
         @media (min-width: 780px) {
           .form-contact-container form .content-item-image .item-icon-close-form {
             position: absolute;
-            font-size: 1.5rem;
-            top: 60%;
-            left: -35px;
-            width: 80px;
+            top: 65%;
+            left: -28px;
+            width: 60px;
             height: auto; } }
     .form-contact-container form .radio-group-container {
       width: 100%;
