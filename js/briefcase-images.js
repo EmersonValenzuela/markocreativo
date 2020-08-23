@@ -237,7 +237,6 @@ let briefcaseImages = [
 			{name: "valla doble cy-zone", url: "valladoblecyzone.jpg"},
 			{name: "bus stop muay thai", url: "busstopmuaythai.jpg"},
 			{name: "bus stop esika", url: "busstopesika.jpg"},
-			{name: "paneles master class", url: "panelesmasterclass.jpg"},
 		],
 	},
 	{
