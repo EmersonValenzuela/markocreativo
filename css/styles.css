@@ -270,7 +270,7 @@ body {
   @media screen and (max-width: 1125px) and (max-width: 768px) {
     .container-initial .container-logo .icon-menu-open-mb {
       font-size: 1.5rem; } }
-  @media screen and (max-width: 1125px) and (max-width: 768px) and (max-width: 325px) {
+  @media screen and (max-width: 1125px) and (max-width: 768px) and (max-width: 365px) {
     .container-initial .container-logo .icon-menu-open-mb {
       font-size: 1.5rem; } }
     .container-initial .container-logo .item-logo {
@@ -1117,15 +1117,24 @@ body {
     .container-services .content-services .content-img .item-title {
       font-size: 20vw;
       padding-right: 2rem; } }
-  @media screen and (max-width: 1125px) and (max-width: 768px) and (max-width: 325px) {
+  @media screen and (max-width: 1125px) and (max-width: 768px) and (max-width: 365px) {
     .container-services .content-services .content-img .item-title {
       font-size: 24vw; } }
         .container-services .content-services .content-img .item-title div {
           width: auto;
           height: 90px; }
-          @media screen and (max-width: 768px) {
+          @media screen and (max-width: 1250px) {
             .container-services .content-services .content-img .item-title div {
-              height: 70px; } }
+              height: 90px; } }
+  @media screen and (max-width: 1250px) and (max-width: 1125px) {
+    .container-services .content-services .content-img .item-title div {
+      height: 90px; } }
+  @media screen and (max-width: 1250px) and (max-width: 1125px) and (max-width: 768px) {
+    .container-services .content-services .content-img .item-title div {
+      height: 110px; } }
+  @media screen and (max-width: 1250px) and (max-width: 1125px) and (max-width: 768px) and (max-width: 365px) {
+    .container-services .content-services .content-img .item-title div {
+      height: 70px; } }
     .container-services .content-services .content-items-services {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -1203,7 +1212,7 @@ body {
   @media screen and (max-width: 1805px) and (max-width: 1125px) and (max-width: 768px) {
     .container-services .content-services .content-items-services .content-card-items .item-service .icon-service img {
       height: 60px; } }
-  @media screen and (max-width: 1805px) and (max-width: 1125px) and (max-width: 768px) and (max-width: 325px) {
+  @media screen and (max-width: 1805px) and (max-width: 1125px) and (max-width: 768px) and (max-width: 365px) {
     .container-services .content-services .content-items-services .content-card-items .item-service .icon-service img {
       height: 60px; } }
           .container-services .content-services .content-items-services .content-card-items .item-service .title-service {
@@ -1230,7 +1239,7 @@ body {
     .container-services .content-services .content-items-services .content-card-items .item-service .title-service {
       font-size: 1.2rem;
       padding: 0; } }
-  @media screen and (max-width: 1805px) and (max-width: 1125px) and (max-width: 768px) and (max-width: 325px) {
+  @media screen and (max-width: 1805px) and (max-width: 1125px) and (max-width: 768px) and (max-width: 365px) {
     .container-services .content-services .content-items-services .content-card-items .item-service .title-service {
       padding: 0 0 0 1rem; } }
           .container-services .content-services .content-items-services .content-card-items .item-service .description-service {
@@ -1245,7 +1254,7 @@ body {
             @media screen and (max-width: 768px) {
               .container-services .content-services .content-items-services .content-card-items .item-service .description-service {
                 padding: 1rem 0; } }
-  @media screen and (max-width: 768px) and (max-width: 325px) {
+  @media screen and (max-width: 768px) and (max-width: 365px) {
     .container-services .content-services .content-items-services .content-card-items .item-service .description-service {
       padding: 1rem 0; } }
             .container-services .content-services .content-items-services .content-card-items .item-service .description-service .list-service {
@@ -1263,7 +1272,7 @@ body {
   @media screen and (max-width: 1805px) and (max-width: 1125px) and (max-width: 768px) {
     .container-services .content-services .content-items-services .content-card-items .item-service .description-service .list-service {
       font-size: 3.5vw; } }
-  @media screen and (max-width: 1805px) and (max-width: 1125px) and (max-width: 768px) and (max-width: 325px) {
+  @media screen and (max-width: 1805px) and (max-width: 1125px) and (max-width: 768px) and (max-width: 365px) {
     .container-services .content-services .content-items-services .content-card-items .item-service .description-service .list-service {
       font-size: 5vw; } }
     .container-services .content-services .content-title-service {
@@ -1362,7 +1371,7 @@ body {
   @media screen and (max-width: 1650px) and (max-width: 1125px) and (max-width: 768px) {
     .container-banner-title-jobs .container-text-title img {
       height: 90px; } }
-  @media screen and (max-width: 1650px) and (max-width: 1125px) and (max-width: 768px) and (max-width: 325px) {
+  @media screen and (max-width: 1650px) and (max-width: 1125px) and (max-width: 768px) and (max-width: 365px) {
     .container-banner-title-jobs .container-text-title img {
       margin-left: 0;
       height: 80px; } }

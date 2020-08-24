@@ -867,8 +867,17 @@ body {
 				div {
 					width: auto;
 					height: 90px;
-					@include mediaQuery(mobile) {
-						height: 70px;
+					@include mediaQuery(desktop) {
+						height: 90px;
+						@include mediaQuery(tablet) {
+							height: 90px;
+							@include mediaQuery(mobile) {
+								height: 110px;
+								@include mediaQuery(mobilexs) {
+									height: 70px;
+								}
+							}
+						}
 					}
 				}
 			}
