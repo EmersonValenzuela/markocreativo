@@ -1731,6 +1731,10 @@ body {
 					display: flex;
 					align-items: center;
 					.icon {
+						a {
+							text-decoration: none;
+							color: setColor(black);
+						}
 						display: flex;
 						justify-content: center;
 						align-items: center;
@@ -1741,11 +1745,16 @@ body {
 						color: setColor(black);
 						padding: 5px;
 						margin: 0.3rem 1.2rem;
+						cursor: pointer;
 					}
 					span {
 						font-weight: 500;
 						font-size: 1.2rem;
 						color: setColor(yellow);
+						a {
+							text-decoration: none;
+							color: setColor(yellow);
+						}
 					}
 				}
 			}

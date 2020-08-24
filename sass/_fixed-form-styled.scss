@@ -329,13 +329,14 @@ $fontSize: (
 		bottom: 0;
 		left: 0;
 		right: 0;
+		overflow-y: auto;
 
 		form {
 			width: 100%;
 			height: 100%;
 			background: setColor(white);
 			border-left: none;
-			overflow-y: scroll;
+			overflow-y: auto;
 		}
 	}
 
