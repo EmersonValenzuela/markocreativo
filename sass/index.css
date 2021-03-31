@@ -167,6 +167,12 @@ body {
   position: relative;
 }
 
+img {
+  image-rendering: auto;
+  image-rendering: -moz-auto;
+  image-rendering: auto;
+}
+
 ::-webkit-scrollbar {
   width: 3px;
   height: 3px;
