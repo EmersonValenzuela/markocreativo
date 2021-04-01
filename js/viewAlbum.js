@@ -1,5 +1,5 @@
 /***********VIEW IMAGES PORTAFOLIO*********/
-const pathImgBriefcase = "../images/briefcase-images/";
+const pathImgBriefcase = "../images/briefcase/";
 let countImage = 0;
 let newImages = [];
 
@@ -27,7 +27,7 @@ imgGalleryBriefcase.addEventListener("mouseover", stopTemporizador);
 imgGalleryBriefcase.addEventListener("mouseout", startTemporizador);
 
 const viewAlbumImg = (categoryId) => {
-	if (!categoryId || categoryId == null) return null;
+	if (!categoryId || categoryId == null) return [];
 
 	const images = briefcaseImages.filter((images) => images.id === categoryId);
 	const imagesSeconds = images[0].imagesSecondary;
@@ -95,14 +95,14 @@ const filterDataImg = (idImg) => {
 const onMouseImgOver = (img) => {
 	const dataImg = filterDataImg(img.id);
 	setTimeout(() => {
-		img.src = `../images/briefcase-images/${dataImg.urlSecond}`;
+		img.src = pathImgBriefcase + dataImg.urlSecond;
 	}, 300);
 };
 
 const onMouseImgOut = (img) => {
 	const dataImg = filterDataImg(img.id);
 	setTimeout(() => {
-		img.src = `../images/briefcase-images/${dataImg.urlPrimary}`;
+		img.src = pathImgBriefcase + dataImg.urlPrimary;
 	}, 300);
 };
 

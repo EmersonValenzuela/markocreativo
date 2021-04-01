@@ -6,16 +6,16 @@ let inputPhone = document.querySelector("#input-phone");
 let inputEmail = document.querySelector("#input-email");
 let textAreaDescription = document.querySelector("#text-area-description");
 
-inputNameAndLastname.addEventListener("input", function () {
+inputNameAndLastname.addEventListener("input", () => {
 	getDataItems(inputNameAndLastname, inputNameAndLastname.value, "nameAndLastname");
 });
-inputPhone.addEventListener("input", function () {
+inputPhone.addEventListener("input", () => {
 	getDataItems(inputPhone, inputPhone.value, "phone");
 });
-inputEmail.addEventListener("input", function () {
+inputEmail.addEventListener("input", () => {
 	getDataItems(inputEmail, inputEmail.value, "email");
 });
-textAreaDescription.addEventListener("input", function () {
+textAreaDescription.addEventListener("input", () => {
 	getDataItems(textAreaDescription, textAreaDescription.value, "message");
 });
 
@@ -72,16 +72,16 @@ function defaultValueItems() {
 	const email_ = sessionStorage.getItem("email");
 	const message_ = sessionStorage.getItem("message");
 
-	if (nameAndLastname_.length >= 1 && nameAndLastname_.length !== null) {
+	if (nameAndLastname_) {
 		inputNameAndLastname.value = nameAndLastname_;
 	}
-	if (phone_.length >= 1 && phone_.length !== null) {
+	if (phone_) {
 		inputPhone.value = phone_;
 	}
-	if (email_.length >= 1 && email_.length !== null) {
+	if (email_) {
 		inputEmail.value = email_;
 	}
-	if (message_.length >= 1 && message_.length !== null) {
+	if (message_) {
 		textAreaDescription.value = message_;
 	}
 }

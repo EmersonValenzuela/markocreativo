@@ -14,7 +14,8 @@ function activeMenuMobile() {
 
 function addedEventItems() {
 	for (let i = 0; i <= itemsDisableMenuMobile.length; i++) {
-		itemsDisableMenuMobile[i].addEventListener("click", desactiveMenuMobile);
+		itemsDisableMenuMobile[i] &&
+			itemsDisableMenuMobile[i].addEventListener("click", desactiveMenuMobile);
 	}
 }
 
