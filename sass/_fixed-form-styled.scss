@@ -86,7 +86,7 @@ $fontSize: (
 		padding: 8px 0.7rem;
 		color: #000000;
 		cursor: pointer;
-		top: 25%;
+		top: 17%;
 		right: 0;
 		flex-direction: column;
 		justify-content: flex-start;
@@ -115,7 +115,7 @@ $fontSize: (
 	@media (min-width: $tablet) {
 		width: auto;
 		right: 0;
-		top: 4%;
+		top: 1%;
 	}
 
 	form {
@@ -245,16 +245,8 @@ $fontSize: (
 
 	.item-form-input,
 	.item-form-select {
-		/* padding:5px 0; */
-
-		/* label{
-        font-size: 1rem;
-        columns: setColor(black);;
-    } */
-
 		input,
 		select {
-			/* padding: 5px 6px; */
 			margin: 2px 10px;
 			border-top: none;
 			border-left: none;
