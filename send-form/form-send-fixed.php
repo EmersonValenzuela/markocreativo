@@ -86,8 +86,9 @@
             }
             </script>`; 
 
-            header("location:../index.html");
+            header("location:../success-message.php");
 
+            exit;
             }
         }
     ?>

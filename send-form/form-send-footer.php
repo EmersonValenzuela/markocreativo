@@ -1,19 +1,19 @@
 <?php
 
-$nameAndLasNameValue = "";
+$nameValue = "";
 $phoneValue = "";
 $emailValue = "";
-$messageValue =  "";
+$descriptionValue =  "";
     
-if(isset($_POST['btn-send-message-fo'])){
+if(isset($_POST['btn-send-message-b'])){
     
-    $nameAndLasNameValue = $_POST['input-name-and-lastname-fo'];
-    $phoneValue = $_POST['input-phone-fo'];
-    $emailValue = $_POST['input-email-fo'];
-    $messageValue =  $_POST['input-message-fo'];
+    $nameValue = $_POST['input-name-b'];
+    $phoneValue = $_POST['input-phone-b'];
+    $emailValue = $_POST['input-email-b'];
+    $descriptionValue =  $_POST['input-description-b'];
 
     
-    if(empty($nameAndLasNameValue) || empty($phoneValue) || empty($emailValue)){
+    if(empty($nameValue) || empty($phoneValue) || empty($emailValue) || empty($descriptionValue)){
         echo "<script>alert('Ingrese todos sus datos');</script>";
     }else{
         
@@ -30,19 +30,19 @@ if(isset($_POST['btn-send-message-fo'])){
     <table style='margin:0!important'>
         <tr>
         <td style='margin:0!important;border:1px solid #444;background:#F9FF00;color:#000;padding:8px;'><b>Nombres y Apellidos:</b></td>
-        <td style='margin:0!important;border:1px solid #444;padding:8px;'>".$nameAndLasNameValue."</td>
-        </tr>
-        <tr>
-        <td style='margin:0!important;border:1px solid #444;background:#F9FF00;color:#000;padding:8px;'><b>Email:</b></td>
-        <td style='margin:0!important;border:1px solid #444;padding:8px;'>".$emailValue."</td>
+        <td style='margin:0!important;border:1px solid #444;padding:8px;'>".$nameValue."</td>
         </tr>
         <tr>
         <td style='margin:0!important;border:1px solid #444;background:#F9FF00;color:#000;padding:8px;'><b>Cell:</b></td>
         <td style='margin:0!important;border:1px solid #444;padding:8px;'>".$phoneValue."</td>
         </tr>
         <tr>
+        <td style='margin:0!important;border:1px solid #444;background:#F9FF00;color:#000;padding:8px;'><b>Email:</b></td>
+        <td style='margin:0!important;border:1px solid #444;padding:8px;'>".$emailValue."</td>
+        </tr>
+        <tr>
         <td style='margin:0!important;border:1px solid #444;background:#F9FF00;color:#000;padding:8px;'><b>Mensaje:</b></td>
-        <td style='margin:0!important;border:1px solid #444;padding:8px;'>".$messageValue."</td>
+        <td style='margin:0!important;border:1px solid #444;padding:8px;'>".$descriptionValue."</td>
         </tr>
     </table>
     </body>
@@ -54,18 +54,15 @@ if(isset($_POST['btn-send-message-fo'])){
 
     mail($to,$subject,$message,$headers);  
         
-    $nameAndLasNameValue = "";
+    $nameValue = "";
     $phoneValue = "";
     $emailValue = "";
-    $messageValue =  "";
+    $descriptionValue =  "";
 
-    echo `<script>
-                if ( window.history.replaceState ) {
-                window.history.replaceState( null, null, window.location.href );
-            }
-            </script>`; 
 
-    header("location:../index.html");
+    header("location:../success-message.php");
+        
+    exit;
 
     }
 }

@@ -1,0 +1,61 @@
+.container-initial {
+  width: 100vw;
+  height: 100vh;
+
+  .container-line {
+    width: 100%;
+    height: 1%;
+    background: setColor(yellow);
+  }
+
+  .container-success {
+    width: 100%;
+    height: 86%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: $font-terciary-extra-bold;
+    .success-message {
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .icon-success {
+        font-size: 5rem;
+        color: setColor(yellow);
+        margin: 1rem auto;
+      }
+      .text-success {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: setColor(yellow);
+        text-align: center;
+        p {
+          color: setColor(white);
+        }
+      }
+      .item-button {
+        margin: 1rem auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .button-back {
+          margin: 1rem auto;
+          width: 100%;
+          height: auto;
+          background: setColor(yellow);
+          color: setColor(black);
+          font-size: 1.2rem;
+          font-weight: bold;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          padding: 0.7rem 1rem;
+        }
+      }
+    }
+  }
+}
