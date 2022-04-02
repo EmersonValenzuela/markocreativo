@@ -60,7 +60,7 @@ if(isset($_POST['btn-send-message-b'])){
     $descriptionValue =  "";
 
 
-    header("location:../success-message.php");
+    header("location:../successful-message.php");
         
     exit;
 

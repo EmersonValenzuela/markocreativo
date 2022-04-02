@@ -86,7 +86,7 @@
             }
             </script>`; 
 
-            header("location:../success-message.php");
+            header("location:../successful-message.php");
 
             exit;
             }
